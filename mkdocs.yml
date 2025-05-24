@@ -1,0 +1,90 @@
+site_name: STEMAIDE Docs
+
+theme:          
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  primary: indigo
+  accent: indigo
+  logo: assets/stemaide-logo-white-footer.128px.webp   
+  favicon: assets/favicon.ico  
+ 
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.tracking
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - toc.integrate 
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share  
+    - navigation.footer
+    #- header.autohide
+copyright: Copyright &copy; 2024 - 2025 STEMAIDE AFRICA
+
+
+plugins:
+  - search
+  - tags
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installatiion Guide: install.md
+      - Quickstart Guide: getting-started.md
+      
+  - Guides:
+      - Beginner Use Cases: version-1/version1.md
+      - Intermediate Use Cases: version-2/version2.md
+      - Advanced Use Cases: version-3/version3.md
+   #   - Best Practices: guides/best-practices.md
+  - FAQ's:
+      - FAQ's: faq.md
+      - Common Errors and Fixes: common-errors.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/whatsapp
+      link: https://www.whatsapp.com/channel/0029VaCyaNN5a23vbdCABI0n
+      name: Chat with us on WhatsApp
+    - icon: fontawesome/brands/facebook
+      link: https://facebook.com/stemaideafrica
+      name: STEMAIDE on Facebook
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/stemaideafrica
+      name: STEMAIDE on Instagram
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/stemaideafrica
+      name: STEMAIDE on Twitter
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/stemaide-africa
+      name: STEMAIDE on LinkedIn
+   
+  generator: false
+  homepage: /
+  generator: false  # hides "Made with Material for MkDocs"
