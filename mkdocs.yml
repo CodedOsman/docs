@@ -1,23 +1,26 @@
 site_name: STEMAIDE Docs
+site_description: Documentation for STEMAIDE, a platform for STEMAIDE Kit Manual.
+site_url: https://docs.stemaide.com
 
-theme:          
+
+theme:
   name: material
   palette:
     - scheme: default
-      primary: indigo
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
+      icon: material/weather-night
+      name: Switch to dark mode 
+      label: Toggle dark mode
     - scheme: slate
-      primary: indigo
       toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
-  primary: indigo
-  accent: indigo
+      icon: material/weather-sunny
+      name: Switch to light mode 
+      label: Toggle light mode
   logo: assets/stemaide-logo-white-footer.128px.webp   
-  favicon: assets/favicon.ico  
- 
+  favicon: assets/favicon.ico 
+
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -35,9 +38,21 @@ theme:
     - search.highlight
     - search.share  
     - navigation.footer
-    #- header.autohide
-copyright: Copyright &copy; 2024 - 2025 STEMAIDE AFRICA
+    - navigation.tabs.sticky.scroll.target: .md-header-nav
+  copyright: Copyright &copy; 2024 - 2025 STEMAIDE AFRICA
 
+  primary_color: '#4CAF50'
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  logo:
+    text: STEMAIDE-logo
+    image: assets/stemaide-logo-white-footer.128px.webp
+
+  accent:
+    text: '#FFFFFF'
+    background: '#4CAF50'
 
 plugins:
   - search
@@ -55,36 +70,43 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting Started:
-      - Installatiion Guide: install.md
-      - Quickstart Guide: getting-started.md
-      
-  - Guides:
-      - Beginner Use Cases: version-1/version1.md
-      - Intermediate Use Cases: version-2/version2.md
-      - Advanced Use Cases: version-3/version3.md
-   #   - Best Practices: guides/best-practices.md
-  - FAQ's:
-      - FAQ's: faq.md
-      - Common Errors and Fixes: common-errors.md
+      - Overview: getting-started/overview.md
+      - Installation: getting-started/installation.md
+      - Quick Start: getting-started/quick-start.md
 
+  - Features:
+      - Core Features: features/core-features.md
+      - Advanced Features: features/advanced-features.md
+
+  - Guides:
+      - User Guide: guides/user-guide.md
+      - Beginner's Use Case: 1.0/version1.md
+      - Intermediate Use Case: 2.0/version2.md
+      - Advanced Use Case: 3.0/version3.md
+      - Developer Guide: guides/developer-guide.md 
+
+  - Changelog: changelog.md
+  - Contributing: contributing.md
+  - About: about.md
+  - Code of Conduct: code-of-conduct.md
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.highlight:
+      use_pygments: true
+  
 extra:
-  social:
-    - icon: fontawesome/brands/whatsapp
-      link: https://www.whatsapp.com/channel/0029VaCyaNN5a23vbdCABI0n
-      name: Chat with us on WhatsApp
-    - icon: fontawesome/brands/facebook
-      link: https://facebook.com/stemaideafrica
-      name: STEMAIDE on Facebook
-    - icon: fontawesome/brands/instagram
-      link: https://www.instagram.com/stemaideafrica
-      name: STEMAIDE on Instagram
-    - icon: fontawesome/brands/x-twitter
-      link: https://twitter.com/stemaideafrica
-      name: STEMAIDE on Twitter
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/company/stemaide-africa
-      name: STEMAIDE on LinkedIn
-   
   generator: false
   homepage: /
-  generator: false  # hides "Made with Material for MkDocs"
+
+
