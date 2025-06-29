@@ -7,65 +7,56 @@ theme:
   name: material
   palette:
     - scheme: default
+      primary: indigo
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
-      icon: material/weather-night
-      name: Switch to dark mode 
-      label: Toggle dark mode
     - scheme: slate
+      primary: indigo
       toggle:
-      icon: material/weather-sunny
-      name: Switch to light mode 
-      label: Toggle light mode
-  logo: assets/stemaide-logo-white-footer.128px.webp   
+        icon: material/weather-sunny
+        name: Switch to light mode
+  primary: indigo
+  accent: indigo 
   favicon: assets/favicon.ico 
+  logo: assets/stemaide-logo-white-footer.128px.webp 
 
   features:
     - navigation.instant
     - navigation.instant.progress
     - navigation.instant.preview
     - navigation.tracking
-    - navigation.tabs
-    # - navigation.tabs.sticky
+    #- navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
     - navigation.path
     - navigation.indexes
     - toc.integrate 
+    - toc.follow
     - navigation.top
     - search.suggest
     - search.highlight
     - search.share  
     - navigation.footer
+    - content.code.copy
     - navigation.tabs.sticky.scroll.target: .md-header-nav
-  copyright: Copyright &copy; 2024 - 2025 STEMAIDE AFRICA
+    - Core Features: features/core-features.md
+    - Advanced Features: features/advanced-features.md
+copyright: |
+  <div style="display: flex; align-items: center; gap: 8px; font-size: 12px;">
+    <img src="assets/stemaide-logo-white-footer.128px.webp" alt="STEMAIDE Logo" height="25px" width="25px"/>
+    <span>© 2024 - 2025 STEMAIDE AFRICA</span>
+  </div>
 
-  primary_color: '#4CAF50'
-  font:
+
+font:
     text: Roboto
     code: Roboto Mono
-
-  logo:
-    text: STEMAIDE-logo
-    image: assets/stemaide-logo-white-footer.128px.webp
-
-  accent:
-    text: '#FFFFFF'
-    background: '#4CAF50'
 
 plugins:
   - search
   - tags
-
-markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
 
 nav:
   - Home: index.md
@@ -73,10 +64,7 @@ nav:
       - Overview: getting-started/overview.md
       - Installation: getting-started/installation.md
       - Quick Start: getting-started/quick-start.md
-
-  - Features:
-      - Core Features: features/core-features.md
-      - Advanced Features: features/advanced-features.md
+  
 
   - Guides:
       - User Guide: guides/user-guide.md
@@ -85,8 +73,8 @@ nav:
       - Advanced Use Case: 3.0/version3.md
       - Developer Guide: guides/developer-guide.md 
 
-  - Changelog: changelog.md
-  - Contributing: contributing.md
+  - Changelog: CHANGELOG.md
+  - Contributing: CONTRIBUTING.md
   - About: about.md
   - Code of Conduct: code-of-conduct.md
 
@@ -104,9 +92,36 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.highlight:
       use_pygments: true
-  
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
 extra:
-  generator: false
+  social:
+    - icon: fontawesome/brands/whatsapp
+      link: https://www.whatsapp.com/channel/0029VaCyaNN5a23vbdCABI0n
+      name: Chat with us on WhatsApp
+    - icon: fontawesome/brands/facebook
+      link: https://facebook.com/stemaideafrica
+      name: STEMAIDE on Facebook
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/stemaideafrica
+      name: STEMAIDE on Instagram
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/stemaideafrica
+      name: STEMAIDE on Twitter
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/stemaide-africa
+      name: STEMAIDE on LinkedIn
+    - icon: fontawesome/brands/tiktok
+      link: https://www.tiktok.com/@stemaide?_t=ZM-8xaIGd6aIR6&_r=1
+      name: STEMAIDE on TikTok
+
+  generator: false 
   homepage: /
-
-
+  
