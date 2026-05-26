@@ -1,0 +1,321 @@
+/* Keep original image styling */
+.md-typeset img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ==========================================================================
+   Project Explorer Sidebar Tree
+   ========================================================================== */
+
+/* Spacing and modern layout for sidebar navigation links */
+.md-nav__link {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect on links */
+.md-nav__link:hover {
+    background-color: rgba(63, 81, 181, 0.05);
+    color: var(--md-primary-color) !important;
+}
+
+/* Dark mode hover */
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Active page highlight */
+.md-nav__link--active {
+    font-weight: 700 !important;
+    background-color: rgba(63, 81, 181, 0.1) !important;
+    color: var(--md-primary-color) !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link--active {
+    background-color: rgba(63, 81, 181, 0.2) !important;
+}
+
+/* Add folder icons to Level 3 project directories */
+.md-nav__item[data-md-level="3"]>.md-nav__link::before {
+    content: "📁";
+    margin-right: 8px;
+    font-size: 0.85em;
+    display: inline-block;
+    filter: grayscale(100%) opacity(0.7);
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.md-nav__item[data-md-level="3"]:hover>.md-nav__link::before {
+    filter: none;
+    transform: scale(1.05);
+}
+
+/* Add document icon to Level 4 individual lessons */
+.md-nav__item[data-md-level="4"]>.md-nav__link::before {
+    content: "📄";
+    margin-right: 8px;
+    font-size: 0.8em;
+    display: inline-block;
+    filter: grayscale(100%) opacity(0.5);
+    transition: filter 0.2s ease;
+}
+
+.md-nav__item[data-md-level="4"]:hover>.md-nav__link::before,
+.md-nav__item[data-md-level="4"]>.md-nav__link--active::before {
+    filter: none;
+}
+
+/* Remove default marker circles if any to avoid overlap */
+.md-nav__link .md-icon {
+    display: none;
+}
+
+/* ==========================================================================
+   Top Breadcrumbs Bar
+   ========================================================================== */
+
+.md-content__path {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(240, 242, 245, 0.6);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+[data-md-color-scheme="slate"] .md-content__path {
+    background: rgba(30, 41, 59, 0.5);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.md-content__path a {
+    color: var(--md-default-foreground-color--light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.md-content__path a:hover {
+    color: var(--md-primary-color);
+}
+
+/* Customize separators in breadcrumb path */
+.md-content__path li::after {
+    color: rgba(0, 0, 0, 0.2) !important;
+    margin: 0 8px;
+}
+
+[data-md-color-scheme="slate"] .md-content__path li::after {
+    color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* ==========================================================================
+   Dashboard View Grid (Landing Page)
+   ========================================================================== */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 32px 0;
+}
+
+.dashboard-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    background: var(--md-default-bg-color);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    border-color: var(--md-primary-color);
+}
+
+.dashboard-card-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 12px;
+    background: rgba(63, 81, 181, 0.08);
+    color: var(--md-primary-color);
+}
+
+.dashboard-card-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.dashboard-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 10px 0 !important;
+    color: var(--md-default-foreground-color);
+}
+
+.dashboard-card-desc {
+    font-size: 0.8rem;
+    line-height: 1.45;
+    color: var(--md-default-foreground-color--light);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.dashboard-card-features {
+    margin-bottom: 20px;
+    padding-top: 16px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-card-features h4 {
+    font-size: 0.8rem;
+    margin: 0 0 10px 0 !important;
+    font-weight: 700;
+    color: var(--md-default-foreground-color);
+}
+
+.dashboard-card-features ul {
+    list-style: none;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.dashboard-card-features li {
+    font-size: 0.76rem;
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 16px;
+    color: var(--md-default-foreground-color--light);
+}
+
+.dashboard-card-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--md-primary-color);
+    font-weight: bold;
+}
+
+.dashboard-card-btn {
+    display: inline-block;
+    text-align: center;
+    background: var(--md-primary-color);
+    color: white !important;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(63, 81, 181, 0.15);
+}
+
+.dashboard-card-btn:hover {
+    background-color: #303f9f;
+    transform: scale(1.02);
+}
+
+/* ==========================================================================
+   Project Lesson Grid (Folder Landing Pages)
+   ========================================================================== */
+
+.lesson-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.lesson-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: var(--md-default-bg-color);
+    text-decoration: none !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.lesson-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.03);
+    border-color: var(--md-primary-color);
+}
+
+.lesson-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(63, 81, 181, 0.08);
+    color: var(--md-primary-color);
+    font-weight: 700;
+    font-size: 0.78rem;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.lesson-card-content {
+    flex-grow: 1;
+}
+
+.lesson-card-content h4 {
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin: 0 0 4px 0 !important;
+    color: var(--md-default-foreground-color);
+}
+
+.lesson-card-content p {
+    font-size: 0.76rem;
+    line-height: 1.4;
+    color: var(--md-default-foreground-color--light);
+    margin: 0 !important;
+}
+
+/* ==========================================================================
+   Dark Mode Slate Overrides
+   ========================================================================== */
+
+[data-md-color-scheme="slate"] .dashboard-card {
+    border-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+[data-md-color-scheme="slate"] .dashboard-card-badge {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--md-default-foreground-color);
+}
+
+[data-md-color-scheme="slate"] .dashboard-card-features {
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-md-color-scheme="slate"] .lesson-card {
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-md-color-scheme="slate"] .lesson-card-icon {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--md-default-foreground-color);
+}

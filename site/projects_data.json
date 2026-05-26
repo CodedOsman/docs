@@ -1,0 +1,538 @@
+[
+  {
+    "num": "1",
+    "title": "Led On",
+    "desc": "Turn on a single LED to understand the basics of electricity and pin outputs.",
+    "url": "../1.0/1.1.LED/1.1.1.LED_ON/",
+    "category": "LED Control",
+    "level": "Beginner"
+  },
+  {
+    "num": "2",
+    "title": "Car Travigator Blinking",
+    "desc": "Blink an LED repeatedly to master timing control, delays, and loops.",
+    "url": "../1.0/1.1.LED/1.1.2.One_LED_Blink/",
+    "category": "LED Control",
+    "level": "Beginner"
+  },
+  {
+    "num": "3",
+    "title": "Double Led On",
+    "desc": "Control two LEDs simultaneously using different digital output pins.",
+    "url": "../1.0/1.1.LED/1.1.3.LEDS_ON/",
+    "category": "LED Control",
+    "level": "Beginner"
+  },
+  {
+    "num": "4",
+    "title": "Double Led Blink",
+    "desc": "Program two LEDs to blink in patterns, building a custom light sequence.",
+    "url": "../1.0/1.1.LED/1.1.4.Two_LED_Blink/",
+    "category": "LED Control",
+    "level": "Beginner"
+  },
+  {
+    "num": "5",
+    "title": "Triple LEDS",
+    "desc": "Control three LEDs at the same time to create custom lighting effects.",
+    "url": "../1.0/1.1.LED/1.1.5.Three_LEDs_ON/",
+    "category": "LED Control",
+    "level": "Beginner"
+  },
+  {
+    "num": "6",
+    "title": "Traffic Light",
+    "desc": "Build a traffic light sequencer using red, yellow, and green LEDs.",
+    "url": "../1.0/1.1.LED/1.1.6.Three_LEDs_Blink/",
+    "category": "LED Control",
+    "level": "Beginner"
+  },
+  {
+    "num": "7",
+    "title": "Car front and rear lights",
+    "desc": "Simulate a car's head and tail lights by controlling four LEDs.",
+    "url": "../1.0/1.1.LED/1.1.7.Four_LEDs_ON/",
+    "category": "LED Control",
+    "level": "Beginner"
+  },
+  {
+    "num": "8",
+    "title": "Party Lights",
+    "desc": "Create a sequencing light show with four blinking LEDs.",
+    "url": "../1.0/1.1.LED/1.1.8.Four_LEDs_Blink/",
+    "category": "LED Control",
+    "level": "Beginner"
+  },
+  {
+    "num": "9",
+    "title": "Increasing Brightness In A Room",
+    "desc": "Light up five LEDs to simulate dimming or brightness steps.",
+    "url": "../1.0/1.1.LED/1.1.9.Five_LEDs_ON/",
+    "category": "LED Control",
+    "level": "Beginner"
+  },
+  {
+    "num": "10",
+    "title": "Party Lightnening",
+    "desc": "Build a dynamic party light sequence using five LEDs.",
+    "url": "../1.0/1.1.LED/1.1.10.Five_LEDs_Blink/",
+    "category": "LED Control",
+    "level": "Beginner"
+  },
+  {
+    "num": "1",
+    "title": "Buzzer Control With Arduino(On and OFF)",
+    "desc": "Control a piezo buzzer to produce basic sound alerts.",
+    "url": "../1.0/1.2.Buzzer/1.2.1.Buzzer_ON_and_OFF/",
+    "category": "Buzzer Control",
+    "level": "Beginner"
+  },
+  {
+    "num": "2",
+    "title": "Buzzer Control With Arduino(On and OFF)",
+    "desc": "Program a buzzer to beep at regular intervals for a custom alarm.",
+    "url": "../1.0/1.2.Buzzer/1.2.2.Buzzer_Beep/",
+    "category": "Buzzer Control",
+    "level": "Beginner"
+  },
+  {
+    "num": "1",
+    "title": "Button Lit",
+    "desc": "Use a push button to control a single LED interactively.",
+    "url": "../1.0/1.3.Push_Button/1.3.1.Push_Button_press_with_1_LED/",
+    "category": "Push Button Interface",
+    "level": "Beginner"
+  },
+  {
+    "num": "2",
+    "title": "Twin Light",
+    "desc": "Control two LEDs with a button press, learning about input states.",
+    "url": "../1.0/1.3.Push_Button/1.3.2.Push_Button_press_with_2_LEDs/",
+    "category": "Push Button Interface",
+    "level": "Beginner"
+  },
+  {
+    "num": "3",
+    "title": "Tri-Light",
+    "desc": "Build a button-controlled triple LED system.",
+    "url": "../1.0/1.3.Push_Button/1.3.3.Push_Button_press_with_3_LEDs/",
+    "category": "Push Button Interface",
+    "level": "Beginner"
+  },
+  {
+    "num": "1",
+    "title": "Traffic Light",
+    "desc": "Introduction to traffic light modules and how to use them with Arduino.",
+    "url": "../1.0/1.4.Traffic_Light/1.4.0.Taffic_Light_Intro/",
+    "category": "Traffic Light Module",
+    "level": "Beginner"
+  },
+  {
+    "num": "2",
+    "title": "Red Means Stop",
+    "desc": "Turn on the red LED on the traffic light module.",
+    "url": "../1.0/1.4.Traffic_Light/1.4.1.Traffic_Light_Red_ON/",
+    "category": "Traffic Light Module",
+    "level": "Beginner"
+  },
+  {
+    "num": "3",
+    "title": "Traffic Light Red Only Blink",
+    "desc": "Make the red LED blink to signal warning.",
+    "url": "../1.0/1.4.Traffic_Light/1.4.2.Traffic_Light_Red_BLINK/",
+    "category": "Traffic Light Module",
+    "level": "Beginner"
+  },
+  {
+    "num": "4",
+    "title": "Yellow Means Get Ready",
+    "desc": "Turn on the yellow LED to signal preparation.",
+    "url": "../1.0/1.4.Traffic_Light/1.4.3.Traffic_Light_Yellow_ON/",
+    "category": "Traffic Light Module",
+    "level": "Beginner"
+  },
+  {
+    "num": "5",
+    "title": "Traffic Light Yellow Only Blink",
+    "desc": "Make the yellow LED blink for caution.",
+    "url": "../1.0/1.4.Traffic_Light/1.4.4.Traffic_Light_Yellow_Blink/",
+    "category": "Traffic Light Module",
+    "level": "Beginner"
+  },
+  {
+    "num": "6",
+    "title": "Green Means Go",
+    "desc": "Turn on the green LED to signal clear road.",
+    "url": "../1.0/1.4.Traffic_Light/1.4.5.Traffic_Light_Green_ON/",
+    "category": "Traffic Light Module",
+    "level": "Beginner"
+  },
+  {
+    "num": "7",
+    "title": "Trafic Light Green Blink Only",
+    "desc": "Make the green LED blink for pedestrian crossing warnings.",
+    "url": "../1.0/1.4.Traffic_Light/1.4.6.Traffic_Light_Green_Blink/",
+    "category": "Traffic Light Module",
+    "level": "Beginner"
+  },
+  {
+    "num": "1",
+    "title": "Red-G-B",
+    "desc": "Display red color using the RGB LED module.",
+    "url": "../1.0/1.5.RGB/1.5.1.RGB_Red_On/",
+    "category": "RGB LED Module",
+    "level": "Beginner"
+  },
+  {
+    "num": "2",
+    "title": "Red Blink",
+    "desc": "Blink the red color on the RGB LED module.",
+    "url": "../1.0/1.5.RGB/1.5.2.RGB_Red_Blink/",
+    "category": "RGB LED Module",
+    "level": "Beginner"
+  },
+  {
+    "num": "3",
+    "title": "Turning On/Off Green Led On Rgb",
+    "desc": "Display green color using the RGB LED module.",
+    "url": "../1.0/1.5.RGB/1.5.3.RGB_Green_On/",
+    "category": "RGB LED Module",
+    "level": "Beginner"
+  },
+  {
+    "num": "4",
+    "title": "Green Led Blinking On Rgb",
+    "desc": "Blink the green color on the RGB LED module.",
+    "url": "../1.0/1.5.RGB/1.5.4.RGB_Green_Blink/",
+    "category": "RGB LED Module",
+    "level": "Beginner"
+  },
+  {
+    "num": "5",
+    "title": "R -G-Blue",
+    "desc": "Display blue color using the RGB LED module.",
+    "url": "../1.0/1.5.RGB/1.5.5.RGB_Blue_On/",
+    "category": "RGB LED Module",
+    "level": "Beginner"
+  },
+  {
+    "num": "6",
+    "title": "Blue Led Blinking On Rgb",
+    "desc": "Blink the blue color on the RGB LED module.",
+    "url": "../1.0/1.5.RGB/1.5.6.RGB_Blue_Blink/",
+    "category": "RGB LED Module",
+    "level": "Beginner"
+  },
+  {
+    "num": "7",
+    "title": "Rainbow Colors On Rgb",
+    "desc": "Cycle through multiple colors to create a rainbow effect on the RGB LED.",
+    "url": "../1.0/1.5.RGB/1.5.7.RGB_Rainbow_Colors/",
+    "category": "RGB LED Module",
+    "level": "Beginner"
+  },
+  {
+    "num": "1",
+    "title": "Light Intensity Checker",
+    "desc": "Measure ambient light levels using a Light Dependent Resistor (LDR).",
+    "url": "../1.0/1.6.LDR/1.6.0.LDR_Module/",
+    "category": "LDR Light Sensor",
+    "level": "Beginner"
+  },
+  {
+    "num": "1",
+    "title": "Robot Arm-Up",
+    "desc": "Control a servo motor's rotation angle to simulate a robotic arm.",
+    "url": "../1.0/1.7.Servo_Motor/1.7.0.Servo_Motor_One_Angle/",
+    "category": "Servo Motor Control",
+    "level": "Beginner"
+  },
+  {
+    "num": "2",
+    "title": "Car windshield wiper",
+    "desc": "Program a servo motor to sweep back and forth like a wiper.",
+    "url": "../1.0/1.7.Servo_Motor/1.7.1.Servo_Motor_Sweep/",
+    "category": "Servo Motor Control",
+    "level": "Beginner"
+  },
+  {
+    "num": "1",
+    "title": "Noise Checker – Sound Sensor Threshold Detection",
+    "desc": "Detect sound levels and trigger alerts when it exceeds a threshold.",
+    "url": "../1.0/1.9.Sound_Sensor/1.9.0.Sound_Sensor/",
+    "category": "Sound Sensor Interface",
+    "level": "Beginner"
+  },
+  {
+    "num": "1",
+    "title": "LED and Ultrasonic Sensor Control",
+    "desc": "Measure distance with an ultrasonic sensor and light up an LED as visual indicator.",
+    "url": "../2.0/2.1.Ultrasonic+LED/2.1.1.Ultrasonic_and_1_LED/",
+    "category": "Ultrasonic & LED",
+    "level": "Intermediate"
+  },
+  {
+    "num": "2",
+    "title": "LED and Ultrasonic Sensor Control",
+    "desc": "Control two LEDs based on object proximity using an ultrasonic sensor.",
+    "url": "../2.0/2.1.Ultrasonic+LED/2.1.2.Ultrasonic_and_2_LED/",
+    "category": "Ultrasonic & LED",
+    "level": "Intermediate"
+  },
+  {
+    "num": "3",
+    "title": "LED and Ultrasonic Sensor Control",
+    "desc": "Create a 3-stage distance tracker using an ultrasonic sensor and three LEDs.",
+    "url": "../2.0/2.1.Ultrasonic+LED/2.1.3.Ultrasonic_and_3_LED/",
+    "category": "Ultrasonic & LED",
+    "level": "Intermediate"
+  },
+  {
+    "num": "4",
+    "title": "Smart Alert Lightining System",
+    "desc": "Create a distance-based warning system using four LEDs.",
+    "url": "../2.0/2.1.Ultrasonic+LED/2.1.4.Ultrasonic_and_4_LED/",
+    "category": "Ultrasonic & LED",
+    "level": "Intermediate"
+  },
+  {
+    "num": "1",
+    "title": "Smart Sound Alert System",
+    "desc": "Trigger an audible buzzer alarm when light levels drop.",
+    "url": "../2.0/2.10.LDR+Buzzer/2.10.1.LDR+Buzzer/",
+    "category": "LDR Sensor & Buzzer",
+    "level": "Intermediate"
+  },
+  {
+    "num": "1",
+    "title": "TRAFFIC LIGHT with STEMAIDE",
+    "desc": "Display different colors on an RGB LED based on ambient light levels.",
+    "url": "../2.0/2.11.LDR_RGB/2.11.1.LDR_RGB/",
+    "category": "LDR Sensor & RGB",
+    "level": "Intermediate"
+  },
+  {
+    "num": "1",
+    "title": "TRAFFIC LIGHT with STEMAIDE",
+    "desc": "Control a traffic light module based on LDR light sensor feedback.",
+    "url": "../2.0/2.12.Traffic_Light_STEMAIDE/2.12.1.Traffic_Light_STEMAIDE/",
+    "category": "STEMAIDE Traffic Light",
+    "level": "Intermediate"
+  },
+  {
+    "num": "1",
+    "title": "Operating A Sound Sensor Wiith One Led",
+    "desc": "Light up an LED by clapping or making sound.",
+    "url": "../2.0/2.13.SoundSensor+LED/2.13.1.SoundSensor+1_LED/",
+    "category": "Sound Sensor & LED",
+    "level": "Intermediate"
+  },
+  {
+    "num": "2",
+    "title": "OPERATING A SOUND SENSOR WITH TWO LEDs",
+    "desc": "Control two LEDs simultaneously with sound level triggers.",
+    "url": "../2.0/2.13.SoundSensor+LED/2.13.2.Soundsensor+2_LED/",
+    "category": "Sound Sensor & LED",
+    "level": "Intermediate"
+  },
+  {
+    "num": "3",
+    "title": "OPERATING A SOUND SENSOR WITH THREE LEDs",
+    "desc": "Create a sound-activated multi-LED display system.",
+    "url": "../2.0/2.13.SoundSensor+LED/2.13.3.SoundSensor+3_LED/",
+    "category": "Sound Sensor & LED",
+    "level": "Intermediate"
+  },
+  {
+    "num": "1",
+    "title": "Operating A Sound Sensor And Led With Stemaide",
+    "desc": "Control traffic signal sequences with sound triggers.",
+    "url": "../2.0/2.14.SoundSensor+Traffic/2.14.1.SoundSensor+TrafficLight_module/",
+    "category": "Sound Sensor & Traffic Light",
+    "level": "Intermediate"
+  },
+  {
+    "num": "1",
+    "title": "Smart Sound Alert System",
+    "desc": "Build a proximity alarm that changes buzzer frequency based on distance.",
+    "url": "../2.0/2.2.Ultrasonic+Buzzer/2.2.1.Ultrasonic_distance_Sensor/",
+    "category": "Ultrasonic & Buzzer",
+    "level": "Intermediate"
+  },
+  {
+    "num": "1",
+    "title": "Ultrasonic distance sensor with traffic light module.",
+    "desc": "Control traffic lights based on vehicle proximity.",
+    "url": "../2.0/2.3.Ultrasonic+TrafficLight/2.3.1.ultrasonic_sensor_and_trafficLight_module/",
+    "category": "Ultrasonic & Traffic Light",
+    "level": "Intermediate"
+  },
+  {
+    "num": "1",
+    "title": "Smart lightening system with RGB module.",
+    "desc": "Change RGB LED colors based on object distance.",
+    "url": "../2.0/2.4.Ultrasonic+RGB/2.4.1.ultrasonic_sensor_and_RGB_module/",
+    "category": "Ultrasonic & RGB",
+    "level": "Intermediate"
+  },
+  {
+    "num": "1",
+    "title": "LED Control with Arduino and Push Button",
+    "desc": "Toggle a single LED's power state with a push button.",
+    "url": "../2.0/2.5.Push_Button+LED/2.5.1.Push_Button_to_turn_on_and_off_LED/",
+    "category": "Push Button & LED",
+    "level": "Intermediate"
+  },
+  {
+    "num": "2",
+    "title": "LED Control with Arduino and Push Button",
+    "desc": "Blink an LED when the push button is held down.",
+    "url": "../2.0/2.5.Push_Button+LED/2.5.2.Push_Button_to_blink_one_LED/",
+    "category": "Push Button & LED",
+    "level": "Intermediate"
+  },
+  {
+    "num": "3",
+    "title": "LED Control with Arduino and Push Button",
+    "desc": "Toggle two LEDs simultaneously with a button press.",
+    "url": "../2.0/2.5.Push_Button+LED/2.5.3.Push_Button_to_turn_on_and_off_2_LED/",
+    "category": "Push Button & LED",
+    "level": "Intermediate"
+  },
+  {
+    "num": "4",
+    "title": "LED Control with Arduino and Push Button",
+    "desc": "Blink two LEDs in alternate patterns using a push button.",
+    "url": "../2.0/2.5.Push_Button+LED/2.5.4.Push_Button_to_blink_two_LED/",
+    "category": "Push Button & LED",
+    "level": "Intermediate"
+  },
+  {
+    "num": "5",
+    "title": "LED Control with Arduino and Push Button",
+    "desc": "Control three LEDs with a single button input.",
+    "url": "../2.0/2.5.Push_Button+LED/2.5.5.Push_Button_to_turn_on_and_off_three_LED/",
+    "category": "Push Button & LED",
+    "level": "Intermediate"
+  },
+  {
+    "num": "6",
+    "title": "LED Control with Arduino and Push Button",
+    "desc": "Toggle a set of four LEDs with a button press.",
+    "url": "../2.0/2.5.Push_Button+LED/2.5.7.Push_Button_to_turn_on_and_off_four_LED/",
+    "category": "Push Button & LED",
+    "level": "Intermediate"
+  },
+  {
+    "num": "7",
+    "title": "LED Control with Arduino and Push Button",
+    "desc": "Blink four LEDs in sequence with a button press.",
+    "url": "../2.0/2.5.Push_Button+LED/2.5.8.Push_Button_to_blink_four_LED/",
+    "category": "Push Button & LED",
+    "level": "Intermediate"
+  },
+  {
+    "num": "1",
+    "title": "Push Button with Buzzer",
+    "desc": "Make an interactive button-activated audio buzzer.",
+    "url": "../2.0/2.6.Push_Button+Buzzer/2.6.1.Push_button_and_Buzzer/",
+    "category": "Push Button & Buzzer",
+    "level": "Intermediate"
+  },
+  {
+    "num": "1",
+    "title": "Push Button with Traffic Light Module",
+    "desc": "Build a pedestrian-activated traffic crossing button.",
+    "url": "../2.0/2.7.PushButton+TrafficLightModule/2.7.1.PushButton+TrafficLightModule/",
+    "category": "Push Button & Traffic Light",
+    "level": "Intermediate"
+  },
+  {
+    "num": "1",
+    "title": "STEMAIDE Pushbutton And RGB Control",
+    "desc": "Cycle RGB LED colors interactively with a push button.",
+    "url": "../2.0/2.8.PushButton+RGB/2.8.1.PushButton+RGB/",
+    "category": "Push Button & RGB Module",
+    "level": "Intermediate"
+  },
+  {
+    "num": "1",
+    "title": "Smart Street Light (1 Led)",
+    "desc": "Design an automatic street light that turns on when it gets dark.",
+    "url": "../2.0/2.9.LDR+LED/2.9.1.LDR+1_LED/",
+    "category": "LDR Sensor & LED",
+    "level": "Intermediate"
+  },
+  {
+    "num": "2",
+    "title": "SMART STREET LIGHT (2 LEDs)",
+    "desc": "Control two smart street lights based on light level thresholds.",
+    "url": "../2.0/2.9.LDR+LED/2.9.2.LDR+2_LED/",
+    "category": "LDR Sensor & LED",
+    "level": "Intermediate"
+  },
+  {
+    "num": "3",
+    "title": "SMART STREET LIGHT (4 LEDs)",
+    "desc": "Build a multi-level smart street lighting system with four LEDs.",
+    "url": "../2.0/2.9.LDR+LED/2.9.4.LDR+4_LED/",
+    "category": "LDR Sensor & LED",
+    "level": "Intermediate"
+  },
+  {
+    "num": "4",
+    "title": "SMART STREET LIGHT (5 LEDs)",
+    "desc": "Create a high-density smart lighting system using five LEDs and LDR.",
+    "url": "../2.0/2.9.LDR+LED/2.9.5.LDR+5_LED/",
+    "category": "LDR Sensor & LED",
+    "level": "Intermediate"
+  },
+  {
+    "num": "1",
+    "title": "Smart Gauge Water Level Monitor",
+    "desc": "Build a water level monitor using ultrasonic sensor depth measurement.",
+    "url": "../3.0/3.1.Smart_Guage/3.1.1.Smart Guage/",
+    "category": "Smart Gauge System",
+    "level": "Advanced"
+  },
+  {
+    "num": "1",
+    "title": "Smart Intruder Alarm System",
+    "desc": "Build a home security alarm using an ultrasonic motion sensor.",
+    "url": "../3.0/3.2.Smart_Security_System/3.2.1.Smart Security System/",
+    "category": "Smart Security System",
+    "level": "Advanced"
+  },
+  {
+    "num": "1",
+    "title": "Smart Traffic Light System",
+    "desc": "Build a pedestrian crossing system with ultrasonic detection.",
+    "url": "../3.0/3.3.Smart_Traffic_light_system/3.3.1.Smart Traffic light system/",
+    "category": "Smart Traffic Light System",
+    "level": "Advanced"
+  },
+  {
+    "num": "1",
+    "title": "Smart Bed Lighting System",
+    "desc": "Create a motion-activated bed light system.",
+    "url": "../3.0/3.4.Smart_Bed_Light/3.4.1.Smart_Bed_Light/",
+    "category": "Smart Bed Light System",
+    "level": "Advanced"
+  },
+  {
+    "num": "1",
+    "title": "Smart Car Parking Gate",
+    "desc": "Build a parking barrier gate that opens automatically when a car approaches.",
+    "url": "../3.0/3.5.Smart_Car_Parking_System/3.5.1.Smart_Car_Parking_System/",
+    "category": "Smart Car Parking System",
+    "level": "Advanced"
+  },
+  {
+    "num": "1",
+    "title": "Smart Clap Device Controller",
+    "desc": "Design a clap-activated home appliance controller.",
+    "url": "../3.0/3.6.Smart_Clap_Device/3.6.1.Smart_Clap_device/",
+    "category": "Smart Clap Device",
+    "level": "Advanced"
+  }
+]
