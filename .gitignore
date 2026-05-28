@@ -1,0 +1,23 @@
+# Ignore all agent files and directories
+.qoder
+.vscode
+.claude
+.anthropic
+.codex
+.cursor
+.idea
+.gemini
+
+# Ignore test scripts
+scratch
+test
+scripts
+
+# Ignore build files
+# This is for php static site
+site/*
+site
+site.zip
+
+# Ignore OS generated files
+Thumbs.db
