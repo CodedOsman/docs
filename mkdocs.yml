@@ -6,6 +6,8 @@ docs_dir: docs
 
 theme:
   name: material
+  logo: assets/stemaide-logo-white-footer.128px.webp
+  favicon: assets/favicon.ico
   palette:
     scheme: default
     primary: indigo
