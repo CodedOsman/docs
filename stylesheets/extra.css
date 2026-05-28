@@ -1,0 +1,143 @@
+.md-typeset img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ==========================================================================
+   Project Lesson Grid (Folder Landing Pages) - Image Cards
+   ========================================================================== */
+
+.lesson-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 28px;
+    margin: 28px 0;
+}
+
+.lesson-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: var(--md-default-bg-color);
+    text-decoration: none !important;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.3s ease;
+}
+
+.lesson-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+    border-color: var(--md-primary-color);
+}
+
+.lesson-card-image {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    position: relative;
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.lesson-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    border-radius: 0 !important; /* Override global img border radius */
+}
+
+.lesson-card:hover .lesson-card-image img {
+    transform: scale(1.06);
+}
+
+.lesson-card-icon {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--md-primary-color);
+    font-weight: 800;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    z-index: 2;
+}
+
+.lesson-card-content {
+    padding: 20px 24px 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.lesson-card-content h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 10px 0 !important;
+    color: var(--md-default-foreground-color);
+    line-height: 1.35;
+}
+
+.lesson-card-content p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--md-default-foreground-color--light);
+    margin: 0 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.lesson-card-action {
+    margin-top: 16px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--md-primary-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: gap 0.2s ease;
+}
+
+.lesson-card:hover .lesson-card-action {
+    gap: 8px;
+}
+
+/* ==========================================================================
+   Dark Mode Slate Overrides
+   ========================================================================== */
+
+[data-md-color-scheme="slate"] .lesson-card {
+    border-color: rgba(255, 255, 255, 0.08);
+    background: #1e293b; /* Sleek slate background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+[data-md-color-scheme="slate"] .lesson-card:hover {
+    border-color: var(--md-primary-color);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+[data-md-color-scheme="slate"] .lesson-card-icon {
+    background: rgba(30, 41, 59, 0.95);
+    color: var(--md-primary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+[data-md-color-scheme="slate"] .lesson-card-image {
+    background: rgba(255, 255, 255, 0.01);
+}
