@@ -1,0 +1,53 @@
+site_name: STEMAIDE Docs
+site_description: Documentation for STEMAIDE, a platform for STEMAIDE Kit Manual.
+site_author: STEMAIDE
+site_dir: site
+docs_dir: docs
+
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - search.suggest
+
+hooks:
+  - hooks.py
+
+plugins:
+  - search
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Getting Started:
+      - Overview: getting-started/overview.md
+      - Installation: getting-started/installation.md
+      - Quick Start: getting-started/quick-start.md
+  - Features:
+      - Core Features: features/core-features.md
+      - Advanced Features: features/advanced-features.md
+  - Guides:
+      - Developer Guide: guides/developer-guide.md
+      - User Guide: guides/user-guide.md
+  - Use Case:
+      - Overview: use-case/index.md
+      - Beginner: 1.0/index.md
+      - Intermediate: 2.0/index.md
+      - Advanced: 3.0/index.md
+  - CHANGELOG: CHANGELOG.md
+  - Code of Conduct: code-of-conduct.md
+  - CONTRIBUTING: CONTRIBUTING.md
+  
