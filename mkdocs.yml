@@ -59,113 +59,115 @@ extra:
 nav:
   - Home: index.md
   - Getting Started:
-    #   - Introduction: Arduino_STEMAIDE_Manual_v1.0/Getting Started/Introduction.md
-      - Arduino IDE Setup: Arduino_STEMAIDE_Manual_v1.0/Getting Started/Arduino_IDE_Setup.md
-      - Basic Programming Concepts: Arduino_STEMAIDE_Manual_v1.0/Getting Started/Basic_Programming_Concept.md
-      - Safety Guidelines: Arduino_STEMAIDE_Manual_v1.0/Getting Started/Safety_Guidelines.md
+    #   - Introduction: STEMAIDE_CODER_Kit_Manual/Getting Started/Introduction.md
+      - Arduino IDE Setup: STEMAIDE_CODER_Kit_Manual/Getting Started/Arduino_IDE_Setup.md
+      - Basic Programming Concepts: STEMAIDE_CODER_Kit_Manual/Getting Started/Basic_Programming_Concept.md
+      - Safety Guidelines: STEMAIDE_CODER_Kit_Manual/Getting Started/Safety_Guidelines.md
   - Beginner Projects:
-      - Overview: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/index.md
+      - Overview: STEMAIDE_CODER_Kit_Manual/Beginner Projects/index.md
       - 1.1 LED Control:
-          - Turn ON One LED: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.1_LED/1.1.1_Turn_ON_One_LED.md
-          - Blink One LED: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.1_LED/1.1.2_Blink_One_LED.md
-          - Turn ON Two LEDs: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.1_LED/1.1.3_Turn_ON_Two_LEDs.md
-          - Blink Two LEDs: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.1_LED/1.1.4_Blink_Two_LEDs.md
-          - Turn ON Three LEDs: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.1_LED/1.1.5_Turn_ON_Three_LEDs.md
-          - Blink Three LEDs: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.1_LED/1.1.6_Blink_Three_LEDs.md
-          - Turn ON Four LEDs: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.1_LED/1.1.7_Turn_ON_Four_LEDs.md
-          - Blink Four LEDs: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.1_LED/1.1.8_Blink_Four_LEDs.md
-          - Turn ON Five LEDs: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.1_LED/1.1.9_Turn_ON_Five_LEDs.md
-          - Blink Five LEDs: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.1_LED/1.1.10_Blink_Five_LEDs.md
+          - 1.1.1 Turn ON One LED: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.1_Turn_ON_One_LED.md
+          - 1.1.2 Blink One LED: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.2_Blink_One_LED.md
+          - 1.1.3 Turn ON Two LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.3_Turn_ON_Two_LEDs.md
+          - 1.1.4 Blink Two LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.4_Blink_Two_LEDs.md
+          - 1.1.5 Turn ON Three LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.5_Turn_ON_Three_LEDs.md
+          - 1.1.6 Blink Three LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.6_Blink_Three_LEDs.md
+          - 1.1.7 Turn ON Four LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.7_Turn_ON_Four_LEDs.md
+          - 1.1.8 Blink Four LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.8_Blink_Four_LEDs.md
+          - 1.1.9 Turn ON Five LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.9_Turn_ON_Five_LEDs.md
+          - 1.1.10 Blink Five LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.10_Blink_Five_LEDs.md
       - 1.2 Buzzer:
-          - Buzzer ON/OFF: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.2_Buzzer/1.2.1_Buzzer_ON_OFF.md
-          - Buzzer Beep: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.2_Buzzer/1.2.2_Buzzer_Beep.md
+          - 1.2.1 Buzzer ON/OFF: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.2_Buzzer/1.2.1_Buzzer_ON_OFF.md
+          - 1.2.2 Buzzer Beep: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.2_Buzzer/1.2.2_Buzzer_Beep.md
       - 1.3 Push Button:
-          - Button with 1 LED: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.3_Push_Button/1.3.1_Button_With_1_LED.md
-          - Button with 2 LEDs: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.3_Push_Button/1.3.2_Button_With_2_LEDs.md
-          - Button with 3 LEDs: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.3_Push_Button/1.3.3_Button_With_3_LEDs.md
-          - Button with 4 LEDs: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.3_Push_Button/1.3.4_Button_With_4_LEDs.md
+          - 1.3.1 Button with 1 LED: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.3_Push_Button/1.3.1_Button_With_1_LED.md
+          - 1.3.2 Button with 2 LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.3_Push_Button/1.3.2_Button_With_2_LEDs.md
+          - 1.3.3 Button with 3 LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.3_Push_Button/1.3.3_Button_With_3_LEDs.md
+          - 1.3.4 Button with 4 LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.3_Push_Button/1.3.4_Button_With_4_LEDs.md
       - 1.4 Traffic Light Module:
-          - Green Light ON: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.4_Traffic_Light_Module/1.4.1_Green_Light_ON.md
-          - Blink Green Light: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.4_Traffic_Light_Module/1.4.2_Blink_Green_Light.md
-          - Red Light ON: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.4_Traffic_Light_Module/1.4.3_Red_Light_ON.md
-          - Blink Red Light: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.4_Traffic_Light_Module/1.4.4_Blink_Red_Light.md
-          - Yellow Light ON: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.4_Traffic_Light_Module/1.4.5_Yellow_Light_ON.md
-          - Blink Yellow Light: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.4_Traffic_Light_Module/1.4.6_Blink_Yellow_Light.md
+          - 1.4.1 Green Light ON: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.4_Traffic_Light_Module/1.4.1_Green_Light_ON.md
+          - 1.4.2 Blink Green Light: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.4_Traffic_Light_Module/1.4.2_Blink_Green_Light.md
+          - 1.4.3 Red Light ON: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.4_Traffic_Light_Module/1.4.3_Red_Light_ON.md
+          - 1.4.4 Blink Red Light: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.4_Traffic_Light_Module/1.4.4_Blink_Red_Light.md
+          - 1.4.5 Yellow Light ON: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.4_Traffic_Light_Module/1.4.5_Yellow_Light_ON.md
+          - 1.4.6 Blink Yellow Light: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.4_Traffic_Light_Module/1.4.6_Blink_Yellow_Light.md
       - 1.5 RGB Module:
-          - RGB Introduction: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.5_RGB_Module/1.5.0_RGB_Introduction.md
-          - Red ON: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.5_RGB_Module/1.5.1_Red_ON.md
-          - Red Blink: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.5_RGB_Module/1.5.2_Red_Blink.md
-          - Green ON: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.5_RGB_Module/1.5.3_Green_ON.md
-          - Green Blink: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.5_RGB_Module/1.5.4_Green_Blink.md
-          - Blue ON: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.5_RGB_Module/1.5.5_Blue_ON.md
-          - Blue Blink: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.5_RGB_Module/1.5.6_Blue_Blink.md
-          - Rainbow Colors: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.5_RGB_Module/1.5.7_Rainbow_Colors.md
-      - 1.6 LDR Module: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.6_LDR_Module/1.6.1_LDR_Module.md
+          - 1.5.1 RGB Introduction: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.0_RGB_Introduction.md
+          - 1.5.2 Red ON: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.1_Red_ON.md
+          - 1.5.3 Red Blink: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.2_Red_Blink.md
+          - 1.5.4 Green ON: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.3_Green_ON.md
+          - 1.5.5 Green Blink: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.4_Green_Blink.md
+          - 1.5.6 Blue ON: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.5_Blue_ON.md
+          - 1.5.7 Blue Blink: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.6_Blue_Blink.md
+          - 1.5.8 Rainbow Colors: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.7_Rainbow_Colors.md
+      - 1.6 LDR Module: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.6_LDR_Module/1.6.1_LDR_Module.md
       - 1.7 Servo Motor:
-          - One Angle: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.7_Servo_Motor/1.7.1_One_Angle.md
-          - Sweep: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.7_Servo_Motor/1.7.2_Sweep.md
-      - 1.8 Ultrasonic Sensor: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.8_Ultrasonic_Sensor/1.8.1_Ultrasonic_With_RGB.md
-      - 1.9 Sound Sensor: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.9_Sound_Sensor/1.9.1_Sound_Sensor.md
-      - 1.10 Sound Controlled Desk Lamp: Arduino_STEMAIDE_Manual_v1.0/Beginner Projects/1.10_Sound_Controlled_Desk_Lamp/1.10.1_Sound_Controlled_Desk_Lamp.md
+          - 1.7.1 One Angle: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.7_Servo_Motor/1.7.1_One_Angle.md
+          - 1.7.2 Sweep: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.7_Servo_Motor/1.7.2_Sweep.md
+      - 1.8 Ultrasonic Sensor: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.8_Ultrasonic_Sensor/1.8.1_Ultrasonic_With_RGB.md
+      - 1.9 Sound Sensor: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.9_Sound_Sensor/1.9.1_Sound_Sensor.md
   - Intermediate Projects:
-      - Overview: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/index.md
-      - 2.1 Button and Buzzer: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.1_Button_And_Buzzer/2.1.1_Button_And_Buzzer.md
-      - 2.2 Button and RGB: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.2_Button_And_RGB/2.2.1_Button_And_RGB.md
-      - 2.3 Button and Traffic Light: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.3_Button_And_Traffic_Light/2.3.1_Button_And_Traffic_Light.md
-      - 2.4 LDR and RGB: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.4_LDR_And_RGB/2.4.1_LDR_And_RGB.md
-      - 2.5 LDR and Traffic Light: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.5_LDR_And_Traffic_Light/2.5.1_LDR_And_Traffic_Light.md
-      - 2.6 Ultrasonic and Buzzer: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.6_Ultrasonic_And_Buzzer/2.6.1_Ultrasonic_And_Buzzer.md
-      - 2.7 Ultrasonic and RGB: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.7_Ultrasonic_And_RGB/2.7.1_Ultrasonic_And_RGB.md
-      - 2.8 Sound Sensor and Traffic Light: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.8_Sound_Sensor_And_Traffic_Light/2.8.1_Sound_Sensor_And_Traffic_Light.md
-      - 2.9 Servo and Ultrasonic: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.9_Servo_And_Ultrasonic/2.9.1_Servo_And_Ultrasonic.md
+      - Overview: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/index.md
+      - 2.1 Button and Buzzer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.1_Button_And_Buzzer/2.1.1_Button_And_Buzzer.md
+      - 2.2 Button and RGB: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.2_Button_And_RGB/2.2.1_Button_And_RGB.md
+      - 2.3 Button and Traffic Light: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.3_Button_And_Traffic_Light/2.3.1_Button_And_Traffic_Light.md
+      - 2.4 LDR and RGB: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.4_LDR_And_RGB/2.4.1_LDR_And_RGB.md
+      - 2.5 LDR and Traffic Light: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.5_LDR_And_Traffic_Light/2.5.1_LDR_And_Traffic_Light.md
+      - 2.6 Ultrasonic and Buzzer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.6_Ultrasonic_And_Buzzer/2.6.1_Ultrasonic_And_Buzzer.md
+      - 2.7 Ultrasonic and RGB: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.7_Ultrasonic_And_RGB/2.7.1_Ultrasonic_And_RGB.md
+      - 2.8 Sound Sensor and Traffic Light: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.8_Sound_Sensor_And_Traffic_Light/2.8.1_Sound_Sensor_And_Traffic_Light.md
+      - 2.9 Servo and Ultrasonic: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.9_Servo_And_Ultrasonic/2.9.1_Servo_And_Ultrasonic.md
       - 2.10 Smart Alarm Projects:
           - Ultrasonic + LED:
-              - Ultrasonic with 1 LED: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.10_Smart_Alarm_Projects/Ultrasonic_LED/2.10.1_Ultrasonic_with_1_LED.md
-              - Ultrasonic with 2 LEDs: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.10_Smart_Alarm_Projects/Ultrasonic_LED/2.10.2_Ultrasonic_with_2_LEDs.md
-              - Ultrasonic with 3 LEDs: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.10_Smart_Alarm_Projects/Ultrasonic_LED/2.10.3_Ultrasonic_with_3_LEDs.md
-              - Ultrasonic with 4 LEDs: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.10_Smart_Alarm_Projects/Ultrasonic_LED/2.10.4_Ultrasonic_with_4_LEDs.md
+              - Ultrasonic with 1 LED: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Ultrasonic_LED/2.10.1_Ultrasonic_with_1_LED.md
+              - Ultrasonic with 2 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Ultrasonic_LED/2.10.2_Ultrasonic_with_2_LEDs.md
+              - Ultrasonic with 3 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Ultrasonic_LED/2.10.3_Ultrasonic_with_3_LEDs.md
+              - Ultrasonic with 4 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Ultrasonic_LED/2.10.4_Ultrasonic_with_4_LEDs.md
           - Push Button + LED:
-              - Button to Control LED: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.5_Button_to_control_LED.md
-              - Button to Blink LED: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.6_Button_to_blink_LED.md
-              - Button to Control 2 LEDs: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.7_Button_to_control_2_LEDs.md
-              - Button to Blink 2 LEDs: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.8_Button_to_blink_2_LEDs.md
-              - Button to Control 3 LEDs: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.9_Button_to_control_3_LEDs.md
-              - Button to Blink 4 LEDs: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.10_Button_to_blink_4_LEDs.md
+              - Button to Control LED: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.5_Button_to_control_LED.md
+              - Button to Blink LED: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.6_Button_to_blink_LED.md
+              - Button to Control 2 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.7_Button_to_control_2_LEDs.md
+              - Button to Blink 2 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.8_Button_to_blink_2_LEDs.md
+              - Button to Control 3 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.9_Button_to_control_3_LEDs.md
+              - Button to Blink 4 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.10_Button_to_blink_4_LEDs.md
           - LDR + LED:
-              - LDR with 1 LED: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_LED/2.10.11_LDR_with_1_LED.md
-              - LDR with 2 LEDs: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_LED/2.10.12_LDR_with_2_LEDs.md
-              - LDR with 4 LEDs: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_LED/2.10.13_LDR_with_4_LEDs.md
-              - LDR with 5 LEDs: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_LED/2.10.14_LDR_with_5_LEDs.md
-          - LDR + Buzzer: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_Buzzer/2.10.15_LDR_with_Buzzer.md
+              - LDR with 1 LED: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_LED/2.10.11_LDR_with_1_LED.md
+              - LDR with 2 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_LED/2.10.12_LDR_with_2_LEDs.md
+              - LDR with 4 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_LED/2.10.13_LDR_with_4_LEDs.md
+              - LDR with 5 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_LED/2.10.14_LDR_with_5_LEDs.md
+          - LDR + Buzzer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_Buzzer/2.10.15_LDR_with_Buzzer.md
           - Sound + LED:
-              - Sound with 1 LED: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.16_Sound_with_1_LED.md
-              - Sound with 2 LEDs: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.17_Sound_with_2_LEDs.md
-              - Sound with 3 LEDs: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.18_Sound_with_3_LEDs.md
-      - 2.11 Potentiometer Buzzer: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.11_Potentiometer_Buzzer/2.111_Potentiometer_Buzzer.md
-      - 2.12 Automatic traffic detention: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.12_Automatic_traffic_detention/2.12.1_Automatic_traffic_detention.md
-      - 2.13 Intruder Alarm System: Arduino_STEMAIDE_Manual_v1.0/Intermediate Projects/2.13_Intruder_Alarm_System/2.13.1_Automatic_traffic_detention.md
-  - Advanced STEM Projects:
-      - Overview: Arduino_STEMAIDE_Manual_v1.0/Advance Projects/index.md
-      - Automatic Curtain Controller: Arduino_STEMAIDE_Manual_v1.0/Advance Projects/Automatic Curtain Controller/automatic_curtain_controller.md
-      - Smart Parking System: Arduino_STEMAIDE_Manual_v1.0/Advance Projects/Smart_Parking_System/Smart_Car_Parking_System.md
-      - Home Security System: Arduino_STEMAIDE_Manual_v1.0/Advance Projects/Home_Security_System/Smart_Security_System.md
-      - Security Gate Audio Alert: Arduino_STEMAIDE_Manual_v1.0/Advance Projects/Security_Gate_Audio_Alert/security_gate_audio.md
-      - Smart Traffic Light System: Arduino_STEMAIDE_Manual_v1.0/Advance Projects/Smart_Traffic_Light_System/Smart_Traffic_Light_System.md
-      - STEM Capstone Projects:
-          - Smart Gauge System: Arduino_STEMAIDE_Manual_v1.0/Advance Projects/STEM_Capstone_Projects/Smart_Gauge_System.md
+              - Sound with 1 LED: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.16_Sound_with_1_LED.md
+              - Sound with 2 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.17_Sound_with_2_LEDs.md
+              - Sound with 3 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.18_Sound_with_3_LEDs.md
+      - 2.11 Potentiometer Buzzer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.11_Potentiometer_Buzzer/2.111_Potentiometer_Buzzer.md
+      - 2.12 Automatic traffic detention: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.12_Automatic_traffic_detention/2.12.1_Automatic_traffic_detention.md
+      - 2.13 Intruder Alarm System: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.13_Intruder_Alarm_System/2.13.1_Automatic_traffic_detention.md
+  - Advanced Projects:
+      - Overview: STEMAIDE_CODER_Kit_Manual/Advance Projects/index.md
+      - 3.1 Automatic Curtain Controller: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.1_Automatic_Curtain_Controller/3.1.1_Automatic_Curtain_Controller.md
+      - 3.2 Smart Parking System: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.2_Smart_Parking_System/3.2.1_Smart_Car_Parking_System.md
+      - 3.3 Home Security System: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.3_Home_Security_System/3.3.1_Smart_Security_System.md
+      - 3.4 Security Gate Audio Alert: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.4_Security_Gate_Audio_Alert/3.4.1_Security_Gate_Audio_Alert.md
+      - 3.5 Smart Traffic Light System: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.5_Smart_Traffic_Light_System/3.5.1_Smart_Traffic_Light_System.md
+      - 3.6 STEM Capstone Projects:
+          - 3.6.1 Smart Gauge System: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.6_STEM_Capstone_Projects/3.6.1_Smart_Gauge_System.md
+          - 3.6.2 Smart Traffic Light System: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.6_STEM_Capstone_Projects/3.6.2_Smart_Traffic_Light_System.md
+      - 3.7 Sound Controlled Desk Lamp: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.7_Sound_Controlled_Desk_Lamp/3.7.1_Sound_Controlled_Desk_Lamp.md
   - Appendices:
-    #   - Overview: Arduino_STEMAIDE_Manual_v1.0/Appendices/index.md
-      - Wiring Reference: Arduino_STEMAIDE_Manual_v1.0/Appendices/Wiring_Reference.md
-      - Common Errors: Arduino_STEMAIDE_Manual_v1.0/Appendices/Common_Errors.md
-      - Component Guide: Arduino_STEMAIDE_Manual_v1.0/Appendices/Component_Guide.md
-      - Troubleshooting: Arduino_STEMAIDE_Manual_v1.0/Appendices/Troubleshooting.md
-    #   - User Guide: Arduino_STEMAIDE_Manual_v1.0/Appendices/User_Guide.md
-    #   - Developer Guide: Arduino_STEMAIDE_Manual_v1.0/Appendices/Developer_Guide.md
-    #   - Core Features: Arduino_STEMAIDE_Manual_v1.0/Appendices/Core_Features.md
-    #   - Advanced Features: Arduino_STEMAIDE_Manual_v1.0/Appendices/Advanced_Features.md
-    #   - About Prol: Arduino_STEMAIDE_Manual_v1.0/Appendices/About_Prol.md
-      - Code of Conduct: Arduino_STEMAIDE_Manual_v1.0/Appendices/Code_of_Conduct.md
-      - Contributing: Arduino_STEMAIDE_Manual_v1.0/Appendices/Contributing.md
-      - Changelog: Arduino_STEMAIDE_Manual_v1.0/Appendices/Changelog.md
-  - Glossary: Arduino_STEMAIDE_Manual_v1.0/Glossary/STEMAIDE_Glossary.md
-  - References: Arduino_STEMAIDE_Manual_v1.0/References/References.md
+    #   - Overview: STEMAIDE_CODER_Kit_Manual/Appendices/index.md
+      - Wiring Reference: STEMAIDE_CODER_Kit_Manual/Appendices/Wiring_Reference.md
+      - Common Errors: STEMAIDE_CODER_Kit_Manual/Appendices/Common_Errors.md
+      - Component Guide: STEMAIDE_CODER_Kit_Manual/Appendices/Component_Guide.md
+      - Troubleshooting: STEMAIDE_CODER_Kit_Manual/Appendices/Troubleshooting.md
+    #   - User Guide: STEMAIDE_CODER_Kit_Manual/Appendices/User_Guide.md
+    #   - Developer Guide: STEMAIDE_CODER_Kit_Manual/Appendices/Developer_Guide.md
+    #   - Core Features: STEMAIDE_CODER_Kit_Manual/Appendices/Core_Features.md
+    #   - Advanced Features: STEMAIDE_CODER_Kit_Manual/Appendices/Advanced_Features.md
+    #   - About Prol: STEMAIDE_CODER_Kit_Manual/Appendices/About_Prol.md
+      - Code of Conduct: STEMAIDE_CODER_Kit_Manual/Appendices/Code_of_Conduct.md
+      - Contributing: STEMAIDE_CODER_Kit_Manual/Appendices/Contributing.md
+      - Changelog: STEMAIDE_CODER_Kit_Manual/Appendices/Changelog.md
+  - Glossary: STEMAIDE_CODER_Kit_Manual/Glossary/STEMAIDE_Glossary.md
+  - References: STEMAIDE_CODER_Kit_Manual/References/References.md
+
