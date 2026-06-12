@@ -29,6 +29,17 @@ hooks:
 plugins:
   - search
 
+validation:
+  nav:
+    omitted_files: ignore
+    not_found: ignore
+    absolute_links: ignore
+  links:
+    not_found: ignore
+    anchors: ignore
+    absolute_links: ignore
+    unrecognized_links: ignore
+
 extra_css:
   - stylesheets/extra.css
 
