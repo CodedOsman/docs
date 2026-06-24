@@ -35,15 +35,6 @@ hide:
   </div>
 </div>
 
----
-
-<!-- ## Introducing the STEMAIDE kit
-The STEMAIDE Kit is a comprehensive plug-and-play educational toolkit designed  to  inspire  and  empower young  learners  in  Africa.  It  is  specifically  curated  to  promote  STEM  (Science,  Technology, Engineering,  and  Mathematics)  education  and  foster  the  development  of  critical  skills,  creativity, problem-solving abilities, and an entrepreneurial mindset.
-
-The  STEMAIDE  kit  includes  a  range  of  components  and  materials  that  allow  you  to  engage  in  first-hand learning experiences and build over two hundred projects to explore various STEM concepts.
-
-This guide helps you discover all the amazing things the STEMAIDE kit can do. -->
-
 ## Quick Start
 Get your hardware kit set up and write your first program in under 10 minutes.
 <div class="quickstart-grid">
