@@ -49,19 +49,19 @@ extra_javascript:
 extra:
   social:
     - icon: fontawesome/brands/instagram
-      link: https://www.instagram.com/stemaide
+      link: https://www.instagram.com/stemaideafrica
       name: Instagram
     - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/stemaide
       name: Facebook
     - icon: fontawesome/brands/x-twitter
-      link: https://www.x.com/stemaide
+      link: https://twitter.com/stemaideafrica
       name: X (Twitter)
     - icon: fontawesome/brands/whatsapp
-      link: https://wa.me/your_phone_number
+      link: https://www.whatsapp.com/channel/0029VaCyaNN5a23vbdCABI0n
       name: WhatsApp
     - icon: fontawesome/brands/youtube
-      link: https://www.youtube.com/stemaide
+      link: https://www.youtube.com/@STEMAIDEAfrica
       name: YouTube
     - icon: fontawesome/brands/tiktok
       link: https://www.tiktok.com/@stemaide
@@ -117,6 +117,18 @@ nav:
           - 1.7.2 Sweep: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.7_Servo_Motor/1.7.2_Sweep.md
       - 1.8 Ultrasonic Sensor: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.8_Ultrasonic_Sensor/1.8.1_Ultrasonic_With_RGB.md
       - 1.9 Sound Sensor: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.9_Sound_Sensor/1.9.1_Sound_Sensor.md
+      - 1.10 Noise Level Alarm:
+         - 1.10 Noise Level Alarm: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.10_Noise_Level_Alarm/1.10.1_Noise_level_alarm.md
+      - 1.11 Smart Simulation Night/Day Light:
+         - 1.11 Solar Simulation Night/Day Light: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.11_Solar_Simulation/1.11.1_solar_simulated.md
+      - 1.12 Smart Potentiometer Dimmer:
+         - 1.12 Smart Potentiometer Dimmer: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.12_Smart_potentiometer_dimmer/1.12.1_smart_potentiometer.md
+      - 1.13 Smart RGB Selector:
+         - 1.13 Smart RGB Selector: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.13_Push_Button_RGB_Selector/1.13.1_push_button_rgb_selector.md
+      - 1.14 Smart Servo Controlled Drawbridge:
+         - 1.14 Smart Servo Controlled Drawbridge: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.14_Servo_Controlled_Drawbridge/1.14.1_servo_controlled_drawbridge.md
+      - 1.15 Smart Distance Based Led Brighness:
+         - 1.15 Smart Distance Based Led Brighness: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.15_Distance_Based_Led_Brightness/1.15.1_distance_based_led.md
   - Intermediate Projects:
       - Overview: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/index.md
       - 2.1 Button and Buzzer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.1_Button_And_Buzzer/2.1.1_Button_And_Buzzer.md
