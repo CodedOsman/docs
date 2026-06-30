@@ -23,8 +23,8 @@ theme:
     - toc.integrate
     - navigation.footer
 
-hooks:
-  - hooks.py
+# hooks:
+#   - hooks.py
 
 plugins:
   - search
