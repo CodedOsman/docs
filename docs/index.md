@@ -22,11 +22,11 @@ hide:
     <span class="stat-label">Foundation Lessons</span>
   </div>
   <div class="stat-card">
-    <span class="stat-num">30+</span>
+    <span class="stat-num">42</span>
     <span class="stat-label">Beginner Projects</span>
   </div>
   <div class="stat-card">
-    <span class="stat-num">35+</span>
+    <span class="stat-num">30</span>
     <span class="stat-label">Intermediate Projects</span>
   </div>
   <div class="stat-card">
