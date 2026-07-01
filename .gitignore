@@ -21,3 +21,8 @@ site.zip
 
 # Ignore OS generated files
 Thumbs.db
+# hooks.py
+# rebuild.py
+# pycache/
+
+# __pycache__/

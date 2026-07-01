@@ -35,7 +35,7 @@ These projects combine two or more components to create intelligent systems:
 - **2.9 Servo and Ultrasonic** — Distance-triggered servo movement for gating systems.
 - **2.10 Smart Alarm Projects** — Advanced multi-sensor alarm systems with threshold-based triggering.
 - **2.11 Potentiometer Buzzer** — Create a distance theremin using a potentiometer and buzzer.
-- **2.12 Automatic traffic detention** — Proximity-based smart street lighting system.
+- **2.12 Automatic traffic detection** — Proximity-based smart street lighting system.
 - **2.13 Intruder Alarm System** — Ultrasonic-triggered home security alarm system.
 
 **Select any topic on the left sidebar to begin!**
