@@ -1,0 +1,363 @@
+# Project 187
+## ENVIRONMENTAL POLLUTION ALERT
+
+**Intermediate Embedded Systems Project Using Raspberry Pi Pico 2 W and MicroPython**
+
+| Field | Value |
+|-------|-------|
+| Manual Section | Intermediate Projects |
+| Project Level | Intermediate |
+| Board | Raspberry Pi Pico 2 W |
+| Programming Language | MicroPython |
+| Version | 1.0 |
+| Date | May 2026 |
+| Prepared for | STEMAIDE Africa |
+
+---
+
+## Contents
+
+- [Overview](#overview)
+- [Learning Objectives](#learning-objectives)
+- [Required Components](#required-components)
+- [Before You Begin](#before-you-begin)
+- [Circuit Connections](#circuit-connections)
+- [Wiring Diagram](#wiring-diagram)
+- [Step-by-Step Assembly](#step-by-step-assembly)
+- [Testing Individual Components](#testing-individual-components)
+- [Full Project Code](#full-project-code)
+- [How the Code Works](#how-the-code-works)
+- [Expected Result](#expected-result)
+- [Troubleshooting](#troubleshooting)
+- [Challenge Extensions](#challenge-extensions)
+- [Reflection Questions](#reflection-questions)
+- [Save Your Work](#save-your-work)
+- [Next Project](#next-project)
+
+---
+
+## Overview
+
+This project builds an environmental pollution alert that reacts to changes from an air-quality proxy baseline.
+
+Students will connect an analog gas or air-quality proxy sensor, allow it to stabilise, compare readings against a baseline, and raise watch or alert states when the reading climbs too far.
+
+The final system should report NORMAL, WATCH, or ALERT, show the current state with LEDs, and sound a buzzer only after the alert level has been confirmed.
+
+### Project Story
+
+The real-world use case is a classroom, workshop, or public-space demo where students need to understand how a low-cost air-quality sensor can flag unusual conditions, while also learning that it is not a certified environmental monitor.
+
+---
+
+## Learning Objectives
+
+- Work with an analog air-quality or gas-proxy sensor
+- Use sensor warm-up and baseline capture in a monitoring workflow
+- Separate watch-level drift from confirmed alert conditions
+- Use acknowledgement-free automatic recovery when conditions improve
+- Explain why proxy air sensing is not the same as a certified pollution measurement
+- Apply safety thinking when a module may use 5V or a heated sensor element
+
+---
+
+## Required Components
+
+| Component Name | Quantity | Short Description | Important Note |
+|----------------|----------|-------------------|----------------|
+| Raspberry Pi Pico 2 W | 1 | Main controller board | Use MicroPython firmware |
+| Air-quality or gas-proxy sensor module | 1 | Analog proxy sensor such as an MQ-style or similar module with a safe output path | Do not connect a 5V analog output directly to the Pico ADC |
+| Yellow LED and 220 Ω resistor | 1 each | Shows watch-level drift | Use current limiting |
+| Red LED and 220 Ω resistor | 1 each | Shows a confirmed alert | Use current limiting |
+| Active buzzer | 1 | Sounds when alert level is confirmed | Use a 3.3V-safe buzzer or suitable driver |
+| Breadboard and jumper wires | 1 set | Prototype wiring | Disconnect power before rewiring |
+
+---
+
+## Before You Begin
+
+Before starting this project, make sure you have completed the foundational sections at the beginning of the manual:
+
+- **Software Installation and Setup**
+- **Safety Guidelines**
+- **Breadboard Basics**
+- **Reading Circuit Diagrams**
+
+### Project-Specific Setup Notes
+
+- No external library is required. This project uses only built-in MicroPython modules
+- Run `import os` and `print(os.listdir())` in the Thonny Shell to confirm the Pico file system is responding before you save the code
+- Many gas-sensor modules need warm-up time before the baseline becomes stable
+- If your sensor module requires 5V, do not connect its analog output directly to the Pico. Use a safe 3.3V-compatible output path or appropriate signal conditioning
+
+### Project-Specific Safety Note
+
+Keep electronics away from water and wet surfaces.
+
+Some gas-sensor modules contain heated elements and can become warm during operation.
+
+This project is a learning alert only, not a certified health or industrial safety detector.
+
+Test in a ventilated space and do not expose the sensor to dangerous concentrations of real pollutants.
+
+---
+
+## Circuit Connections
+
+| Component Pin | Connects To | Pico GPIO / Physical Pin Number | Notes |
+|---------------|-------------|---------------------------------|-------|
+| Proxy sensor VCC | Module dependent | Follow sensor label | Use only the correct safe supply arrangement for your module |
+| Proxy sensor GND | GND | Any GND pin | Common ground |
+| Proxy sensor analog output | GPIO 26 | GPIO 26 / physical pin 31 | The ADC input must stay within 0 to 3.3V |
+| Yellow LED anode | GPIO 16 through 220 Ω resistor | GPIO 16 / physical pin 21 | Watch indicator |
+| Red LED anode | GPIO 17 through 220 Ω resistor | GPIO 17 / physical pin 22 | Alert indicator |
+| Buzzer positive | GPIO 18 | GPIO 18 / physical pin 24 | Alert buzzer |
+| LED cathodes and buzzer negative | GND | Any GND pin | Return path |
+
+---
+
+## Wiring Diagram
+
+```
+  Air-quality proxy sensor output -> GPIO 26
+  GPIO 16 -> 220Ω -> Yellow LED anode
+  GPIO 17 -> 220Ω -> Red LED anode
+  GPIO 18                    -> Buzzer positive
+  All grounds                -> GND
+```
+
+---
+
+## Step-by-Step Assembly
+
+### Step 1: Place the Raspberry Pi Pico 2W
+Place the Raspberry Pi Pico 2W on the breadboard so it sits across the center gap. Keep the USB port facing outward so you can easily connect it to your computer.
+
+### Step 2: Place the Air-Quality Proxy Sensor
+Place the gas or air-quality proxy sensor module where air can reach it safely. Identify VCC, GND, and analog output before wiring.
+
+### Step 3: Connect the Proxy Sensor
+Connect sensor VCC to the safe supply required by the module label. Connect sensor GND to GND. Connect the sensor analog output to GPIO 26. Confirm the analog signal reaching GPIO 26 stays within 0V to 3.3V.
+
+### Step 4: Place and Connect the Yellow LED
+Place the yellow watch LED on the breadboard. Identify the long leg as the anode (+) and the short leg as the cathode (-). Connect the yellow LED long leg through a 220Ω resistor to GPIO 16. Connect the yellow LED short leg to GND.
+
+### Step 5: Place and Connect the Red LED
+Place the red alert LED on the breadboard. Identify the long leg as the anode (+) and the short leg as the cathode (-). Connect the red LED long leg through a 220Ω resistor to GPIO 17. Connect the red LED short leg to GND.
+
+### Step 6: Place and Connect the Buzzer
+Place the buzzer on the breadboard and identify its positive (+) and negative (-) pins. Connect the buzzer positive pin to GPIO 18. Connect the buzzer negative pin to GND.
+
+### Wiring Check
+
+- [x] Pico 2W is placed correctly across the breadboard center gap
+- [x] Proxy sensor analog output connects to GPIO 26
+- [x] Proxy sensor output is confirmed 3.3V-safe before connecting to the Pico
+- [x] Yellow LED long leg connects through a 220Ω resistor to GPIO 16
+- [x] Red LED long leg connects through a 220Ω resistor to GPIO 17
+- [x] Both LED short legs connect to GND
+- [x] Buzzer positive pin connects to GPIO 18
+- [x] Buzzer negative pin connects to GND
+- [x] No loose jumper wires
+
+> **Intermediate Note**
+> Many gas or air-quality modules need warm-up time before the baseline is stable. Let the sensor warm up before judging watch or alert thresholds.
+
+> **Safety Note**
+> Gas and air quality sensors in these projects are for learning/prototype use only and should not be treated as certified safety instruments. If the module requires 5V, make sure the signal output is safe for Pico GPIO before connecting it.
+
+---
+
+## Testing Individual Components
+
+Before running the full project, test each part separately. This makes it easier to find wiring, library, or code problems.
+
+### Hardware Setup
+
+- Build the sensor input and indicator outputs first, then verify the ADC signal is safe for the Pico
+- Do not begin threshold tuning until the sensor has warmed up and stabilised
+
+### Test the Input Sensor
+
+- Watch the raw ADC value during warm-up and record how stable the baseline becomes over time
+- Expose the sensor only to mild, safe test conditions such as normal room variation or a controlled demonstration source
+
+### Test the Output Device
+
+- Force the WATCH and ALERT states briefly and confirm the yellow LED, red LED, and buzzer behave correctly
+- Check that the buzzer does not sound during only the watch-level drift condition
+
+### Test Communication
+
+- Watch the Thonny Shell and confirm it prints the baseline, current raw value, delta, and state
+- Use the delta values to tune the watch and alert thresholds
+
+### Run the Full System
+
+- Allow the sensor to stabilise, then observe the normal state in clean room air
+- Introduce a safe controlled change and confirm the system moves through WATCH before ALERT when the delta becomes large enough
+
+### Save the Project
+
+- Save the final code and record the warm-up time, baseline, and threshold values used in your tests
+- Write down the limits of this proxy alert before claiming anything about real air safety
+
+### Additional Testing and Calibration Checks
+
+- **Warm-up test**: confirm the sensor reading becomes more stable after the warm-up period
+- **Normal condition test**: record a few normal-room readings and confirm the state stays NORMAL
+- **Threshold condition test**: create a safe controlled change and compare WATCH and ALERT responses
+- **Output response test**: confirm the LEDs and buzzer match the printed state
+- **Calibration note**: different proxy sensors and environments will need different WATCH_DELTA and ALERT_DELTA values
+
+---
+
+## Full Project Code
+
+After completing and checking the circuit connections, open Thonny IDE. Copy and paste the code below into a new file, or upload the project file to the Raspberry Pi Pico 2 W, then run it from Thonny.
+
+```python
+from machine import ADC, Pin
+import time
+
+pollution_sensor = ADC(26)
+watch_led = Pin(16, Pin.OUT)
+alert_led = Pin(17, Pin.OUT)
+buzzer = Pin(18, Pin.OUT)
+
+WARMUP_SECONDS = 20
+WATCH_DELTA = 3500
+ALERT_DELTA = 7000
+CONFIRM_READS = 3
+
+baseline = 0
+alert_hits = 0
+
+
+def average_raw(samples=10, delay=0.1):
+    total = 0
+    for _ in range(samples):
+        total += pollution_sensor.read_u16()
+        time.sleep(delay)
+    return total // samples
+
+
+def beep(times=2):
+    for _ in range(times):
+        buzzer.value(1)
+        time.sleep(0.12)
+        buzzer.value(0)
+        time.sleep(0.12)
+
+
+print('=== Environmental Pollution Alert ===')
+print('Warming up sensor...')
+time.sleep(WARMUP_SECONDS)
+baseline = average_raw()
+print('Baseline stored:', baseline)
+print()
+
+while True:
+    raw = average_raw(samples=4, delay=0.05)
+    delta = max(0, raw - baseline)
+
+    if delta >= ALERT_DELTA:
+        alert_hits += 1
+    else:
+        alert_hits = 0
+
+    if alert_hits >= CONFIRM_READS:
+        state = 'ALERT'
+        watch_led.value(0)
+        alert_led.value(1)
+        beep()
+    elif delta >= WATCH_DELTA:
+        state = 'WATCH'
+        watch_led.value(1)
+        alert_led.value(0)
+        buzzer.value(0)
+    else:
+        state = 'NORMAL'
+        watch_led.value(0)
+        alert_led.value(0)
+        buzzer.value(0)
+
+    print('Raw: {} | Baseline: {} | Delta: {} | Alert hits: {} | State: {}'.format(
+        raw, baseline, delta, alert_hits, state
+    ))
+    time.sleep(2)
+```
+
+---
+
+## How the Code Works
+
+| Code Section | What It Does | Why It Matters |
+|--------------|--------------|----------------|
+| Warm-up stage | Waits before storing the baseline | Many proxy gas sensors are unstable immediately after power-up |
+| Averaged readings | Use several ADC samples for each result | Averaging reduces small random fluctuations |
+| Delta from baseline | Measures how far the current reading has risen above normal | This is the main proxy alert calculation |
+| Watch and alert states | Separate moderate change from confirmed strong change | Students can compare early warning with full alert behaviour |
+
+---
+
+## Expected Result
+
+After warm-up, the system should store a baseline and remain in NORMAL state under stable conditions.
+
+A moderate increase above the baseline should turn on the yellow watch LED without sounding the buzzer.
+
+A confirmed larger increase should turn on the red alert LED and sound the buzzer.
+
+---
+
+## Troubleshooting
+
+| Problem | Possible cause | Solution |
+|---------|----------------|----------|
+| The alert triggers all the time | The baseline was taken before the sensor stabilised or the thresholds are too low | Increase the warm-up time and retune the thresholds |
+| The reading never changes much | The test condition is too weak or the sensor is not wired correctly | Check the sensor power and confirm the output changes under a safe controlled variation |
+| The Pico becomes unstable | A 5V analog output may be connected directly to the ADC | Use a safe 3.3V-compatible signal path |
+| The buzzer never sounds | The alert level is not being confirmed enough times or the buzzer wiring is wrong | Check GPIO 18 and confirm delta stays above ALERT_DELTA for repeated reads |
+
+---
+
+## Challenge Extensions
+
+- Decide whether the baseline should update slowly over time or stay fixed, and explain the risk of each choice
+- Explain how you would validate this project without over-claiming that it measures true pollution concentration
+- Add a baseline-reset button for different test locations
+- Add Wi-Fi reporting so watch and alert events can be viewed remotely
+- Add an OLED display that shows raw, baseline, and delta values locally
+- Add a second proxy sensor and compare two locations side by side
+
+---
+
+## Reflection Questions
+
+1. Why is warm-up important for many analog gas or air-quality sensors?
+2. Why should this system be described as a proxy alert rather than a certified pollution instrument?
+3. How could the environment change the baseline even when no obvious pollution source is present?
+4. What evidence would you need before using a system like this for real safety decisions?
+
+---
+
+## Save Your Work
+
+Save the file to your computer as:
+
+```
+project_187_environmental_pollution_alert.py
+```
+
+If you want the program to run automatically when the Pico powers on, save the final version to the Pico as:
+
+```
+main.py
+```
+
+---
+
+## Next Project
+
+**Project 188: Smart Sanitation Facility Monitor**

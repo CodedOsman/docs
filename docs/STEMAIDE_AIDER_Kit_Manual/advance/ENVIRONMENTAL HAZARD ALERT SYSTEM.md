@@ -1,0 +1,279 @@
+# Project 199
+## Environmental Hazard Alert System
+
+**Advanced Embedded Systems Project Using Raspberry Pi Pico 2 W and MicroPython**
+
+
+## Contents
+
+- [Overview](#overview)
+- [Learning Objectives](#learning-objectives)
+- [Required Components](#required-components)
+- [Before You Begin](#before-you-begin)
+- [Circuit Connections](#circuit-connections)
+- [Wiring Diagram](#wiring-diagram)
+- [Step-by-Step Assembly](#step-by-step-assembly)
+- [Testing Individual Components](#testing-individual-components)
+- [Full Project Code](#full-project-code)
+- [How the Code Works](#how-the-code-works)
+- [Expected Result](#expected-result)
+- [Troubleshooting](#troubleshooting)
+- [Challenge Extensions](#challenge-extensions)
+- [Reflection Questions](#reflection-questions)
+- [Save Your Work](#save-your-work)
+- [Next Project](#next-project)
+
+---
+
+## Overview
+
+The Pico watches environmental conditions and raises a local warning when air quality or heat moves into an unsafe prototype range.
+
+Environmental risks are harder to act on when the system does not clearly escalate from normal to warning behavior.
+
+A Pico 2 W prototype with an MQ-5 Liquefied Petroleum/Methane Gas Sensor, BME280, LED, and buzzer.
+
+Environmental alert thresholds, multi-output warning behavior, and careful prototype framing.
+
+### Project Story
+
+**Advanced Project**: This advanced project is designed to help learners move beyond basic wiring and coding into complete system thinking. The learner should build the prototype, test each subsystem, validate the data, explain the design decisions, and propose improvements for real-world deployment.
+
+Early environmental warnings help people respond sooner, but only when the system is clear about what the warning means and what its limits are.
+
+---
+
+## Learning Objectives
+
+- Read a sensor value or detection signal
+- Turn thresholds into clear NORMAL, WARNING, or CRITICAL states
+- Coordinate visual and audible alerts
+- Check false triggers and calibration limits
+- Explain why prototypes are not certified safety systems
+
+---
+
+## Required Components
+
+| Component Name | Quantity | Short Description | Important Note |
+|----------------|----------|-------------------|----------------|
+| Raspberry Pi Pico 2 W | 1 | Main controller board | Use MicroPython firmware |
+| MQ-5 Liquefied Petroleum/Methane Gas Sensor | 1 | Provides an LPG/methane gas proxy input | Warm up before use and protect the ADC if required |
+| BME280 environmental sensor | 1 | Measures temperature, humidity, and pressure | Uses I2C; upload bme280.py if needed |
+| LED | 1 | Visual warning output | Add a 220 ohm resistor |
+| Active buzzer | 1 | Audible warning output | Use a low-current buzzer module |
+
+---
+
+## Before You Begin
+
+Before starting this project, make sure you have completed the foundational sections at the beginning of the manual:
+
+- **Software Installation and Setup**
+- **Safety Guidelines**
+- **Breadboard Basics**
+- **Reading Circuit Diagrams**
+
+### Project-Specific Setup Notes
+
+- Upload a compatible bme280.py MicroPython driver; the remaining timing and control logic uses built-in MicroPython modules.
+- This alert is a local prototype warning only and not a certified environmental safety system.
+
+### Project-Specific Safety Note
+
+Gas sensor readings are for learning and prototype use only and should not be treated as certified safety measurements.
+
+Many MQ sensor modules use a 5V heater and can output up to 5V on the analog pin. Use a resistor divider or a 3.3V-safe conditioning board before connecting the analog output to the Pico ADC.
+
+Treat the warning as prototype support only and not as a certified safety instruction.
+
+---
+
+## Circuit Connections
+
+| Component Pin | Connects To | Pico GPIO / Physical Pin Number | Notes |
+|---------------|-------------|---------------------------------|-------|
+| BME280 VCC | 3.3V output | Physical pin 36 | Sensor power |
+| BME280 GND | GND | Physical pin 38 | Common ground |
+| BME280 SDA | GPIO 20 | GPIO 20 / physical pin 26 | I2C0 SDA |
+| BME280 SCL | GPIO 21 | GPIO 21 / physical pin 27 | I2C0 SCL |
+| MQ-5 AO | GPIO 26 ADC0 | GPIO 26 / physical pin 31 | LPG/methane gas proxy input |
+| LED anode | 220 ohm resistor to GPIO 16 | GPIO 16 / physical pin 21 | Visual alert |
+| Buzzer positive | GPIO 17 | GPIO 17 / physical pin 22 | Audible alert |
+
+---
+
+## Wiring Diagram
+
+```
+  MQ-5 AO                    -> GPIO 26
+  BME280 SDA                 -> GPIO 20
+  BME280 SCL                 -> GPIO 21
+  GPIO 16 -> 220 ohm resistor -> LED anode
+  GPIO 17                    -> buzzer positive
+  Common GND                 -> all parts
+  BME280 VCC                 -> 3.3V
+  BME280 GND                 -> GND
+```
+
+---
+
+## Step-by-Step Assembly
+
+1. Connect the MQ-5 analog output to GPIO 26 through a safe ADC path.
+2. Connect the BME280 to Pico 3.3V, GND, GPIO 20 (SDA), and GPIO 21 (SCL).
+3. Wire the LED to GPIO 16 through a 220 ohm resistor and the buzzer to GPIO 17.
+4. Warm up the MQ-5 before trusting the warning thresholds.
+
+---
+
+## Testing Individual Components
+
+Before running the full project, test each subsystem separately. This makes it easier to find wiring, library, or logic problems before full integration.
+
+1. **Hardware setup**: Assemble the Pico, sensor, indicator, and load wiring exactly as shown in the connection table before applying power.
+2. **Test the input sensor**: Test the MQ-5 and BME280 separately so the warning logic is based on believable readings.
+3. **Test the output device**: Test the LED and buzzer outputs with short standalone scripts before integrating the alert logic.
+4. **Test the decision logic**: Increase gas or temperature one factor at a time and confirm the alert level changes logically.
+5. **Run the full system**: Run the full system and compare the outputs with the printed readings.
+6. **Validate the prototype**: Discuss what false-trigger sources or calibration issues could weaken the alert reliability.
+7. **Save the project**: Save the validated program on the Pico as main.py and keep a copy on the computer for future edits.
+
+---
+
+## Full Project Code
+
+After completing and checking the circuit connections, open Thonny IDE, copy and paste this code into a new file or upload the project file to the Raspberry Pi Pico 2 W, then run it from Thonny.
+
+```python
+from machine import ADC, I2C, Pin
+import bme280
+import time
+
+GAS_PIN = 26
+BME_SDA_PIN = 20
+BME_SCL_PIN = 21
+LED_PIN = 16
+BUZZER_PIN = 17
+GAS_WATCH = 18000
+GAS_CRITICAL = 30000
+TEMP_WATCH = 30
+TEMP_CRITICAL = 35
+
+mq5 = ADC(GAS_PIN)
+i2c = I2C(0, sda=Pin(BME_SDA_PIN), scl=Pin(BME_SCL_PIN), freq=400000)
+climate = bme280.BME280(i2c=i2c)
+led = Pin(LED_PIN, Pin.OUT)
+buzzer = Pin(BUZZER_PIN, Pin.OUT)
+
+print('Environmental alert system ready')
+
+while True:
+    gas_value = mq5.read_u16()
+    try:
+        values = climate.values
+        temperature = float(values[0].replace('C', ''))
+        pressure = float(values[1].replace('hPa', ''))
+        humidity = float(values[2].replace('%', ''))
+    except Exception:
+        temperature = 0
+        pressure = 0
+        humidity = 0
+
+    if gas_value >= GAS_CRITICAL or temperature >= TEMP_CRITICAL:
+        level = 'CRITICAL'
+    elif gas_value >= GAS_WATCH or temperature >= TEMP_WATCH:
+        level = 'WATCH'
+    else:
+        level = 'NORMAL'
+
+    led.value(1 if level != 'NORMAL' else 0)
+    buzzer.value(1 if level == 'CRITICAL' else 0)
+    print('Gas:{} Temp:{}C Hum:{}% Level:{}'.format(gas_value, temperature, humidity, level))
+    time.sleep(2)
+```
+
+---
+
+## How the Code Works
+
+| Code Section | What It Does | Why It Matters | What to Modify During Testing |
+|--------------|--------------|----------------|------------------------------|
+| Warning thresholds | Turns gas and temperature values into NORMAL, WATCH, or CRITICAL | Clear escalation rules make the system easier to test and explain | Adjust the warning levels only after repeated baseline measurements |
+| LED and buzzer outputs | Uses the LED for warning states and the buzzer for the strongest state | Different outputs help users distinguish mild and strong warnings | If the buzzer is too disruptive, validate the LED path first |
+| Serial reporting | Prints the measured values and the active level | The Shell output helps validate the code against the hardware response | Compare the printed level with the actual outputs during each test |
+
+---
+
+## Expected Result
+
+The serial monitor reports the current reading or state clearly.
+
+The hardware output responds when the decision logic changes state.
+
+Subsystem behavior matches the thresholds, timing, or rules described in the document.
+
+### Validation Checks
+
+- **Normal condition test**: confirm the system stays in its safe or idle state under baseline conditions
+- **Warning condition test**: move the input close to the chosen threshold and confirm the transition is sensible
+- **Critical condition test**: trigger the strongest alert or control state and confirm the output response is correct
+- **Calibration test**: compare the sensor or timing against a known reference or repeated trial
+- **Limitation test**: deliberately create an awkward or noisy condition and note how the prototype behaves
+
+### Deployment and Limitations
+
+- This prototype can be used for local warning demonstrations and early field trials
+- Before deployment, it needs enclosure protection, calibration records, and a clear response procedure
+- Alert systems should always be treated as decision-support tools unless they are certified for the application
+
+---
+
+## Troubleshooting
+
+| Problem | Possible Cause | Solution |
+|---------|----------------|----------|
+| The alert is always active | The thresholds are too low or the sensor is still warming up | Allow more warm-up time and raise the thresholds after observing the baseline |
+| The buzzer never sounds | The critical condition is not being reached or the buzzer wiring is wrong | Create a clearer critical test case and verify the buzzer pin with a simple script |
+| Temperature reads zero | The BME280 read failed | Test the BME280 separately and shorten the I2C wires if needed |
+| The LED does not change | The LED wiring is wrong | Run a short blink script on GPIO 16 and check the resistor path |
+
+---
+
+## Challenge Extensions
+
+- Add a second warning level or extra indicator
+- Log alert history for later analysis
+- Add local display or Wi-Fi communication as a future extension
+- Improve the enclosure for harsher environments
+
+---
+
+## Reflection Questions
+
+1. What could cause false alerts in this design?
+2. How would you calibrate the thresholds before deployment?
+3. What safety risk exists if users trust the prototype too much?
+4. How would the system fail in a harsh real environment?
+
+---
+
+## Save Your Work
+
+Save the file to your computer as:
+
+```
+project_199_environmental_hazard_alert_system.py
+```
+
+If you want the program to run automatically when the Pico powers on, save the final version to the Pico as:
+
+```
+main.py
+```
+
+---
+
+## Next Project
+
+**Project 200: Smart Water Conservation System**

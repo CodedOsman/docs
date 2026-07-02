@@ -1,0 +1,469 @@
+# Project 180
+## SMART IRRIGATION OPTIMIZATION DEMO
+
+**Intermediate Embedded Systems Project Using Raspberry Pi Pico 2 W and MicroPython**
+
+| Field | Value |
+|-------|-------|
+| Manual Section | Intermediate Projects |
+| Project Level | Intermediate |
+| Board | Raspberry Pi Pico 2 W |
+| Programming Language | MicroPython |
+| Version | 1.0 |
+| Date | May 2026 |
+| Prepared for | STEMAIDE Africa |
+
+---
+
+## Contents
+
+- [Overview](#overview)
+- [Learning Objectives](#learning-objectives)
+- [Required Components](#required-components)
+- [Before You Begin](#before-you-begin)
+- [Circuit Connections](#circuit-connections)
+- [Wiring Diagram](#wiring-diagram)
+- [Step-by-Step Assembly](#step-by-step-assembly)
+- [Testing Individual Components](#testing-individual-components)
+- [Full Project Code](#full-project-code)
+- [How the Code Works](#how-the-code-works)
+- [Expected Result](#expected-result)
+- [Troubleshooting](#troubleshooting)
+- [Challenge Extensions](#challenge-extensions)
+- [Reflection Questions](#reflection-questions)
+- [Save Your Work](#save-your-work)
+- [Next Project](#next-project)
+
+---
+
+## Overview
+
+This project builds a demo controller that compares a simple irrigation threshold with a more adaptive rule-based optimization mode.
+
+Students will combine a soil sensor, BME280 sensor, relay output, mode button, and trend logic into one optimization demonstration.
+
+The final system should switch between STANDARD and OPTIMIZED modes, adjust the effective dry threshold in optimized mode, and water only when the rule-based decision says irrigation is justified.
+
+### Project Story
+
+The real-world use case is a teaching system where students need to understand how extra context such as temperature and drying trend can improve watering decisions without using full machine learning.
+
+---
+
+## Learning Objectives
+
+- Compare simple threshold control with adaptive rule-based decision logic
+- Use sensor history to detect a drying trend
+- Adjust irrigation behaviour based on both temperature and soil condition
+- Use a mode button to compare two control strategies in one project
+- Explain why this is rule-based optimization rather than full machine learning
+- Test irrigation logic separately from hardware output control
+
+---
+
+## Required Components
+
+| Component Name | Quantity | Short Description | Important Note |
+|----------------|----------|-------------------|----------------|
+| Raspberry Pi Pico 2 W | 1 | Main controller board | Use MicroPython firmware |
+| Soil moisture sensor (analog output) | 1 | Measures the main irrigation input | Keep the electronics section dry |
+| BME280 sensor module | 1 | Temperature, humidity, and pressure input | Requires bme280.py on the Pico |
+| 1-channel relay module | 1 | Controls the pump or valve output | Verify active-low or active-high logic |
+| Push button | 1 | Switches between STANDARD and OPTIMIZED modes | Use with Pico internal pull-up |
+| Green LED and 220 Ω resistor | 1 each | Shows STANDARD mode | Use current limiting |
+| Blue LED and 220 Ω resistor | 1 each | Shows OPTIMIZED mode | Use current limiting |
+| Breadboard and jumper wires | 1 | Prototype wiring | Disconnect power before rewiring |
+
+---
+
+## Before You Begin
+
+Before starting this project, make sure you have completed the foundational sections at the beginning of the manual:
+
+- **Software Installation and Setup**
+- **Safety Guidelines**
+- **Breadboard Basics**
+- **Reading Circuit Diagrams**
+
+### Project-Specific Setup Notes
+
+- No external library is required. This project uses only built-in MicroPython modules
+- Run `import os` and `print(os.listdir())` in the Thonny Shell to confirm the Pico file system is responding before you save the code
+- If you are using a bare BME280 sensor instead of a ready-made module, add a 10 kΩ I2C pull-up resistors already included on most BME280 modules
+
+### Project-Specific Safety Note
+
+Keep electronics away from water and wet surfaces.
+
+Do not power motors, pumps, or relays directly from the Pico GPIO pins.
+
+Use an external power supply for pumps, valves, and other high-current loads.
+
+If the relay module is controlled by the Pico, make sure the Pico GND and external power supply GND are connected together unless the relay module is fully opto-isolated and wired correctly.
+
+Keep the first pump test short and be ready to disconnect external power if the relay wiring is wrong.
+
+Describe this project as rule-based optimization or decision logic, not full machine learning.
+
+---
+
+## Circuit Connections
+
+| Component Pin | Connect to | Pico GPIO / Physical Pin Number | Notes |
+|---------------|------------|---------------------------------|-------|
+| Soil sensor VCC | Physical pin 36 | Physical pin 36 | Sensor power |
+| Soil sensor GND | Any GND pin | Any GND pin | Common ground |
+| Soil sensor AOUT | GPIO 26 / physical pin 31 | GPIO 26 / physical pin 31 | Analog soil input |
+| Mode button one side | GPIO 5 / physical pin 7 | GPIO 5 / physical pin 7 | Uses internal pull-up |
+| Mode button other side | Any GND pin | Any GND pin | Pressing pulls the input low |
+| 1-channel relay module | GPIO 15 / physical pin 20 | GPIO 15 / physical pin 20 | Verify active-low or active-high logic |
+| STANDARD LED anode | GPIO 16 through 220 Ω resistor | GPIO 16 / physical pin 21 | Standard-mode indicator |
+| OPTIMIZED LED anode | GPIO 17 through 220 Ω resistor | GPIO 17 / physical pin 22 | Optimized-mode indicator |
+| LED cathodes | GND | Any GND pin | Return path |
+| BME280 VCC | 3.3V | Physical pin 36 | Sensor power |
+| BME280 GND | GND | Any GND pin | Common ground |
+| BME280 SDA | GPIO 2 | GPIO 2 / physical pin 4 | I2C data |
+| BME280 SCL | GPIO 3 | GPIO 3 / physical pin 5 | I2C clock |
+
+---
+
+## Wiring Diagram
+
+```
+  Soil sensor AOUT           -> GPIO 26
+  BME280 SDA                 -> GPIO 2
+  BME280 SCL                 -> GPIO 3
+  BME280 VCC                 -> 3.3V
+  BME280 GND                 -> GND
+  Mode button                -> GPIO 5 and GND
+  GPIO 15                    -> Relay IN
+  GPIO 16 -> 220Ω -> Green STANDARD LED anode
+  GPIO 17 -> 220Ω -> Blue OPTIMIZED LED anode
+  LED cathodes               -> GND
+  Relay contacts switch external pump or valve power only
+```
+
+---
+
+## Step-by-Step Assembly
+
+### Step 1: Place the Raspberry Pi Pico 2W
+Place the Raspberry Pi Pico 2W on the breadboard so it sits across the center gap. Keep the USB port facing outward so you can easily connect it to your computer.
+
+### Step 2: Position and Connect the Soil Sensor
+Place the soil moisture probe so the sensing end can enter the soil sample. Connect soil sensor VCC to 3.3V. Connect soil sensor GND to GND. Connect soil sensor AOUT, AO, or Signal to GPIO 26.
+
+### Step 3: Place the BME280 Sensor Module
+Place the BME280 module where it can sense the irrigation test environment. Connect BME280 VCC to 3.3V. Connect BME280 GND to GND. Connect BME280 SDA to GPIO 2 and BME280 SCL to GPIO 3. If your BME280 is bare, use the module pins labeled VCC, GND, SDA, and SCL.
+
+### Step 4: Place the Mode Button
+Place the mode push button across the breadboard center gap. Connect one side of the mode button to GPIO 5. Connect the opposite side of the mode button to GND.
+
+### Step 5: Place and Wire the Relay Module
+Identify relay VCC, GND, IN, COM, NO, and NC before wiring. Connect relay IN to GPIO 15. Power the relay module according to its label. Connect relay GND to Pico GND and to the external pump or valve supply GND where shared grounding is required.
+
+### Step 6: Place and Connect the Mode LEDs
+Place the STANDARD LED and OPTIMIZED LED on the breadboard. Connect the STANDARD LED long leg through a 220Ω resistor to GPIO 16. Connect the OPTIMIZED LED long leg through a 220Ω resistor to GPIO 17. Connect both LED short legs to GND.
+
+### Step 7: Keep the Irrigation Load on the Relay Side
+If you connect a pump or valve, route the external supply positive wire through relay COM and NO. Connect the pump or valve negative lead to the external supply negative wire.
+
+### Wiring Check
+
+- [x] Pico 2W is placed correctly across the breadboard center gap
+- [x] Soil sensor AOUT / AO / Signal connects to GPIO 26
+- [x] BME280 SDA connects to GPIO 2 and SCL connects to GPIO 3
+- [x] Mode button connects between GPIO 5 and GND
+- [x] Relay IN connects to GPIO 15
+- [x] STANDARD LED long leg connects through a 220Ω resistor to GPIO 16
+- [x] OPTIMIZED LED long leg connects through a 220Ω resistor to GPIO 17
+- [x] Both LED short legs connect to GND
+- [x] Pump or valve positive path uses relay COM and NO if a real load is connected
+- [x] No loose jumper wires
+
+> **Intermediate Note**
+> Use the mode button to compare STANDARD and OPTIMIZED irrigation logic. Calibrate soil readings first, and allow BME280 readings time to settle.
+
+> **Safety Note**
+> Use external load power for any pump or valve. Keep electronics away from water and keep optimization tests short and supervised.
+
+---
+
+## Testing Individual Components
+
+Before running the full project, test each part separately. This makes it easier to find wiring, library, or code problems.
+
+### Hardware Setup
+
+- Build the soil sensor, BME280, and mode button first, then add the relay and indicator LEDs
+- Keep the circuit simple and well labelled because you will compare two logic modes in the same build
+
+### Test the Input Sensor
+
+- Record dry and wet soil values and confirm the BME280 readings are realistic before trusting the optimization logic
+- Press the mode button and confirm the system switches cleanly between STANDARD and OPTIMIZED modes
+
+### Test the Output Device
+
+- Run a relay click test with no pump connected and confirm the correct mode LED stays on
+- If the relay output is reversed, update RELAY_ON and RELAY_OFF before continuing
+
+### Test Communication
+
+- Watch the serial output and confirm it prints the current mode, trend, and effective threshold
+- Use the printed values to explain why optimized mode may water at a different time than standard mode
+
+### Run the Full System
+
+- Compare the behaviour in STANDARD mode with the behaviour in OPTIMIZED mode under the same dry and warm conditions
+- Observe how the drying trend and hot temperature can shift the effective threshold in optimized mode
+
+### Save the Project
+
+- Save the final code and record the threshold adjustments used in optimized mode
+- Write down whether the optimized rules felt more useful or more complicated than the standard mode
+
+### Additional Testing and Calibration Checks
+
+- **Dry/wet reading test**: calibrate the soil sensor with measured dry and wet samples
+- **Normal condition test**: confirm both modes stay idle when the soil is comfortably above the threshold
+- **Threshold condition test**: compare STANDARD and OPTIMIZED behaviour under the same dry condition
+- **Trend test**: let the soil readings fall over time and confirm the optimized threshold changes when the drying trend becomes stronger
+- **Output response test**: confirm the relay and the mode LEDs match the printed decisions
+- **Pump safety test**: keep the first real pump run short and supervised
+
+---
+
+## Full Project Code
+
+After completing and checking the circuit connections, open Thonny IDE. Copy and paste the code below into a new file, or upload the project file to the Raspberry Pi Pico 2 W, then run it from Thonny.
+
+```python
+from machine import ADC, I2C, Pin
+import bme280
+import time
+
+soil_sensor = ADC(26)
+i2c_bme = I2C(1, sda=Pin(2), scl=Pin(3), freq=400000)
+bme = bme280.BME280(i2c=i2c_bme)
+
+
+def number_from_bme(text_value):
+    cleaned = "".join(ch for ch in str(text_value) if ch.isdigit() or ch in ".-")
+    return float(cleaned)
+
+
+def read_bme280():
+    temp_text, pressure_text, humidity_text = bme.values
+    return number_from_bme(temp_text), number_from_bme(humidity_text), number_from_bme(pressure_text)
+
+
+mode_button = Pin(5, Pin.IN, Pin.PULL_UP)
+relay = Pin(15, Pin.OUT)
+standard_led = Pin(16, Pin.OUT)
+optimized_led = Pin(17, Pin.OUT)
+
+RELAY_ON = 1
+RELAY_OFF = 0
+SOIL_DRY = 52000
+SOIL_WET = 22000
+BASE_DRY_THRESHOLD = 35
+HOT_TEMP = 30
+LOW_HUMIDITY = 40
+FAST_DRY_DROP = 4
+HISTORY_SIZE = 6
+WATER_SECONDS = 4
+COOLDOWN_SECONDS = 90
+DEBOUNCE_MS = 250
+
+mode = 'STANDARD'
+soil_history = []
+last_watered = time.time() - COOLDOWN_SECONDS
+last_button_ms = 0
+
+
+def clamp(value, low, high):
+    if value < low:
+        return low
+    if value > high:
+        return high
+    return value
+
+
+def soil_percent():
+    raw = soil_sensor.read_u16()
+    span = SOIL_DRY - SOIL_WET
+    if span <= 0:
+        return 0
+    percent = int(((SOIL_DRY - raw) * 100) / span)
+    return clamp(percent, 0, 100)
+
+
+def read_environment():
+    try:
+        temp_c, humidity, pressure_hpa = read_bme280()
+        return temp_c, humidity
+    except Exception as error:
+        print('BME28022 read error:', error)
+        return None, None
+
+
+def button_pressed():
+    global last_button_ms
+    now_ms = time.ticks_ms()
+    if mode_button.value() == 0 and time.ticks_diff(now_ms, last_button_ms) > DEBOUNCE_MS:
+        while mode_button.value() == 0:
+            time.sleep(0.02)
+        last_button_ms = now_ms
+        return True
+    return False
+
+
+def update_history(value):
+    soil_history.append(value)
+    if len(soil_history) > HISTORY_SIZE:
+        soil_history.pop(0)
+
+
+def drying_trend():
+    if len(soil_history) < HISTORY_SIZE:
+        return 0
+    return soil_history[0] - soil_history[-1]
+
+
+def effective_threshold(temp_c, humidity):
+    threshold = BASE_DRY_THRESHOLD
+    if temp_c is not None and temp_c > HOT_TEMP:
+        threshold += 4
+    if humidity is not None and humidity < LOW_HUMIDITY:
+        threshold += 3
+    if drying_trend() >= FAST_DRY_DROP:
+        threshold += 3
+    return min(threshold, 50)
+
+
+def relay_on():
+    relay.value(RELAY_ON)
+
+
+def relay_off():
+    relay.value(RELAY_OFF)
+
+
+def water_once(reason):
+    global last_watered
+    relay_on()
+    print(reason)
+    time.sleep(WATER_SECONDS)
+    relay_off()
+    last_watered = time.time()
+
+
+relay_off()
+print('=== Smart Irrigation Optimization Demo ===')
+print('Use the button to switch between STANDARD and OPTIMIZED modes.\n')
+
+while True:
+    if button_pressed():
+        mode = 'OPTIMIZED' if mode == 'STANDARD' else 'STANDARD'
+        print('Mode changed to', mode)
+
+    soil = soil_percent()
+    temp_c, humidity = read_environment()
+    update_history(soil)
+
+    threshold = BASE_DRY_THRESHOLD if mode == 'STANDARD' else effective_threshold(temp_c, humidity)
+
+    standard_led.value(1 if mode == 'STANDARD' else 0)
+    optimized_led.value(1 if mode == 'OPTIMIZED' else 0)
+
+    if soil <= threshold and (time.time() - last_watered) >= COOLDOWN_SECONDS:
+        water_once('Watering in {} mode | Soil: {}% | Threshold: {}% | Trend: {}'.format(
+            mode, soil, threshold, drying_trend()
+        ))
+    else:
+        print('Mode: {} | Soil: {}% | Temp: {} | Humidity: {} | Threshold: {}% | Trend: {}'.format(
+            mode,
+            soil,
+            temp_c,
+            humidity,
+            threshold,
+            drying_trend()
+        ))
+
+    time.sleep(5)
+```
+
+---
+
+## How the Code Works
+
+| Code Section | What It Does | Why It Matters |
+|--------------|--------------|----------------|
+| STANDARD versus OPTIMIZED mode | Switches between fixed and adaptive watering logic | This turns the project into a direct control-strategy comparison |
+| Soil history and drying trend | Tracks recent soil readings to detect drying rate | Trend information adds context beyond one instantaneous value |
+| effective_threshold() | Adjusts the dry threshold based on temp, humidity, and trend | This is the rule-based optimization logic in the project |
+| Cooldown timer | Prevents the relay from watering too often | Optimization still needs practical actuator protection |
+
+---
+
+## Expected Result
+
+In STANDARD mode, the green LED should stay on and watering should happen only when the soil falls below the fixed base threshold.
+
+In OPTIMIZED mode, the blue LED should stay on and the effective threshold should change when the temperature is high, humidity is low, or the soil trend is dropping quickly.
+
+The serial monitor should show the current mode, threshold, trend, and watering reason so students can compare both strategies clearly.
+
+---
+
+## Troubleshooting
+
+| Problem | Possible cause | Solution |
+|---------|----------------|----------|
+| The two modes behave the same all the time | Conditions never reach the extra thresholds | Create more varied conditions and wait for the history list to fill before judging optimized mode |
+| The optimized threshold becomes too high | The bonus values are too aggressive | Reduce one or more of the threshold bonuses inside effective_threshold() |
+| The mode button does not switch modes | Wiring or debounce issue | Check the GPIO 5 connection and keep the debounce timing in the code |
+| The soil trend looks confusing | The history or calibration values are wrong | Collect more readings and verify the soil percentage makes sense first |
+
+---
+
+## Challenge Extensions
+
+- Choose one extra rule that could improve the optimized mode without making the system too hard for students to understand
+- Explain how you would test whether optimized mode truly saves water or only looks more advanced on paper
+- Add an OLED page that shows the current effective threshold and drying trend
+- Add Wi-Fi logging so students can compare the two modes over a longer period
+- Add a rain input so optimized mode can delay watering for weather reasons too
+- Add a manual override button so maintenance watering can be triggered without changing modes
+
+---
+
+## Reflection Questions
+
+1. Why is this project described as rule-based optimization rather than full machine learning?
+2. Why can a fixed threshold be easier to trust even if an adaptive mode looks smarter?
+3. What evidence would you need before claiming the optimized mode is actually better?
+4. How could an overcomplicated decision system make troubleshooting harder in the field?
+
+---
+
+## Save Your Work
+
+Save the file to your computer as:
+
+```
+project_180_smart_irrigation_optimization_demo.py
+```
+
+If you want the program to run automatically when the Pico powers on, save the final version to the Pico as:
+
+```
+main.py
+```
+
+---
+
+## Next Project
+
+**Project 181: Smart Waste Bin Level Monitor**

@@ -1,0 +1,382 @@
+# Project 158
+## IoT Soil Quality Tracker
+
+**Intermediate Embedded Systems Project Using Raspberry Pi Pico 2 W and MicroPython**
+
+| Field | Value |
+|-------|-------|
+| Manual Section | Intermediate Projects |
+| Project Level | Intermediate |
+| Board | Raspberry Pi Pico 2 W |
+| Programming Language | MicroPython |
+| Version | 1.0 |
+| Date | May 2026 |
+| Prepared for | STEMAIDE Africa |
+
+---
+
+## Contents
+
+- [Overview](#overview)
+- [Learning Objectives](#learning-objectives)
+- [Required Components](#required-components)
+- [Before You Begin](#before-you-begin)
+- [Circuit Connections](#circuit-connections)
+- [Wiring Diagram](#wiring-diagram)
+- [Step-by-Step Assembly](#step-by-step-assembly)
+- [Testing Individual Components](#testing-individual-components)
+- [Full Project Code](#full-project-code)
+- [How the Code Works](#how-the-code-works)
+- [Expected Result](#expected-result)
+- [Troubleshooting](#troubleshooting)
+- [Challenge Extensions](#challenge-extensions)
+- [Reflection Questions](#reflection-questions)
+- [Save Your Work](#save-your-work)
+- [Next Project](#next-project)
+
+---
+
+## Overview
+
+This project tracks a soil quality proxy score over Wi-Fi using moisture behaviour rather than direct chemical sensing.
+
+Students will read a soil sensor, calculate a moisture-based quality proxy score, and serve the result to a browser on the local network.
+
+The final system should show the current moisture, a short rolling average, and a rule-based quality proxy score while clearly stating that the result is not direct pH or nutrient measurement.
+
+### Project Story
+
+The real-world use case is an introductory IoT soil-monitoring demo where the kit does not include a laboratory pH or EC probe but students still need to reason about soil condition and stability.
+
+---
+
+## Learning Objectives
+
+- Use Wi-Fi to publish a live soil-monitoring page
+- Build a transparent proxy score when the available sensors cannot measure true chemistry directly
+- Use recent history to include stability, not just one instant reading
+- Communicate the limits of a measurement system honestly
+- Understand why IoT dashboards should explain what they are and are not measuring
+
+---
+
+## Required Components
+
+| Component Name | Quantity | Short Description | Important Note |
+|----------------|----------|-------------------|----------------|
+| Raspberry Pi Pico 2 W | 1 | Wi-Fi capable controller | Use MicroPython |
+| Soil moisture sensor | 1 | Analog soil-condition input | Calibrate before final testing |
+| Phone or computer | 1 | Dashboard viewer | Must be on the same Wi-Fi network |
+| Breadboard and jumper wires | 1 set | Prototype wiring | Keep the analog path stable |
+
+---
+
+## Before You Begin
+
+Before starting this project, make sure you have completed the foundational sections at the beginning of the manual:
+
+- **Software Installation and Setup**
+- **Safety Guidelines**
+- **Breadboard Basics**
+- **Reading Circuit Diagrams**
+
+### Project-Specific Setup Notes
+
+- No external library is required. This project uses only built-in MicroPython modules
+- **Communication Setup**: connect the Pico 2 W and your phone or computer to the same Wi-Fi network
+- Replace the SSID and PASSWORD placeholders in the code before testing the network features
+- After upload, read the IP address shown in the Thonny Shell and use that address in a browser if the project serves a page
+- No external library is required. This project uses the built-in `network` and `socket` modules
+- This project intentionally reports a moisture-based soil quality proxy because the base kit does not include a true pH or EC soil-analysis probe
+
+### Project-Specific Safety Note
+
+Keep wet soil away from the Pico board and USB connection.
+
+Do not overclaim the results: this project is not a substitute for laboratory soil testing.
+
+---
+
+## Circuit Connections
+
+| Component Pin | Connects To | Pico GPIO / Physical Pin Number | Notes |
+|---------------|-------------|---------------------------------|-------|
+| Soil sensor VCC | 3.3V | Physical pin 36 | Sensor power |
+| Soil sensor GND | GND | Physical pin 38 | Common ground |
+| Soil sensor AOUT | GPIO 26 | GPIO 26 / physical pin 31 | ADC input |
+
+---
+
+## Wiring Diagram
+
+```
+  Raspberry Pi Pico 2 W
+  ┌─────────────────────┐
+  │                     │
+  │  3.3V    ───────────┤──── Soil Sensor VCC
+  │                     │
+  │  GND     ───────────┤──── Soil Sensor GND
+  │                     │
+  │  GPIO 26 ───────────┤──── Soil Sensor AOUT
+  │                     │
+  └─────────────────────┘
+```
+
+---
+
+## Step-by-Step Assembly
+
+### Step 1: Place the Raspberry Pi Pico 2W
+Place the Raspberry Pi Pico 2W on the breadboard so it sits across the center gap. Keep the USB port facing outward so you can easily connect it to your computer.
+
+### Step 2: Position the Soil Moisture Sensor
+Place the soil moisture probe so the sensing end can enter the soil sample. Check the module labels and identify VCC, GND, and AOUT / AO / Signal.
+
+### Step 3: Connect Sensor VCC
+Connect the soil sensor VCC pin to **3.3V**.
+
+### Step 4: Connect Sensor GND
+Connect the soil sensor GND pin to **GND**.
+
+### Step 5: Connect AOUT to GPIO 26
+Connect the soil sensor AOUT, AO, or Signal pin to **GPIO 26** (ADC0).
+
+### Step 6: Prepare for Dashboard Testing
+Keep the local sensor reading stable before testing the IoT dashboard. Update the Wi-Fi credentials in the code before running the networking part.
+
+### Wiring Check
+
+- [x] Pico 2W is placed correctly across the breadboard center gap
+- [x] Soil sensor VCC connects to 3.3V
+- [x] Soil sensor GND connects to GND
+- [x] Soil sensor AOUT / AO / Signal connects to GPIO 26
+- [x] Pico 2W is connected to Wi-Fi for the dashboard part
+- [x] No loose jumper wires
+
+> **Intermediate Note**
+> When running the networking part, the Pico 2W must be connected to Wi-Fi. Replace the SSID and PASSWORD placeholders in the MicroPython code before testing. This project uses a moisture-based soil quality proxy, not direct pH or nutrient sensing. Test dry and wet soil before interpreting the proxy score.
+
+> **Safety Note**
+> Do not pour water onto the Pico, breadboard, USB cable, or jumper wires. Add water to the soil sample away from the electronics.
+
+---
+
+## Testing Individual Components
+
+Before running the full project, test each part separately. This makes it easier to find wiring, library, or code problems.
+
+### Hardware Setup
+
+- Build the soil-sensor wiring and keep the analog path short
+- Do not begin network testing until the local moisture reading is believable
+
+### Test the Input Sensor
+
+- Calibrate the sensor with dry and wet references
+- Confirm that the moisture percentage changes naturally when the sample changes
+
+### Test Communication
+
+- Connect the Pico to Wi-Fi and open the printed IP address in a browser on the same network
+- Confirm that the dashboard page refreshes and shows the current moisture, average, and proxy score
+
+### Run the Full System
+
+- Let the project collect several readings so the rolling average becomes meaningful
+- Compare how the proxy score changes when the soil becomes much drier, much wetter, or more stable
+
+### Save the Project
+
+- Save the final code and record the Wi-Fi setup and score ranges used
+- Write down how you would explain the limits of this proxy score to another student
+
+### Additional Testing and Calibration Checks
+
+**Calibration and tuning notes**
+
+- Calibrate the soil sensor before interpreting the proxy score
+- Use several readings so the rolling average becomes meaningful
+- If another person tests the system, explain the proxy nature of the score before they treat it like direct soil chemistry data
+- Keep the viewing device on the same Wi-Fi network as the Pico
+
+**Quick testing checklist**
+
+- [ ] Wi-Fi connection succeeds and an IP address is shown
+- [ ] The browser dashboard loads correctly
+- [ ] Moisture and average values update as the sample changes
+- [ ] The proxy score changes with moisture condition and stability
+- [ ] The dashboard clearly states the measurement limits
+
+---
+
+## Full Project Code
+
+After completing and checking the circuit connections, open Thonny IDE. Copy and paste the code below into a new file, or upload the project file to the Raspberry Pi Pico 2 W, then run it from Thonny.
+
+```python
+import network
+import socket
+import time
+from machine import ADC
+
+SSID = "YOUR_WIFI_NAME"
+PASSWORD = "YOUR_WIFI_PASSWORD"
+
+soil = ADC(26)
+soil_dry = 52000
+soil_wet = 22000
+history = []
+history_size = 8
+
+
+def clamp(value, low, high):
+    if value < low:
+        return low
+    if value > high:
+        return high
+    return value
+
+
+def soil_percent():
+    raw = soil.read_u16()
+    span = soil_dry - soil_wet
+    if span == 0:
+        return 0
+    percent = int(((soil_dry - raw) * 100) / span)
+    return clamp(percent, 0, 100)
+
+
+def quality_score(moisture, values):
+    if 40 <= moisture <= 70:
+        base_score = 70
+    elif 30 <= moisture < 40 or 70 < moisture <= 80:
+        base_score = 45
+    else:
+        base_score = 20
+
+    average = sum(values) / len(values) if values else moisture
+    stability_penalty = min(20, int(abs(moisture - average)))
+    return clamp(base_score - stability_penalty + 20, 0, 100)
+
+
+def connect_wifi():
+    wlan = network.WLAN(network.STA_IF)
+    wlan.active(True)
+    if not wlan.isconnected():
+        print("Connecting to Wi-Fi...")
+        wlan.connect(SSID, PASSWORD)
+        start = time.time()
+        while not wlan.isconnected():
+            if time.time() - start > 20:
+                raise RuntimeError("Wi-Fi connection timeout")
+            time.sleep(0.5)
+    return wlan.ifconfig()[0]
+
+
+def page(ip_address, moisture, score, average):
+    return (
+        "HTTP/1.1 200 OK\r\n"
+        "Content-Type: text/html\r\n"
+        "Connection: close\r\n\r\n"
+        "<!DOCTYPE html><html><head><meta name='viewport' content='width=device-width, initial-scale=1'>"
+        "<meta http-equiv='refresh' content='5'><title>Soil Quality Tracker</title>"
+        "<style>body{font-family:Arial;margin:20px;} .card{padding:12px;border:1px solid #ccc;border-radius:8px;margin-bottom:12px;}</style>"
+        "</head><body><h2>IoT Soil Quality Tracker</h2>"
+        "<div class='card'>IP: {}</div>"
+        "<div class='card'>Moisture: {}%</div>"
+        "<div class='card'>Average: {:.1f}%</div>"
+        "<div class='card'>Quality Proxy Score: {}</div>"
+        "<div class='card'>This project uses a moisture-based soil quality proxy, not direct pH or nutrient sensing.</div>"
+        "</body></html>"
+    ).format(ip_address, moisture, average, score)
+
+
+ip_address = connect_wifi()
+server = socket.socket()
+server.bind(("0.0.0.0", 80))
+server.listen(1)
+print("Open http://{}".format(ip_address))
+
+while True:
+    moisture = soil_percent()
+    history.append(moisture)
+    if len(history) > history_size:
+        history.pop(0)
+
+    average = sum(history) / len(history)
+    score = quality_score(moisture, history)
+
+    print("Moisture:{}% Average:{:.1f}% QualityProxy:{}".format(moisture, average, score))
+
+    conn, _ = server.accept()
+    conn.recv(1024)
+    conn.sendall(page(ip_address, moisture, score, average).encode())
+    conn.close()
+```
+
+---
+
+## How the Code Works
+
+| Code Section | What It Does | Why It Matters |
+|--------------|--------------|----------------|
+| `quality_score()` | Builds a moisture-based proxy instead of pretending to measure pH directly | Engineering reports should be honest about what was actually measured |
+| `history` list | Stores recent readings so the score reflects stability as well as the current value | One stable condition may be healthier than one sudden spike |
+| Wi-Fi page | Publishes the live proxy result on the local network | IoT systems often need a simple human-readable interface |
+| Dashboard disclaimer | States that this is not direct pH or nutrient sensing | Clear limits reduce misuse of the system |
+
+---
+
+## Expected Result
+
+A browser should load a simple local page showing current soil moisture, a rolling average, and a quality proxy score. The page should also clearly explain that the result is based on moisture behaviour and is not a direct pH or nutrient measurement.
+
+---
+
+## Troubleshooting
+
+| Problem | Possible cause | Solution |
+|---------|----------------|----------|
+| The dashboard does not load | The viewing device is on a different network or the IP changed | Use the latest IP shown in Thonny and keep both devices on the same Wi-Fi network |
+| The quality score never changes | The sensor is not calibrated or the history is not updating | Recheck the ADC input and confirm the rolling list is changing |
+| The score looks too confident | The scoring bands are too aggressive | Reduce the proxy score and explain the limitations more clearly |
+| The moisture average looks wrong | The history length is too short or old values were not removed | Confirm the history buffer size and pop logic |
+
+---
+
+## Challenge Extensions
+
+- Add cloud logging so the proxy score can be compared across days
+- Add a second soil sensor and compare two locations side by side
+- If a true pH or EC module becomes available later, compare the proxy score with direct measurements
+
+---
+
+## Reflection Questions
+
+1. Why is it better to describe this as a quality proxy than as true soil quality?
+2. Why should IoT dashboards explain their measurement limits clearly?
+3. How can stable moisture be useful information even without direct pH sensing?
+4. What extra sensor would most improve the trustworthiness of this tracker?
+
+---
+
+## Save Your Work
+
+Save the file to your computer as:
+
+```
+project_158_iot_soil_quality_tracker.py
+```
+
+If you want the program to run automatically when the Pico powers on, save the final version to the Pico as:
+
+```
+main.py
+```
+
+---
+
+## Next Project
+
+**Project 159: Multi-Zone Irrigation System**

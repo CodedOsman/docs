@@ -1,0 +1,399 @@
+# Project 111
+## WATER LEVEL ALARM
+
+**Intermediate Embedded Systems Project Using Raspberry Pi Pico 2 W and MicroPython**
+
+| Field | Value |
+|-------|-------|
+| Manual Section | Intermediate Projects |
+| Project Level | Intermediate |
+| Board | Raspberry Pi Pico 2 W |
+| Programming Language | MicroPython |
+| Version | 1.0 |
+| Date | May 2026 |
+| Prepared for | STEMAIDE Africa |
+
+---
+
+## Contents
+
+- [Overview](#overview)
+- [Learning Objectives](#learning-objectives)
+- [Required Components](#required-components)
+- [Before You Begin](#before-you-begin)
+- [Circuit Connections](#circuit-connections)
+- [Wiring Diagram](#wiring-diagram)
+- [Step-by-Step Assembly](#step-by-step-assembly)
+- [Wiring Check](#wiring-check)
+- [Testing Individual Components](#testing-individual-components)
+- [Full Project Code](#full-project-code)
+- [How the Code Works](#how-the-code-works)
+- [Expected Result](#expected-result)
+- [Troubleshooting](#troubleshooting)
+- [Challenge Extensions](#challenge-extensions)
+- [Reflection Questions](#reflection-questions)
+- [Save Your Work](#save-your-work)
+- [Next Project](#next-project)
+
+---
+
+## Overview
+
+This project builds a water-level monitor that warns when a tank or container level falls below a safe limit.
+
+The Pico reads an analog water-level sensor, converts the raw signal into a percentage using empty/full calibration points, and triggers a buzzer when the level is too low.
+
+A similar system could be used for tank monitoring, hydroponic demonstration setups, or reservoir warning systems.
+
+### Project Story
+
+The final system should let the student calibrate empty and full reference points, view the water level on a phone, and raise a low-level alert safely.
+
+---
+
+## Learning Objectives
+
+- Read and calibrate an analog water-level sensor
+- Convert raw readings into a percentage using empty and full references
+- Trigger a low-level alarm with rule-based threshold logic
+- Send level status to a phone
+- Apply careful water-safety practices around electronics
+
+---
+
+## Required Components
+
+| Component Name | Quantity | Short Description | Important Note |
+|----------------|----------|-------------------|----------------|
+| Raspberry Pi Pico 2 W | 1 | Main controller | Use MicroPython |
+| Water-level sensor (analog) | 1 | Analog level input | Use a 3.3V-safe output version |
+| Active buzzer | 1 | Local low-level alarm | Use a 3.3V-safe buzzer or add a driver |
+| Water container or tank | 1 | Calibration and test sample | Keep the Pico away from splashes |
+| Breadboard and jumper wires | 1 set | Connections | Do not let the breadboard touch water |
+| Phone with mobile app | 1 | Wireless monitor device | Use a UART-style terminal app |
+
+---
+
+## Before You Begin
+
+Before starting this project, make sure you have completed the foundational sections at the beginning of the manual:
+
+- Software Installation and Setup
+- Safety Guidelines
+- Breadboard Basics
+- Reading Circuit Diagrams
+
+### Project-Specific Setup Notes
+
+- This project uses the Pico's built-in wireless module plus two helper files: `ble_uart.py` and `ble_advertising.py`
+- Save `ble_uart.py` to the Pico root folder as `ble_uart.py`
+- Save `ble_advertising.py` to the Pico root folder as `ble_advertising.py`
+- In Thonny Shell, run `import os; print(os.listdir())` and confirm both helper files are visible on the Pico
+- Communication Setup: install a wireless terminal app such as nRF Connect, LightBlue, or another UART terminal app on your phone
+- Scan for the device name `AIDER_WaterAlarm` after the Pico starts advertising
+- **Do not** pair from the normal phone settings menu. Open the terminal app, scan, connect to the UART-style service, then send text commands from inside the app
+- If the wireless connection does not work, restart the Pico and rescan from the terminal app before changing the wiring
+
+### Project-Specific Safety Note
+
+Keep electronics away from water and dry your hands before touching the circuit. Place sensors in water only after the Pico is stable and the wiring has been checked. Do not let exposed jumper connections touch water. Do not leave the water-level sensor powered in water for longer than necessary if the sensor is a corrosion-prone resistive type.
+
+---
+
+## Circuit Connections
+
+| Component Pin | Connects To | Pico GPIO / Physical Pin Number | Notes |
+|---------------|-------------|---------------------------------|-------|
+| Water sensor VCC | 3.3V | Physical pin 36 | Use a 3.3V-safe module |
+| Water sensor GND | GND | Physical pin 38 | Common ground |
+| Water sensor AOUT | GPIO 26 | GPIO 26 / physical pin 31 | ADC0 input |
+| Buzzer positive (+) | GPIO 18 | GPIO 18 / physical pin 24 | Alarm output |
+| Buzzer negative (-) | GND | Physical pin 38 | Common ground |
+
+---
+
+## Wiring Diagram
+
+```text
+Raspberry Pi Pico 2 W
+┌─────────────────────┐
+│                     │
+│  GPIO 26 ───────────┤──── Water sensor AOUT (ADC)
+│  3.3V  ─────────────┤──── Water sensor VCC
+│  GND   ─────────────┤──── Water sensor GND
+│  GPIO 18 ───────────┤──── Buzzer +
+│  GND   ─────────────┤──── Buzzer -
+│                     │
+└─────────────────────┘
+
+Water container / sensor probe
+COMBO: Sensor probe in water -> AOUT changes with level
+```
+
+---
+
+## Step-by-Step Assembly
+
+### Step 1: Place the Raspberry Pi Pico 2W
+
+Place the Raspberry Pi Pico 2W on the breadboard so it sits across the center gap. Keep the USB port facing outward so you can easily connect it to your computer.
+
+### Step 2: Position the Water Sensor
+
+Place the water sensor so only the approved sensing area can touch the test water. Check the module labels and identify VCC, GND, and AOUT before wiring.
+
+### Step 3: Connect Water Sensor VCC
+
+Connect the water sensor VCC pin to 3.3V.
+
+### Step 4: Connect Water Sensor GND
+
+Connect the water sensor GND pin to GND.
+
+### Step 5: Connect AOUT to GPIO 26
+
+Connect the water sensor AOUT, AO, or Signal pin to GPIO 26 (ADC0).
+
+### Step 6: Place the Buzzer
+
+Place the buzzer on the breadboard and identify its positive (+) and negative (-) pins.
+
+### Step 7: Connect the Buzzer Positive Pin
+
+Connect the buzzer positive (+) pin to GPIO 18.
+
+### Step 8: Connect the Buzzer Negative Pin
+
+Connect the buzzer negative (-) pin to GND.
+
+### Step 9: Arrange the Water Test Area
+
+Keep the cup or water container away from the Pico, breadboard, USB cable, and jumper wires. Move only the sensing area of the water sensor toward the water during testing.
+
+---
+
+## Wiring Check
+
+- [x] Pico 2W is placed correctly across the breadboard center gap
+- [x] Water sensor VCC connects to 3.3V
+- [x] Water sensor GND connects to GND
+- [x] Water sensor AOUT / AO / Signal connects to GPIO 26
+- [x] Buzzer positive pin connects to GPIO 18
+- [x] Buzzer negative pin connects to GND
+- [x] Only the sensing area is near water
+- [x] No loose jumper wires
+
+> **Intermediate Note**
+>
+> This project uses wireless UART on the Raspberry Pi Pico 2W. Use a terminal app such as nRF Connect, LightBlue, or another UART terminal to connect to `AIDER_WaterAlarm` and send commands. Test the sensor dry first and then with a small amount of water so you understand the alarm threshold.
+
+> **Safety Note**
+>
+> Keep the Pico, breadboard, USB cable, and jumper wires away from water. Only the sensing probe or approved sensing area should touch water.
+
+---
+
+## Testing Individual Components
+
+Before running the full project, test each part separately. This makes it easier to find wiring, library, or code problems.
+
+### Hardware setup
+
+- Build the sensor and buzzer circuit first
+- Keep the Pico and breadboard on a dry surface away from the container edge
+
+### Test the input sensor
+
+- Run a short ADC script and note the reading when the sensor is dry or at the empty reference level
+- Repeat with the sensor at the full reference level and compare the change
+
+### Test the output device
+
+- Run a short buzzer test
+- Confirm the buzzer sounds briefly and then turns off again
+
+### Test communication
+
+- Connect to `AIDER_WaterAlarm` from the terminal app
+- Send `status`, `empty`, `full`, and `low 30` to verify the command set
+
+### Run the full system
+
+- Capture the empty and full calibration points
+- Lower the water level or move the sensor to the low position and confirm the alarm triggers below the threshold
+- Raise the level again and confirm the status returns to OK
+
+### Save the project
+
+- Save the working code
+- Dry the sensor and workspace after finishing the test
+
+---
+
+## Full Project Code
+
+```python
+from machine import ADC, Pin
+import bluetooth
+import time
+from ble_uart import BLEUART
+
+DEVICE_NAME = "AIDER_WaterAlarm"
+ALARM_COOLDOWN_MS = 10000
+sensor = ADC(26)
+buzzer = Pin(18, Pin.OUT)
+ble = bluetooth.BLE()
+ble.active(True)
+uart = BLEUART(ble, name=DEVICE_NAME)
+
+empty_reading = 500
+full_reading = 42000
+low_level_percent = 25
+alarm_enabled = True
+last_alarm_ms = time.ticks_add(time.ticks_ms(), -ALARM_COOLDOWN_MS)
+command_queue = []
+
+
+def send_line(message):
+    print(message)
+    uart.write((message + "\n").encode())
+
+
+def on_rx(data):
+    command = data.decode("utf-8").strip().lower()
+    if command:
+        command_queue.append(command)
+
+
+def clamp(value, low, high):
+    if value < low:
+        return low
+    if value > high:
+        return high
+    return value
+
+
+def level_percent(raw_value):
+    span = full_reading - empty_reading
+    if span == 0:
+        return 0
+    percent = int(((raw_value - empty_reading) * 100) / span)
+    return clamp(percent, 0, 100)
+
+
+def beep_alarm():
+    for _ in range(2):
+        buzzer.on()
+        time.sleep_ms(200)
+        buzzer.off()
+        time.sleep_ms(200)
+
+
+uart.on_rx(on_rx)
+send_line("Bluetooth water level alarm ready")
+
+while True:
+    now = time.ticks_ms()
+    raw_value = sensor.read_u16()
+    percent = level_percent(raw_value)
+    if alarm_enabled and percent <= low_level_percent and time.ticks_diff(now, last_alarm_ms) >= ALARM_COOLDOWN_MS:
+        beep_alarm()
+        send_line("ALERT! Water level low at {}%".format(percent))
+        last_alarm_ms = now
+
+    if command_queue:
+        command = command_queue.pop(0)
+        if command in ("status", "read"):
+            state = "LOW" if percent <= low_level_percent else "OK"
+            send_line("Raw:{} Level:{}% State:{}".format(raw_value, percent, state))
+            send_line("Empty:{} Full:{} LowThreshold:{}%".format(empty_reading, full_reading, low_level_percent))
+        elif command == "empty":
+            empty_reading = raw_value
+            send_line("Empty reference captured: {}".format(empty_reading))
+        elif command == "full":
+            full_reading = raw_value
+            send_line("Full reference captured: {}".format(full_reading))
+        elif command.startswith("low "):
+            low_level_percent = int(command.split()[1])
+            send_line("Low level threshold set to {}%".format(low_level_percent))
+        elif command == "arm":
+            alarm_enabled = True
+            send_line("Alarm armed")
+        elif command in ("silence", "disarm"):
+            alarm_enabled = False
+            buzzer.off()
+            send_line("Alarm disarmed")
+        elif command == "help":
+            send_line("Commands: status, read, empty, full, low <value>, arm, silence, disarm, help")
+        else:
+            send_line("Unknown command. Send help.")
+
+    time.sleep_ms(200)
+```
+
+---
+
+## How the Code Works
+
+| Code Section | What It Does | Why It Matters |
+|--------------|--------------|----------------|
+| Empty and full references | Store the calibration points for the sensor | A level percentage is only meaningful after calibration |
+| level_percent() | Scales the raw reading into a 0 to 100% level estimate | Turns the analog reading into an easier engineering value |
+| Low-level threshold | Decides when the tank or container is considered low | This drives the buzzer and alert logic |
+| Alarm enable state | Allows the user to arm or silence the warning system | Useful for maintenance or calibration work |
+
+---
+
+## Expected Result
+
+After empty and full calibration, the system reports a water-level percentage wirelessly. When the water level drops below the chosen low threshold, the buzzer sounds briefly and an alert is sent to the phone.
+
+---
+
+## Troubleshooting
+
+| Problem | Possible cause | Solution |
+|---------|----------------|----------|
+| Level stays near 0% or 100% | The calibration points are wrong or too close together | Capture the empty and full references again with clearer conditions. |
+| Alarm never triggers | The low threshold is too low or the sensor is not changing enough | Raise the low threshold temporarily and confirm the sensor reading changes. |
+| Readings look unstable | The sensor is moving in the water or the wiring is loose | Hold the sensor steady and recheck the analog wiring on GPIO 26. |
+| Phone cannot find the device | The Pico is not advertising or the helper files are missing | Confirm ble_uart.py and ble_advertising.py are saved on the Pico, restart the board, and scan again from nRF Connect or LightBlue. |
+| Commands do not change the system state | The phone is connected to the wrong service or the command text is different from the expected command | Reconnect to the UART service and send the exact command shown in the test section. |
+
+---
+
+## Challenge Extensions
+
+- Engineering Challenge: add a relay output to control a refill valve or refill pump, but only after first testing the logic with a safe indicator load
+- Add a second threshold for a critical low-level alarm
+- Log the level every minute and compare how quickly a tank empties during a test
+
+---
+
+## Reflection Questions
+
+1. Why do empty and full calibration points matter for water-level systems?
+2. Why should water projects always be physically separated from the Pico and breadboard?
+3. How could this system fail if it were deployed outdoors or in a real tank?
+
+---
+
+## Save Your Work
+
+Save the file to your computer as:
+
+```
+project_111_water_level_alarm.py
+```
+
+If you want the program to run automatically when the Pico powers on, save the final version to the Pico as:
+
+```
+main.py
+```
+
+---
+
+## Next Project
+
+Project 112: Touch Control Hub

@@ -1,0 +1,409 @@
+# Project 181
+## SMART WASTE BIN LEVEL MONITOR
+
+**Intermediate Embedded Systems Project Using Raspberry Pi Pico 2 W and MicroPython**
+
+| Field | Value |
+|-------|-------|
+| Manual Section | Intermediate Projects |
+| Project Level | Intermediate |
+| Board | Raspberry Pi Pico 2 W |
+| Programming Language | MicroPython |
+| Version | 1.0 |
+| Date | May 2026 |
+| Prepared for | STEMAIDE Africa |
+
+---
+
+## Contents
+
+- [Overview](#overview)
+- [Learning Objectives](#learning-objectives)
+- [Required Components](#required-components)
+- [Before You Begin](#before-you-begin)
+- [Circuit Connections](#circuit-connections)
+- [Wiring Diagram](#wiring-diagram)
+- [Step-by-Step Assembly](#step-by-step-assembly)
+- [Testing Individual Components](#testing-individual-components)
+- [Full Project Code](#full-project-code)
+- [How the Code Works](#how-the-code-works)
+- [Expected Result](#expected-result)
+- [Troubleshooting](#troubleshooting)
+- [Challenge Extensions](#challenge-extensions)
+- [Reflection Questions](#reflection-questions)
+- [Save Your Work](#save-your-work)
+- [Next Project](#next-project)
+
+---
+
+## Overview
+
+This project builds a waste-bin monitor that estimates how full a bin is and warns when it needs collection.
+
+Students will use an ultrasonic distance sensor, convert distance into bin-fill percentage, add watch and full thresholds, and include a service-reset button after emptying the bin.
+
+The final system should report OK, WATCH, or FULL, light the correct indicators, and clear the full alert only after the bin has been serviced and the level has dropped.
+
+### Project Story
+
+The real-world use case is a classroom, office, or public-space bin where collection should happen before the bin overflows but not too early.
+
+---
+
+## Learning Objectives
+
+- Use an ultrasonic distance sensor with the Pico 2 W
+- Convert measured distance into a practical fill-level percentage
+- Use confirmation counts to reduce false full-bin alerts
+- Add a service-reset input after maintenance has been completed
+- Test threshold logic before trusting a monitoring system in the field
+- Think about how sensor mounting affects real-world measurements
+
+---
+
+## Required Components
+
+| Component Name | Quantity | Short Description | Important Note |
+|----------------|----------|-------------------|----------------|
+| Raspberry Pi Pico 2 W | 1 | Main controller board | Use MicroPython firmware |
+| Ultrasonic distance sensor | 1 | Measures the distance from the lid area to the top of the waste inside the bin | If your module uses 5V echo, protect the Pico input with a voltage divider or use a 3.3V-safe version |
+| Push button | 1 | Resets the service flag after the bin has been emptied | Use with Pico internal pull-up |
+| Green LED and 220 Ω resistor | 1 each | Shows the bin is in the OK range | Use current limiting |
+| Yellow LED and 220 Ω resistor | 1 each | Shows the bin is approaching full | Use current limiting |
+| Red LED and 220 Ω resistor | 1 each | Shows the bin is confirmed full | Use current limiting |
+| Breadboard and jumper wires | 1 set | Prototype wiring | Disconnect power before rewiring |
+
+---
+
+## Before You Begin
+
+Before starting this project, make sure you have completed the foundational sections at the beginning of the manual:
+
+- **Software Installation and Setup**
+- **Safety Guidelines**
+- **Breadboard Basics**
+- **Reading Circuit Diagrams**
+
+### Project-Specific Setup Notes
+
+- No external library is required. This project uses only built-in MicroPython modules
+- Run `import os` and `print(os.listdir())` in the Thonny Shell to confirm the Pico file system is responding before you save the code
+- The ultrasonic sensor uses only built-in machine and time functions, so no extra library file is required
+- Mount the ultrasonic sensor at the top of the bin and measure the empty-bin distance before setting EMPTY_DISTANCE_CM
+- Measure the distance to a nearly full test level before setting FULL_DISTANCE_CM
+
+### Project-Specific Safety Note
+
+Keep electronics away from water and wet surfaces.
+
+Do not place the Pico or breadboard inside the waste bin.
+
+Keep the sensor face clean so false readings are not caused by dirt on the transducers.
+
+If the ultrasonic module uses a 5V echo signal, do not connect it directly to a Pico GPIO pin.
+
+---
+
+## Circuit Connections
+
+| Component Pin | Connects To | Pico GPIO / Physical Pin Number | Notes |
+|---------------|------------|---------------------------------|-------|
+| Ultrasonic VCC | Module dependent | Follow module label | Use only a safe supply arrangement for your specific sensor |
+| Ultrasonic GND | GND | Any GND pin | Common ground |
+| Ultrasonic TRIG | GPIO 3 | GPIO 3 / physical pin 5 | Trigger output from the Pico |
+| Ultrasonic ECHO | GPIO 2 | GPIO 2 / physical pin 4 | Use a voltage divider if the sensor echo is 5V |
+| Service button one side | GPIO 5 | GPIO 5 / physical pin 7 | Uses internal pull-up |
+| Service button other side | GND | Any GND pin | Pressing pulls the input low |
+| Green LED anode | GPIO 16 through 220 Ω resistor | GPIO 16 / physical pin 21 | OK indicator |
+| Yellow LED anode | GPIO 17 through 220 Ω resistor | GPIO 17 / physical pin 22 | Watch indicator |
+| Red LED anode | GPIO 18 through 220 Ω resistor | GPIO 18 / physical pin 24 | Full indicator |
+| LED cathodes | GND | Any GND pin | Return path |
+
+---
+
+## Wiring Diagram
+
+```
+  Ultrasonic TRIG            -> GPIO 3
+  Ultrasonic ECHO            -> GPIO 2 (through voltage divider if 5V)
+  Service button             -> GPIO 5 and GND
+  GPIO 16 -> 220Ω -> Green LED anode
+  GPIO 17 -> 220Ω -> Yellow LED anode
+  GPIO 18 -> 220Ω -> Red LED anode
+  LED cathodes               -> GND
+```
+
+---
+
+## Step-by-Step Assembly
+
+### Step 1: Place the Raspberry Pi Pico 2W
+Place the Raspberry Pi Pico 2W on the breadboard so it sits across the center gap. Keep the USB port facing outward so you can easily connect it to your computer.
+
+### Step 2: Position the Ultrasonic Sensor
+Mount the ultrasonic sensor at the top of the bin so it points down toward the waste level. Identify VCC, GND, TRIG, and ECHO before wiring.
+
+### Step 3: Connect the Ultrasonic Sensor
+Connect ultrasonic VCC to the safe supply required by your specific module. Connect ultrasonic GND to GND. Connect ultrasonic TRIG to GPIO 3. Connect ultrasonic ECHO to GPIO 2 through a voltage divider if the ECHO signal is 5V.
+
+### Step 4: Place the Service Button
+Place the service push button across the breadboard center gap. Connect one side of the service button to GPIO 5. Connect the opposite side of the button to GND.
+
+### Step 5: Place the Three Level LEDs
+Place the green, yellow, and red LEDs on the breadboard. For each LED, identify the long leg as the anode (+) and the short leg as the cathode (-).
+
+### Step 6: Connect the Level LEDs
+Connect the green LED long leg through a 220Ω resistor to GPIO 16. Connect the yellow LED long leg through a 220Ω resistor to GPIO 17. Connect the red LED long leg through a 220Ω resistor to GPIO 18. Connect all LED short legs to GND.
+
+### Wiring Check
+
+- [x] Pico 2W is placed correctly across the breadboard center gap
+- [x] Ultrasonic TRIG connects to GPIO 3
+- [x] Ultrasonic ECHO connects to GPIO 2
+- [x] ECHO is voltage-divided or confirmed 3.3V-safe before connecting to the Pico
+- [x] Service button connects between GPIO 5 and GND
+- [x] Green LED long leg connects through a 220Ω resistor to GPIO 16
+- [x] Yellow LED long leg connects through a 220Ω resistor to GPIO 17
+- [x] Red LED long leg connects through a 220Ω resistor to GPIO 18
+- [x] All LED short legs connect to GND
+- [x] No loose jumper wires
+
+> **Intermediate Note**
+> Measure the empty-bin distance and a near-full test distance before finalising EMPTY_DISTANCE_CM and FULL_DISTANCE_CM.
+
+> **Safety Note**
+> Many HC-SR04 ultrasonic modules output 5V on Echo. Raspberry Pi Pico GPIO pins are 3.3V only, so use a voltage divider on Echo or use a 3.3V-safe ultrasonic sensor. Do not place the Pico or breadboard inside the waste bin.
+
+---
+
+## Testing Individual Components
+
+Before running the full project, test each part separately. This makes it easier to find wiring, library, or code problems.
+
+### Hardware Setup
+
+- Mount the ultrasonic sensor first and make sure it points at the waste surface area rather than the bin wall
+- Build the LED and service-button circuit only after the distance readings look stable
+
+### Test the Input Sensor
+
+- Measure the empty-bin distance and then place a test object in the bin to simulate a near-full condition
+- Press the service button and confirm the serial output detects the input change
+
+### Test the Output Device
+
+- Force each state temporarily and confirm the green, yellow, and red LEDs match the intended status
+- Make sure the red full indication does not clear until the service button is pressed after the level has dropped
+
+### Test Communication
+
+- Watch the Thonny Shell and confirm it prints the measured distance, fill percentage, and current state
+- Use the serial output to compare threshold values against real distances
+
+### Run the Full System
+
+- Fill the bin gradually with safe test objects and confirm the state changes from OK to WATCH to FULL
+- Empty the bin, then press the service button and confirm the full alert clears correctly
+
+### Save the Project
+
+- Save the final code and record the empty and near-full distances used in your bin
+- Write down any mounting changes needed to reduce false readings
+
+### Additional Testing and Calibration Checks
+
+- **Empty/full distance test**: measure the sensor reading in an empty bin and then with a safe object stack that represents a near-full bin
+- **Normal condition test**: confirm the system remains in OK state while the measured fill level is low
+- **Threshold condition test**: raise the test object height and confirm the state changes at the intended watch and full levels
+- **Output response test**: check that the correct LED is active for each state
+- **Calibration note**: sensor angle and bin shape can affect readings, so mount position matters as much as threshold values
+
+---
+
+## Full Project Code
+
+After completing and checking the circuit connections, open Thonny IDE. Copy and paste the code below into a new file, or upload the project file to the Raspberry Pi Pico 2 W, then run it from Thonny.
+
+```python
+from machine import Pin
+import time
+
+TRIG = Pin(3, Pin.OUT)
+ECHO = Pin(2, Pin.IN)
+
+service_button = Pin(5, Pin.IN, Pin.PULL_UP)
+green_led = Pin(16, Pin.OUT)
+yellow_led = Pin(17, Pin.OUT)
+red_led = Pin(18, Pin.OUT)
+
+EMPTY_DISTANCE_CM = 40
+FULL_DISTANCE_CM = 8
+WATCH_PERCENT = 60
+FULL_PERCENT = 85
+CONFIRM_COUNT = 3
+DEBOUNCE_MS = 250
+
+bin_state = 'OK'
+full_count = 0
+service_needed = False
+last_button_ms = 0
+
+
+def distance_cm():
+    TRIG.value(0)
+    time.sleep_us(2)
+    TRIG.value(1)
+    time.sleep_us(10)
+    TRIG.value(0)
+
+    while ECHO.value() == 0:
+        start = time.ticks_us()
+    while ECHO.value() == 1:
+        end = time.ticks_us()
+
+    duration = time.ticks_diff(end, start)
+    cm = (duration * 0.0343) / 2
+    return cm
+
+
+def fill_percent(distance):
+    if distance >= EMPTY_DISTANCE_CM:
+        return 0
+    if distance <= FULL_DISTANCE_CM:
+        return 100
+    percent = int(((EMPTY_DISTANCE_CM - distance) * 100) /
+                   (EMPTY_DISTANCE_CM - FULL_DISTANCE_CM))
+    return max(0, min(100, percent))
+
+
+def button_pressed():
+    global last_button_ms
+    now_ms = time.ticks_ms()
+    if service_button.value() == 0 and time.ticks_diff(now_ms, last_button_ms) > DEBOUNCE_MS:
+        while service_button.value() == 0:
+            time.sleep(0.02)
+        last_button_ms = now_ms
+        return True
+    return False
+
+
+def set_leds(state):
+    green_led.value(1 if state == 'OK' else 0)
+    yellow_led.value(1 if state == 'WATCH' else 0)
+    red_led.value(1 if state == 'FULL' else 0)
+
+
+print('=== Smart Waste Bin Level Monitor ===')
+print('Empty dist: {} cm | Full dist: {} cm\n'.format(EMPTY_DISTANCE_CM, FULL_DISTANCE_CM))
+
+while True:
+    dist = distance_cm()
+    percent = fill_percent(dist)
+
+    if percent >= FULL_PERCENT:
+        full_count += 1
+    else:
+        if full_count > 0:
+            full_count -= 1
+
+    new_state = bin_state
+
+    if full_count >= CONFIRM_COUNT:
+        new_state = 'FULL'
+        service_needed = True
+
+    if not service_needed:
+        if percent >= WATCH_PERCENT:
+            new_state = 'WATCH'
+        else:
+            new_state = 'OK'
+
+    if service_needed:
+        if button_pressed() and percent < FULL_PERCENT:
+            service_needed = False
+            full_count = 0
+            new_state = 'OK'
+            print('Bin serviced. Resetting to OK.')
+
+    bin_state = new_state
+    set_leds(bin_state)
+
+    print('Distance: {:.1f} cm | Fill: {}% | State: {} | Count: {}'.format(
+        dist, percent, bin_state, full_count
+    ))
+    time.sleep(2)
+```
+
+---
+
+## How the Code Works
+
+| Code Section | What It Does | Why It Matters |
+|--------------|--------------|----------------|
+| distance_cm() | Sends the trigger pulse and measures the echo time | This is the core measurement used to estimate bin fullness |
+| fill_percent() | Converts distance into a fill-level percentage | Students can tune the system for different bin sizes |
+| Confirmation count | Requires repeated high readings before the bin is marked FULL | This reduces false alerts from one unstable measurement |
+| Service reset logic | Clears the full state only after the bin is emptied and the button is pressed | This matches a real maintenance workflow |
+
+---
+
+## Expected Result
+
+When the bin is mostly empty, the green LED should stay on and the serial output should report OK.
+
+As the fill level increases, the system should move into WATCH before declaring FULL.
+
+After repeated full readings, the red LED should stay on until the bin is emptied and the service button is pressed.
+
+---
+
+## Troubleshooting
+
+| Problem | Possible cause | Solution |
+|---------|----------------|----------|
+| The fill level jumps up and down | The sensor is pointing at the bin wall or an uneven target surface | Reposition the ultrasonic sensor so it faces the centre of the bin contents |
+| The Pico resets or behaves strangely | A 5V echo signal may be connected directly to the Pico | Use a proper voltage divider or a 3.3V-safe ultrasonic module |
+| The FULL alert never clears | The level is still high or the service button was not pressed | Empty the bin further and then press the service button again |
+| The level percentage is reversed | The empty and full calibration distances are incorrect | Measure EMPTY_DISTANCE_CM and FULL_DISTANCE_CM again using your actual bin |
+
+---
+
+## Challenge Extensions
+
+- Choose a better sensor mount position that reduces false readings from sloped waste surfaces and explain why it helps
+- Decide whether a public bin should alert at 80%, 90%, or 95% full and justify the trade-off between overflow risk and collection efficiency
+- Add a buzzer that sounds only when the full state is first confirmed
+- Add Wi-Fi reporting so the fill level can be viewed on a local dashboard
+- Add a battery-voltage check if the monitor must run away from USB power
+- Add a second sensor to detect whether the bin lid is open during servicing
+
+---
+
+## Reflection Questions
+
+1. Why is it useful to confirm a full reading several times before sending a service alert?
+2. Why should a service reset require both an emptied bin and a button press?
+3. How could rain, dust, or oddly shaped waste affect the measurement?
+4. What would you improve before installing this system outdoors?
+
+---
+
+## Save Your Work
+
+Save the file to your computer as:
+
+```
+project_181_smart_waste_bin_level_monitor.py
+```
+
+If you want the program to run automatically when the Pico powers on, save the final version to the Pico as:
+
+```
+main.py
+```
+
+---
+
+## Next Project
+
+**Project 182: Smart Toilet Water Monitor**

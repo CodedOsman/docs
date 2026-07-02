@@ -1,0 +1,400 @@
+# Project 182
+## SMART TOILET WATER MONITOR
+
+**Intermediate Embedded Systems Project Using Raspberry Pi Pico 2 W and MicroPython**
+
+| Field | Value |
+|-------|-------|
+| Manual Section | Intermediate Projects |
+| Project Level | Intermediate |
+| Board | Raspberry Pi Pico 2 W |
+| Programming Language | MicroPython |
+| Version | 1.0 |
+| Date | May 2026 |
+| Prepared for | STEMAIDE Africa |
+
+---
+
+## Contents
+
+- [Overview](#overview)
+- [Learning Objectives](#learning-objectives)
+- [Required Components](#required-components)
+- [Before You Begin](#before-you-begin)
+- [Circuit Connections](#circuit-connections)
+- [Wiring Diagram](#wiring-diagram)
+- [Step-by-Step Assembly](#step-by-step-assembly)
+- [Testing Individual Components](#testing-individual-components)
+- [Full Project Code](#full-project-code)
+- [How the Code Works](#how-the-code-works)
+- [Expected Result](#expected-result)
+- [Troubleshooting](#troubleshooting)
+- [Challenge Extensions](#challenge-extensions)
+- [Reflection Questions](#reflection-questions)
+- [Save Your Work](#save-your-work)
+- [Next Project](#next-project)
+
+---
+
+## Overview
+
+This project builds a toilet water monitor that counts refill events and watches for patterns that suggest a leak or stuck mechanism.
+
+Students will use a digital refill-activity sensor, count complete refill cycles, measure refill duration, and detect suspicious repeated refill events.
+
+The final system should count normal flush-related refills, flag unusually long refill periods, and warn if the toilet refills again too soon after the last cycle.
+
+### Project Story
+
+The real-world use case is a school or public toilet where repeated refill activity can waste water long before someone notices the problem.
+
+---
+
+## Learning Objectives
+
+- Use a digital sensor to detect state changes in a water system
+- Measure event duration and time between events
+- Count normal cycles while also detecting abnormal behaviour
+- Use rule-based leak logic instead of only a simple event counter
+- Add a manual reset button for daily maintenance checks
+- Think about how a low-cost monitor can reduce water waste
+
+---
+
+## Required Components
+
+| Component Name | Quantity | Short Description | Important Note |
+|----------------|----------|-------------------|----------------|
+| Raspberry Pi Pico 2 W | 1 | Main controller board | Use MicroPython firmware |
+| Water level sensor module | 1 | Can be a water level sensor, refill-position switch, or other low-voltage digital detector for refill activity | Mount the sensor safely away from direct water splash |
+| Push button | 1 | Resets the daily counters after inspection | Use with Pico internal pull-up |
+| Green LED and 220 Ω resistor | 1 each | Shows normal monitoring state | Use current limiting |
+| Red LED and 220 Ω resistor | 1 each | Shows suspected leak or abnormal refill state | Use current limiting |
+| Active buzzer | 1 | Sounds when abnormal refill behaviour is detected | Use a 3.3V-safe buzzer or suitable driver |
+| Breadboard and jumper wires | 1 set | Prototype wiring | Disconnect power before rewiring |
+
+---
+
+## Before You Begin
+
+Before starting this project, make sure you have completed the foundational sections at the beginning of the manual:
+
+- **Software Installation and Setup**
+- **Safety Guidelines**
+- **Breadboard Basics**
+- **Reading Circuit Diagrams**
+
+### Project-Specific Setup Notes
+
+- No external library is required. This project uses only built-in MicroPython modules
+- Run `import os` and `print(os.listdir())` in the Thonny Shell to confirm the Pico file system is responding before you save the code
+- Before final use, observe one normal refill cycle and one full flush cycle so you can tune the timing constants
+- Mount the digital sensor so it changes state reliably during refill activity and returns cleanly when refilling stops
+
+### Project-Specific Safety Note
+
+Keep electronics away from water and wet surfaces.
+
+Keep the Pico, breadboard, and USB cable outside the toilet tank or any wet area.
+
+Use only low-voltage isolated sensing methods. Do not connect the Pico directly to mains-powered plumbing equipment.
+
+Secure all wires so they cannot fall into water.
+
+---
+
+## Circuit Connections
+
+| Component Pin | Connects To | Pico GPIO / Physical Pin Number | Notes |
+|---------------|-------------|---------------------------------|-------|
+| Refill sensor VCC | Module dependent | Follow sensor label | Use a safe low-voltage sensor arrangement |
+| Refill sensor GND | GND | Any GND pin | Common ground |
+| Refill sensor output | GPIO 4 | GPIO 4 / physical pin 6 | Digital refill-activity input |
+| Reset button one side | GPIO 5 | GPIO 5 / physical pin 7 | Uses internal pull-up |
+| Reset button other side | GND | Any GND pin | Pressing pulls the input low |
+| Green LED anode | GPIO 16 through 220 Ω resistor | GPIO 16 / physical pin 21 | Normal state indicator |
+| Red LED anode | GPIO 17 through 220 Ω resistor | GPIO 17 / physical pin 22 | Leak warning indicator |
+| Buzzer positive | GPIO 18 | GPIO 18 / physical pin 24 | Leak warning output |
+| LED cathodes and buzzer negative | GND | Any GND pin | Return path |
+
+---
+
+## Wiring Diagram
+
+```
+  Water level sensor AOUT    -> GPIO 26
+  Reset button               -> GPIO 5 and GND
+  GPIO 16 -> 220Ω -> Green LED anode
+  GPIO 17 -> 220Ω -> Red LED anode
+  GPIO 18                    -> Buzzer positive
+  All grounds                -> GND
+```
+
+---
+
+## Step-by-Step Assembly
+
+### Step 1: Place the Raspberry Pi Pico 2W
+Place the Raspberry Pi Pico 2W on the breadboard so it sits across the center gap. Keep the USB port facing outward so you can easily connect it to your computer.
+
+### Step 2: Position the Water Level Sensor
+Place the water level sensor where it can detect refill movement or switch position without getting splashed. Identify VCC, GND, and output before wiring.
+
+### Step 3: Connect the Water Level Sensor
+Connect sensor VCC to the safe low-voltage supply required by the sensor label. Connect sensor GND to GND. Connect sensor output to GPIO 4.
+
+### Step 4: Place the Reset Button
+Place the reset push button across the breadboard center gap. Connect one side of the reset button to GPIO 5. Connect the opposite side of the button to GND.
+
+### Step 5: Place and Connect the Green LED
+Place the green LED on the breadboard. Identify the long leg as the anode (+) and the short leg as the cathode (-). Connect the green LED long leg through a 220Ω resistor to GPIO 16. Connect the green LED short leg to GND.
+
+### Step 6: Place and Connect the Red LED
+Place the red LED on the breadboard. Identify the long leg as the anode (+) and the short leg as the cathode (-). Connect the red LED long leg through a 220Ω resistor to GPIO 17. Connect the red LED short leg to GND.
+
+### Step 7: Place and Connect the Buzzer
+Place the buzzer on the breadboard and identify its positive (+) and negative (-) pins. Connect the buzzer positive pin to GPIO 18. Connect the buzzer negative pin to GND.
+
+### Wiring Check
+
+- [x] Pico 2W is placed correctly across the breadboard center gap
+- [x] Refill sensor output connects to GPIO 4
+- [x] Refill sensor GND connects to GND
+- [x] Reset button connects between GPIO 5 and GND
+- [x] Green LED long leg connects through a 220Ω resistor to GPIO 16
+- [x] Red LED long leg connects through a 220Ω resistor to GPIO 17
+- [x] Both LED short legs connect to GND
+- [x] Buzzer positive pin connects to GPIO 18
+- [x] Buzzer negative pin connects to GND
+- [x] No loose jumper wires
+
+> **Intermediate Note**
+> Observe one normal refill cycle and one full flush cycle before tuning timing constants. Test the sensor active state before trusting leak warnings.
+
+> **Safety Note**
+> Keep the Pico, breadboard, USB cable, and jumper wires outside the toilet tank and away from water. Use only safe low-voltage isolated sensing methods.
+
+---
+
+## Testing Individual Components
+
+Before running the full project, test each part separately. This makes it easier to find wiring, library, or code problems.
+
+### Hardware Setup
+
+- Mount the digital sensor in the refill mechanism area or a safe proxy position before building the indicator outputs
+- Do not place the Pico or the breadboard in the tank or on any wet surface
+
+### Test the Input Sensor
+
+- Trigger one normal refill cycle and record how long the sensor stays active
+- Press the reset button and confirm the serial monitor detects the button correctly
+
+### Test the Output Device
+
+- Confirm the green LED stays on during normal operation and that the red LED and buzzer work during a forced alarm test
+- Make sure the buzzer turns off after the abnormal condition clears or after a counter reset
+
+### Test Communication
+
+- Watch the Thonny Shell and confirm it prints refill start, refill end, duration, and suspected-leak messages
+- Use the printed durations to choose better timing constants
+
+### Run the Full System
+
+- Run a normal flush and confirm it increases the refill counter without raising an alert
+- Then simulate an unusually long refill or repeated quick refill pattern and confirm the warning activates
+
+### Save the Project
+
+- Save the final code and record the normal refill duration and the abnormal timing threshold that worked best
+- Write down which leak pattern seemed easiest to detect with your sensor arrangement
+
+### Additional Testing and Calibration Checks
+
+- **Normal condition test**: observe one standard refill and record its typical duration
+- **Threshold condition test**: hold the sensor active longer than LONG_REFILL_SECONDS and confirm the system enters LEAK SUSPECTED state
+- **Repeat-event test**: trigger quick repeated refills and confirm the suspicious repeat count increases
+- **Output response test**: confirm the LEDs and buzzer match the current state
+- **Calibration note**: the timing constants depend on the tank size and refill mechanism, so tune them using real behaviour
+
+---
+
+## Full Project Code
+
+After completing and checking the circuit connections, open Thonny IDE. Copy and paste the code below into a new file, or upload the project file to the Raspberry Pi Pico 2 W, then run it from Thonny.
+
+```python
+from machine import ADC, Pin
+import time
+
+water_sensor = ADC(26)
+reset_button = Pin(5, Pin.IN, Pin.PULL_UP)
+green_led = Pin(16, Pin.OUT)
+red_led = Pin(17, Pin.OUT)
+buzzer = Pin(18, Pin.OUT)
+
+ACTIVE_LEVEL = 55
+MIN_VALID_REFILL_SECONDS = 2
+LONG_REFILL_SECONDS = 12
+QUICK_REPEAT_SECONDS = 20
+REPEAT_LIMIT = 2
+DEBOUNCE_MS = 250
+
+flush_count = 0
+suspicious_repeats = 0
+last_refill_end = 0
+refill_active = False
+refill_started = 0
+alarm_state = False
+last_button_ms = 0
+
+
+def water_level_percent():
+    return int((water_sensor.read_u16() / 65535) * 100)
+
+
+def button_pressed():
+    global last_button_ms
+    now_ms = time.ticks_ms()
+    if reset_button.value() == 0 and time.ticks_diff(now_ms, last_button_ms) > DEBOUNCE_MS:
+        while reset_button.value() == 0:
+            time.sleep(0.02)
+        last_button_ms = now_ms
+        return True
+    return False
+
+
+def sensor_active():
+    return water_level_percent() >= ACTIVE_LEVEL
+
+
+def beep(times=2):
+    for _ in range(times):
+        buzzer.value(1)
+        time.sleep(0.12)
+        buzzer.value(0)
+        time.sleep(0.12)
+
+
+print('=== Smart Toilet Water Monitor ===')
+
+while True:
+    now = time.time()
+    active = sensor_active()
+
+    if button_pressed():
+        flush_count = 0
+        suspicious_repeats = 0
+        alarm_state = False
+        print('Daily counters reset after inspection.')
+
+    if active and not refill_active:
+        refill_active = True
+        refill_started = now
+        if last_refill_end and (now - last_refill_end) <= QUICK_REPEAT_SECONDS:
+            suspicious_repeats += 1
+        print('Refill-level rise detected.')
+
+    if active and refill_active and (now - refill_started) >= LONG_REFILL_SECONDS:
+        alarm_state = True
+
+    if (not active) and refill_active:
+        refill_active = False
+        duration = now - refill_started
+        last_refill_end = now
+        if duration >= MIN_VALID_REFILL_SECONDS:
+            flush_count += 1
+        print('Refill ended after {} second(s).'.format(int(duration)))
+
+    if suspicious_repeats >= REPEAT_LIMIT:
+        alarm_state = True
+
+    green_led.value(0 if alarm_state else 1)
+    red_led.value(1 if alarm_state else 0)
+
+    if alarm_state:
+        beep()
+    else:
+        buzzer.value(0)
+
+    print('Level:{}% Flushes:{} Repeats:{} State:{}'.format(
+        water_level_percent(), flush_count, suspicious_repeats,
+        'LEAK SUSPECTED' if alarm_state else 'NORMAL'
+    ))
+    time.sleep(1)
+```
+
+---
+
+## How the Code Works
+
+| Code Section | What It Does | Why It Matters |
+|--------------|--------------|----------------|
+| Refill-state detection | Uses rising and falling edges from the digital sensor to detect one refill cycle | The system must recognise full events, not only current sensor state |
+| Duration checks | Measure how long the refill stays active | A long refill can suggest a leak or stuck mechanism |
+| Repeat-refill logic | Looks for another refill soon after the last one ended | Repeated quick refills are a useful leak warning pattern |
+| Reset button | Clears counters after inspection or maintenance | This makes the monitor practical for repeated daily use |
+
+---
+
+## Expected Result
+
+A normal refill cycle should increase the flush count without turning on the leak alert.
+
+If the refill stays active for too long or repeats too soon, the red LED and buzzer should activate.
+
+The serial monitor should show refill start, refill end, refill duration, repeat count, and the current state.
+
+---
+
+## Troubleshooting
+
+| Problem | Possible cause | Solution |
+|---------|----------------|----------|
+| Every refill looks abnormal | The long-refill threshold is too short for this toilet | Record a real normal refill duration and increase LONG_REFILL_SECONDS |
+| The flush count increases too many times | Sensor bounce or unstable mounting is causing repeated triggers | Secure the sensor and check that the signal changes cleanly only once per refill cycle |
+| No refill is detected | The digital sensor does not change level during refill | Reposition the sensor or confirm whether your module is active-high instead of active-low |
+| The reset button does nothing | The button is miswired or not pulling the input low | Recheck the GPIO 5 wiring and test the button state in the Shell |
+
+---
+
+## Challenge Extensions
+
+- Decide whether long refill time or repeated refill events would be the more important leak signal in a public restroom and explain why
+- Design a better sensor-mounting method that can detect refill activity reliably without placing electronics in water
+- Add Wi-Fi reporting so maintenance staff can review leak warnings remotely
+- Add a daily log of refill durations to compare different toilets
+- Add a second button that acknowledges the buzzer without resetting the counters
+- Add a water-level sensor to compare refill timing with actual tank recovery
+
+---
+
+## Reflection Questions
+
+1. Why is a simple event counter not enough for real leak detection?
+2. Why should the monitor watch both refill duration and time between events?
+3. How could a poor sensor mounting position create false leak alerts?
+4. What extra evidence would you want before sending a plumber to investigate?
+
+---
+
+## Save Your Work
+
+Save the file to your computer as:
+
+```
+project_182_smart_toilet_water_monitor.py
+```
+
+If you want the program to run automatically when the Pico powers on, save the final version to the Pico as:
+
+```
+main.py
+```
+
+---
+
+## Next Project
+
+**Project 183: Smart Water Quality Proxy System**

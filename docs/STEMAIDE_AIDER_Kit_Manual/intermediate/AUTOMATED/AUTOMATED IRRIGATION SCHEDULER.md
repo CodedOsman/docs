@@ -1,0 +1,474 @@
+# Project 173
+## AUTOMATED IRRIGATION SCHEDULER
+
+**Intermediate Embedded Systems Project Using Raspberry Pi Pico 2 W and MicroPython**
+
+| Field | Value |
+|-------|-------|
+| Manual Section | Intermediate Projects |
+| Project Level | Intermediate |
+| Board | Raspberry Pi Pico 2 W |
+| Programming Language | MicroPython |
+| Version | 1.0 |
+| Date | May 2026 |
+| Prepared for | STEMAIDE Africa |
+
+---
+
+## Contents
+
+- [Overview](#overview)
+- [Learning Objectives](#learning-objectives)
+- [Required Components](#required-components)
+- [Before You Begin](#before-you-begin)
+- [Circuit Connections](#circuit-connections)
+- [Wiring Diagram](#wiring-diagram)
+- [Step-by-Step Assembly](#step-by-step-assembly)
+- [Testing Individual Components](#testing-individual-components)
+- [Full Project Code](#full-project-code)
+- [How the Code Works](#how-the-code-works)
+- [Expected Result](#expected-result)
+- [Troubleshooting](#troubleshooting)
+- [Challenge Extensions](#challenge-extensions)
+- [Reflection Questions](#reflection-questions)
+- [Save Your Work](#save-your-work)
+- [Next Project](#next-project)
+
+---
+
+## Overview
+
+This project builds a time-aware irrigation controller that waters only during scheduled hours and only when the soil is actually dry.
+
+Students will connect the Pico 2 W to Wi-Fi, synchronise the clock, combine the schedule with soil-threshold logic, and add a manual test button.
+
+The final system should connect to Wi-Fi, synchronise time, check whether the current hour is in the schedule, and run one watering cycle only once per scheduled hour when the soil is dry enough.
+
+### Project Story
+
+The real-world use case is a small farm or greenhouse where watering should happen at planned times such as morning and evening rather than every time a sensor reading changes.
+
+---
+
+## Learning Objectives
+
+- Use Wi-Fi to support time-based control on the Pico 2 W
+- Combine schedule logic with sensor-based threshold decisions
+- Prevent repeated watering during the same scheduled time slot
+- Use a manual test button without breaking the automatic schedule
+- Understand why scheduling alone is not enough without real sensor feedback
+- Explain the limits of the Pico clock after a power reset
+
+---
+
+## Required Components
+
+| Component Name | Quantity | Short Description | Important Note |
+|----------------|----------|-------------------|----------------|
+| Raspberry Pi Pico 2 W | 1 | Main controller board with Wi-Fi support | Use MicroPython firmware |
+| Soil moisture sensor (analog output) | 1 | Measures whether watering is needed during a scheduled hour | Keep the electronics section dry |
+| Relay module or transistor relay driver | 1 | Controls the pump or valve output | Use external load power |
+| Push button | 1 | Runs a manual test cycle without waiting for the next schedule slot | Use with Pico internal pull-up |
+| Built-in Pico LED | 1 | Shows Wi-Fi connection state | No extra wiring needed |
+| Status LED and 220 Ω resistor | 1 each | Shows when the irrigation relay is active | Use current limiting |
+| Breadboard and jumper wires | 1 set | Prototype wiring | Disconnect power before rewiring |
+
+---
+
+## Before You Begin
+
+Before starting this project, make sure you have completed the foundational sections at the beginning of the manual:
+
+- **Software Installation and Setup**
+- **Safety Guidelines**
+- **Breadboard Basics**
+- **Reading Circuit Diagrams**
+
+### Project-Specific Setup Notes
+
+- No external library is required. This project uses only built-in MicroPython modules
+- Run `import os` and `print(os.listdir())` in the Thonny Shell to confirm the Pico file system is responding before you save the code
+- **Communication Setup**: connect the Pico 2 W and your computer or phone to the same 2.4 GHz Wi-Fi network
+- Replace WIFI_SSID and WIFI_PASSWORD in your local copy of the code before testing
+- Keep real Wi-Fi credentials private and do not save them in shared screenshots or handouts
+- This project uses the built-in `ntptime` module to synchronise the clock. No extra library file is required
+- After the code starts, watch the Thonny Shell for the Wi-Fi connection message and the time-sync result
+
+### Project-Specific Safety Note
+
+Keep electronics away from water and wet surfaces.
+
+Do not power motors, pumps, or relays directly from the Pico GPIO pins.
+
+Use an external power supply for pumps, valves, and other high-current loads.
+
+If the relay module is controlled by the Pico, make sure the Pico GND and external power supply GND are connected together unless the relay module is fully opto-isolated and wired correctly.
+
+Keep the first pump test short and be ready to disconnect external power if the relay wiring is wrong.
+
+If Wi-Fi fails, the schedule can be wrong after a reset, so always verify the displayed time during testing.
+
+---
+
+## Circuit Connections
+
+| Component Pin | Connects To | Pico GPIO / Physical Pin Number | Notes |
+|---------------|-------------|---------------------------------|-------|
+| Soil sensor VCC | 3.3V | Physical pin 36 | Sensor power |
+| Soil sensor GND | GND | Any GND pin | Common ground |
+| Soil sensor AOUT | GPIO 26 | GPIO 26 / physical pin 31 | Analog soil input |
+| Manual test button one side | GPIO 5 | GPIO 5 / physical pin 7 | Uses internal pull-up |
+| Manual test button other side | GND | Any GND pin | Pressing pulls the input low |
+| Relay IN | GPIO 15 | GPIO 15 / physical pin 20 | Irrigation relay control |
+| Status LED anode | GPIO 16 through 220 Ω resistor | GPIO 16 / physical pin 21 | Irrigation-active indicator |
+| Status LED cathode | GND | Any GND pin | Return path |
+| Built-in LED | Internal Pico LED | Pin("LED") in code | Shows Wi-Fi connection state |
+
+---
+
+## Wiring Diagram
+
+```
+  Raspberry Pi Pico 2 W
+  ┌─────────────────────┐
+  │                     │
+  │  GPIO 26 ───────────┤──── Soil Sensor AOUT
+  │                     │
+  │  GPIO 5  ───────────┤──── Manual Button ──── GND
+  │                     │
+  │  GPIO 15 ───────────┤──── Relay IN
+  │  GPIO 16 ────220Ω───┤──── Status LED (+)
+  │                     │
+  │  3.3V    ───────────┤──── Soil Sensor VCC
+  │                     │
+  │  GND     ───────────┤──── Soil Sensor GND
+  │  GND     ───────────┤──── Status LED (-)
+  │  GND     ───────────┤──── Relay GND
+  │  GND     ───────────┤──── Manual Button GND
+  │                     │
+  │  Built-in LED (Wi-Fi status, no wiring needed)
+  └─────────────────────┘
+
+  Relay Module            External Supply
+  ┌──────────┐            ┌────────────┐
+  │  COM ────┼────────────┤ (+)        │
+  │  NO  ────┼──┐         │            │
+  └──────────┘  │         └────────────┘
+                │              │
+                │         Pump (+)
+                │
+                └────────────── Pump (-) ──── External Supply (-)
+```
+
+---
+
+## Step-by-Step Assembly
+
+### Step 1: Place the Raspberry Pi Pico 2W
+Place the Raspberry Pi Pico 2W on the breadboard so it sits across the center gap. Keep the USB port facing outward so you can easily connect it to your computer.
+
+### Step 2: Position and Connect the Soil Sensor
+Place the soil moisture probe so the sensing end can enter the soil sample. Connect soil sensor VCC to 3.3V. Connect soil sensor GND to GND. Connect soil sensor AOUT, AO, or Signal to GPIO 26.
+
+### Step 3: Place the Manual Test Button
+Place the manual test push button across the breadboard center gap. Connect one side of the manual test button to GPIO 5. Connect the opposite side of the button to GND.
+
+### Step 4: Place and Wire the Relay Module
+Identify relay VCC, GND, IN, COM, NO, and NC before wiring. Connect relay IN to GPIO 15. Power the relay module according to its label. Connect relay GND to Pico GND and to the external pump or valve supply GND where shared grounding is required.
+
+### Step 5: Place and Connect the Status LED
+Place the irrigation status LED on the breadboard. Identify the long leg as the anode (+) and the short leg as the cathode (-). Connect the status LED long leg through a 220Ω resistor to GPIO 16. Connect the status LED short leg to GND.
+
+### Step 6: Prepare for Wi-Fi Time Sync
+The built-in Pico LED is used for Wi-Fi connection status, so no extra Wi-Fi LED is needed. Prepare your Wi-Fi credentials in your local code copy before running the scheduler. Keep the pump disconnected until the relay and schedule logic have been tested.
+
+### Wiring Check
+
+- [x] Pico 2W is placed correctly across the breadboard center gap
+- [x] Soil sensor AOUT / AO / Signal connects to GPIO 26
+- [x] Manual test button connects between GPIO 5 and GND
+- [x] Relay IN connects to GPIO 15
+- [x] Status LED long leg connects through a 220Ω resistor to GPIO 16
+- [x] Status LED short leg connects to GND
+- [x] Pico built-in LED is used for Wi-Fi status
+- [x] Pico 2W is connected to Wi-Fi for time sync
+- [x] No loose jumper wires
+
+> **Intermediate Note**
+> When running the networking part, the Pico 2W must be connected to Wi-Fi. Keep real Wi-Fi credentials private and enter them only in your local copy of the code. This project uses ntptime for scheduling. If Wi-Fi or time sync fails after reset, verify the displayed time before trusting the schedule.
+
+> **Safety Note**
+> Do not power pumps, valves, or relay coils from the Pico. Use external load power, keep electronics away from water, and keep the first pump test short and supervised.
+
+---
+
+## Testing Individual Components
+
+Before running the full project, test each part separately. This makes it easier to find wiring, library, or code problems.
+
+### Hardware Setup
+
+- Build the soil sensor, manual button, and relay wiring before trying to connect to Wi-Fi
+- A stable circuit makes schedule problems easier to separate from wiring problems
+
+### Test the Input Sensor
+
+- Record dry and wet sensor values so the scheduled watering logic uses a realistic threshold
+- Press the manual test button and confirm that the input changes cleanly in the serial output
+
+### Test the Output Device
+
+- Run a relay click test with no pump connected and confirm the status LED is active only during watering
+- Check that the relay turns off after the timed watering cycle completes
+
+### Test Communication
+
+- Enter the Wi-Fi credentials, run the code, and confirm the built-in LED blinks during connection then stays on
+- Watch the Shell for the time-sync message and confirm the reported hour looks correct for your location
+
+### Run the Full System
+
+- Use a scheduled hour and dry soil to confirm the system waters once for that slot and does not repeat every loop
+- Use the manual button to test a short cycle without changing the schedule
+
+### Save the Project
+
+- Save the final code and record the schedule hours, timezone offset, and threshold values used in your test
+- Write down what happens if Wi-Fi is unavailable after a power reset
+
+### Additional Testing and Calibration Checks
+
+- **Dry/wet reading test**: record real dry and wet values before deciding on DRY_THRESHOLD
+- **Normal condition test**: confirm the system does not water during a scheduled hour if the soil is already moist enough
+- **Threshold condition test**: use dry soil during a scheduled hour and confirm the system waters once only
+- **Output response test**: confirm the relay and status LED are active only during watering
+- **Wi-Fi setup test**: verify the Pico and your computer are on the same 2.4 GHz network
+- **Time-sync test**: compare the printed hour with the real local time after applying UTC_OFFSET_HOURS
+
+---
+
+## Full Project Code
+
+After completing and checking the circuit connections, open Thonny IDE. Copy and paste the code below into a new file, or upload the project file to the Raspberry Pi Pico 2 W, then run it from Thonny.
+
+```python
+from machine import ADC, Pin
+import network
+import ntptime
+import time
+
+WIFI_SSID = 'YOUR_WIFI_NAME'
+WIFI_PASSWORD = 'YOUR_WIFI_PASSWORD'
+UTC_OFFSET_HOURS = 0
+
+soil_sensor = ADC(26)
+manual_button = Pin(5, Pin.IN, Pin.PULL_UP)
+relay = Pin(15, Pin.OUT)
+status_led = Pin(16, Pin.OUT)
+wifi_led = Pin('LED', Pin.OUT)
+
+RELAY_ON = 1
+RELAY_OFF = 0
+SOIL_DRY = 52000
+SOIL_WET = 22000
+DRY_THRESHOLD = 35
+WATER_SECONDS = 4
+SCHEDULE_HOURS = [6, 12, 18]
+DEBOUNCE_MS = 250
+TIME_SYNC_INTERVAL = 3600
+
+last_run_key = None
+last_button_ms = 0
+last_sync = 0
+
+
+def clamp(value, low, high):
+    if value < low:
+        return low
+    if value > high:
+        return high
+    return value
+
+
+def soil_percent():
+    raw = soil_sensor.read_u16()
+    span = SOIL_DRY - SOIL_WET
+    if span <= 0:
+        return 0
+    percent = int(((SOIL_DRY - raw) * 100) / span)
+    return clamp(percent, 0, 100)
+
+
+def relay_on():
+    relay.value(RELAY_ON)
+    status_led.value(1)
+
+
+def relay_off():
+    relay.value(RELAY_OFF)
+    status_led.value(0)
+
+
+def button_pressed():
+    global last_button_ms
+    now_ms = time.ticks_ms()
+    if manual_button.value() == 0 and time.ticks_diff(now_ms, last_button_ms) > DEBOUNCE_MS:
+        while manual_button.value() == 0:
+            time.sleep(0.02)
+        last_button_ms = now_ms
+        return True
+    return False
+
+
+def connect_wifi():
+    wlan = network.WLAN(network.STA_IF)
+    wlan.active(True)
+
+    if not wlan.isconnected():
+        print('Connecting to Wi-Fi...')
+        wlan.connect(WIFI_SSID, WIFI_PASSWORD)
+        start = time.time()
+        while not wlan.isconnected():
+            wifi_led.value(1 - wifi_led.value())
+            if time.time() - start > 20:
+                raise RuntimeError('Wi-Fi connection timeout')
+            time.sleep(0.5)
+
+    wifi_led.value(1)
+    print('Wi-Fi connected:', wlan.ifconfig()[0])
+    return wlan
+
+
+def sync_time():
+    global last_sync
+    ntptime.settime()
+    last_sync = time.time()
+    print('Clock synchronised from NTP.')
+
+
+def local_now():
+    return time.localtime(time.time() + (UTC_OFFSET_HOURS * 3600))
+
+
+def current_run_key():
+    now = local_now()
+    return (now[0], now[1], now[2], now[3])
+
+
+def water_once(reason):
+    relay_on()
+    print(reason)
+    time.sleep(WATER_SECONDS)
+    relay_off()
+
+
+wlan = connect_wifi()
+sync_time()
+relay_off()
+
+print('=== Automated Irrigation Scheduler ===')
+print('Scheduled hours:', SCHEDULE_HOURS)
+print('Press the button for a manual test cycle.\n')
+
+while True:
+    if time.time() - last_sync >= TIME_SYNC_INTERVAL:
+        try:
+            sync_time()
+        except Exception as error:
+            print('Time sync failed:', error)
+
+    moisture = soil_percent()
+    now = local_now()
+    hour = now[3]
+    run_key = current_run_key()
+
+    if button_pressed():
+        water_once('Manual test cycle started by button press.')
+
+    if hour in SCHEDULE_HOURS and moisture <= DRY_THRESHOLD:
+        if run_key != last_run_key:
+            water_once('Scheduled watering at {:02d}:00 with soil at {}%.'.format(hour, moisture))
+            last_run_key = run_key
+        else:
+            print('Already watered during this scheduled hour.')
+    else:
+        print('Time {:02d}:{:02d} | Soil: {}% | Waiting for schedule or dry condition.'.format(
+            now[3], now[4], moisture
+        ))
+
+    time.sleep(10)
+```
+
+---
+
+## How the Code Works
+
+| Code Section | What It Does | Why It Matters |
+|--------------|--------------|----------------|
+| Wi-Fi and NTP setup | Connects the Pico 2 W to Wi-Fi and synchronises the internal clock | A schedule is only meaningful if the controller knows the current time |
+| SCHEDULE_HOURS | Defines the planned watering times for the day | Students can compare scheduled control with always-on automatic control |
+| last_run_key | Prevents repeated watering during the same scheduled hour | This avoids starting a new watering cycle every loop while the hour remains the same |
+| Manual test button | Runs one short cycle without waiting for the next schedule slot | This helps students verify the hardware quickly |
+
+---
+
+## Expected Result
+
+After connecting to Wi-Fi, the built-in LED should stay on and the Shell should report that time was synchronised.
+
+If the current hour is in the schedule and the soil is dry, the relay should run one watering cycle and then wait until the next scheduled slot.
+
+Pressing the manual test button should run a short test cycle even when the current hour is not scheduled.
+
+---
+
+## Troubleshooting
+
+| Problem | Possible cause | Solution |
+|---------|----------------|----------|
+| The schedule runs at the wrong hour | The timezone offset is wrong or the clock did not sync correctly | Adjust UTC_OFFSET_HOURS and check that NTP sync succeeded in the Shell |
+| The relay waters every loop during one scheduled hour | The code is not remembering the last schedule slot | Confirm last_run_key is updating after a watering event |
+| The Pico never connects to Wi-Fi | The SSID or password is wrong or the network is not 2.4 GHz | Re-enter the credentials carefully and verify the router supports 2.4 GHz access |
+| The manual test button does nothing | The button wiring is wrong or still held low | Check the GPIO 5 wiring and press the button once firmly |
+
+---
+
+## Challenge Extensions
+
+- Design a better schedule for hot days versus cool days without removing the soil sensor from the decision loop
+- Explain how you would keep time accurately if the controller had to work in a location with no Wi-Fi
+- Add an OLED display that shows the next scheduled watering hour
+- Add a rain-skip input so scheduled watering can be cancelled automatically when weather conditions change
+- Add a status web page so the schedule and latest soil reading can be checked from a phone
+- Add separate weekday and weekend schedule lists
+
+---
+
+## Reflection Questions
+
+1. Why is a schedule useful even when a soil sensor is already installed?
+2. Why should a scheduled system still check the soil before watering?
+3. What could go wrong if the time source fails after a power reset?
+4. How would you prove that the system only waters once per scheduled hour?
+
+---
+
+## Save Your Work
+
+Save the file to your computer as:
+
+```
+project_173_automated_irrigation_scheduler.py
+```
+
+If you want the program to run automatically when the Pico powers on, save the final version to the Pico as:
+
+```
+main.py
+```
+
+---
+
+## Next Project
+
+**Project 174: Smart Irrigation Rain Integration**

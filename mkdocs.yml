@@ -3,7 +3,6 @@ site_description: Documentation for STEMAIDE, a platform for STEMAIDE Coder Manu
 site_author: STEMAIDE
 site_dir: site
 docs_dir: docs
-
 theme:
   name: material
   custom_dir: overrides
@@ -17,18 +16,14 @@ theme:
     text: Roboto
     code: Roboto Mono
   features:
-    - navigation.instant
-    - search.highlight
-    - search.suggest
-    - toc.integrate
-    - navigation.footer
-
-# hooks:
-#   - hooks.py
-
+  - navigation.instant
+  - search.highlight
+  - search.suggest
+  - toc.integrate
+  - navigation.footer
+  - navigation.tabs
 plugins:
-  - search
-
+- search
 validation:
   nav:
     omitted_files: ignore
@@ -39,158 +34,363 @@ validation:
     anchors: ignore
     absolute_links: ignore
     unrecognized_links: ignore
-
 extra_css:
-  - stylesheets/extra.css
-
+- stylesheets/extra.css
 extra_javascript:
-  - javascripts/nav.js
-
+- javascripts/nav.js
 extra:
   social:
-    - icon: fontawesome/brands/instagram
-      link: https://www.instagram.com/stemaideafrica
-      name: Instagram
-    - icon: fontawesome/brands/facebook
-      link: https://www.facebook.com/stemaide
-      name: Facebook
-    - icon: fontawesome/brands/x-twitter
-      link: https://twitter.com/stemaideafrica
-      name: X (Twitter)
-    - icon: fontawesome/brands/whatsapp
-      link: https://www.whatsapp.com/channel/0029VaCyaNN5a23vbdCABI0n
-      name: WhatsApp
-    - icon: fontawesome/brands/youtube
-      link: https://www.youtube.com/@STEMAIDEAfrica
-      name: YouTube
-    - icon: fontawesome/brands/tiktok
-      link: https://www.tiktok.com/@stemaide
-      name: TikTok
-
+  - icon: fontawesome/brands/instagram
+    link: https://www.instagram.com/stemaideafrica
+    name: Instagram
+  - icon: fontawesome/brands/facebook
+    link: https://www.facebook.com/stemaide
+    name: Facebook
+  - icon: fontawesome/brands/x-twitter
+    link: https://twitter.com/stemaideafrica
+    name: X (Twitter)
+  - icon: fontawesome/brands/whatsapp
+    link: https://www.whatsapp.com/channel/0029VaCyaNN5a23vbdCABI0n
+    name: WhatsApp
+  - icon: fontawesome/brands/youtube
+    link: https://www.youtube.com/@STEMAIDEAfrica
+    name: YouTube
+  - icon: fontawesome/brands/tiktok
+    link: https://www.tiktok.com/@stemaide
+    name: TikTok
 nav:
-  - Home: index.md
+- Home: index.md
+- Coder:
+  - Overview: coder_index.md
   - Getting Started:
-    #   - Introduction: STEMAIDE_CODER_Kit_Manual/Getting Started/Introduction.md
-      - Arduino IDE Setup: STEMAIDE_CODER_Kit_Manual/Getting Started/Arduino_IDE_Setup.md
-      - Basic Programming Concepts: STEMAIDE_CODER_Kit_Manual/Getting Started/Basic_Programming_Concept.md
-      - Safety Guidelines: STEMAIDE_CODER_Kit_Manual/Getting Started/Safety_Guidelines.md
+    - Arduino IDE Setup: STEMAIDE_CODER_Kit_Manual/Getting Started/Arduino_IDE_Setup.md
+    - Basic Programming Concepts: STEMAIDE_CODER_Kit_Manual/Getting Started/Basic_Programming_Concept.md
+    - Safety Guidelines: STEMAIDE_CODER_Kit_Manual/Getting Started/Safety_Guidelines.md
   - Beginner Projects:
-      - Overview: STEMAIDE_CODER_Kit_Manual/Beginner Projects/index.md
-      - 1.1 LED Control:
-          - 1.1.1 Turn ON One LED: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.1_Turn_ON_One_LED.md
-          - 1.1.2 Blink One LED: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.2_Blink_One_LED.md
-          - 1.1.3 Turn ON Two LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.3_Turn_ON_Two_LEDs.md
-          - 1.1.4 Blink Two LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.4_Blink_Two_LEDs.md
-          - 1.1.5 Turn ON Three LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.5_Turn_ON_Three_LEDs.md
-          - 1.1.6 Blink Three LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.6_Blink_Three_LEDs.md
-          - 1.1.7 Turn ON Four LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.7_Turn_ON_Four_LEDs.md
-          - 1.1.8 Blink Four LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.8_Blink_Four_LEDs.md
-          - 1.1.9 Turn ON Five LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.9_Turn_ON_Five_LEDs.md
-          - 1.1.10 Blink Five LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.10_Blink_Five_LEDs.md
-      - 1.2 Buzzer:
-          - 1.2.1 Buzzer ON/OFF: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.2_Buzzer/1.2.1_Buzzer_ON_OFF.md
-          - 1.2.2 Buzzer Beep: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.2_Buzzer/1.2.2_Buzzer_Beep.md
-      - 1.3 Push Button:
-          - 1.3.1 Button with 1 LED: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.3_Push_Button/1.3.1_Button_With_1_LED.md
-          - 1.3.2 Button with 2 LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.3_Push_Button/1.3.2_Button_With_2_LEDs.md
-          - 1.3.3 Button with 3 LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.3_Push_Button/1.3.3_Button_With_3_LEDs.md
-          - 1.3.4 Button with 4 LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.3_Push_Button/1.3.4_Button_With_4_LEDs.md
-      - 1.4 Traffic Light Module:
-          - 1.4.1 Green Light ON: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.4_Traffic_Light_Module/1.4.1_Green_Light_ON.md
-          - 1.4.2 Blink Green Light: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.4_Traffic_Light_Module/1.4.2_Blink_Green_Light.md
-          - 1.4.3 Red Light ON: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.4_Traffic_Light_Module/1.4.3_Red_Light_ON.md
-          - 1.4.4 Blink Red Light: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.4_Traffic_Light_Module/1.4.4_Blink_Red_Light.md
-          - 1.4.5 Yellow Light ON: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.4_Traffic_Light_Module/1.4.5_Yellow_Light_ON.md
-          - 1.4.6 Blink Yellow Light: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.4_Traffic_Light_Module/1.4.6_Blink_Yellow_Light.md
-      - 1.5 RGB Module:
-          - 1.5.1 RGB Introduction: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.0_RGB_Introduction.md
-          - 1.5.2 Red ON: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.1_Red_ON.md
-          - 1.5.3 Red Blink: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.2_Red_Blink.md
-          - 1.5.4 Green ON: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.3_Green_ON.md
-          - 1.5.5 Green Blink: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.4_Green_Blink.md
-          - 1.5.6 Blue ON: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.5_Blue_ON.md
-          - 1.5.7 Blue Blink: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.6_Blue_Blink.md
-          - 1.5.8 Rainbow Colors: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.7_Rainbow_Colors.md
-      - 1.6 LDR Module: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.6_LDR_Module/1.6.1_LDR_Module.md
-      - 1.7 Servo Motor:
-          - 1.7.1 One Angle: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.7_Servo_Motor/1.7.1_One_Angle.md
-          - 1.7.2 Sweep: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.7_Servo_Motor/1.7.2_Sweep.md
-      - 1.8 Ultrasonic Sensor: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.8_Ultrasonic_Sensor/1.8.1_Ultrasonic_With_RGB.md
-      - 1.9 Sound Sensor: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.9_Sound_Sensor/1.9.1_Sound_Sensor.md
-      - 1.10 Noise Level Alarm:
-         - 1.10 Noise Level Alarm: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.10_Noise_Level_Alarm/1.10.1_Noise_level_alarm.md
-      - 1.11 Smart Simulation Night/Day Light:
-         - 1.11 Solar Simulation Night/Day Light: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.11_Solar_Simulation/1.11.1_solar_simulated.md
-      - 1.12 Smart Potentiometer Dimmer:
-         - 1.12 Smart Potentiometer Dimmer: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.12_Smart_potentiometer_dimmer/1.12.1_smart_potentiometer.md
-      - 1.13 Smart RGB Selector:
-         - 1.13 Smart RGB Selector: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.13_Push_Button_RGB_Selector/1.13.1_push_button_rgb_selector.md
-      - 1.14 Smart Servo Controlled Drawbridge:
-         - 1.14 Smart Servo Controlled Drawbridge: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.14_Servo_Controlled_Drawbridge/1.14.1_servo_controlled_drawbridge.md
-      - 1.15 Smart Distance Based Led Brighness:
-         - 1.15 Smart Distance Based Led Brighness: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.15_Distance_Based_Led_Brightness/1.15.1_distance_based_led.md
+    - Overview: STEMAIDE_CODER_Kit_Manual/Beginner Projects/index.md
+    - 1.1 LED Control:
+      - 1.1.1 Turn ON One LED: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.1_Turn_ON_One_LED.md
+      - 1.1.2 Blink One LED: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.2_Blink_One_LED.md
+      - 1.1.3 Turn ON Two LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.3_Turn_ON_Two_LEDs.md
+      - 1.1.4 Blink Two LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.4_Blink_Two_LEDs.md
+      - 1.1.5 Turn ON Three LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.5_Turn_ON_Three_LEDs.md
+      - 1.1.6 Blink Three LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.6_Blink_Three_LEDs.md
+      - 1.1.7 Turn ON Four LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.7_Turn_ON_Four_LEDs.md
+      - 1.1.8 Blink Four LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.8_Blink_Four_LEDs.md
+      - 1.1.9 Turn ON Five LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.9_Turn_ON_Five_LEDs.md
+      - 1.1.10 Blink Five LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.1_LED/1.1.10_Blink_Five_LEDs.md
+    - 1.2 Buzzer:
+      - 1.2.1 Buzzer ON/OFF: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.2_Buzzer/1.2.1_Buzzer_ON_OFF.md
+      - 1.2.2 Buzzer Beep: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.2_Buzzer/1.2.2_Buzzer_Beep.md
+    - 1.3 Push Button:
+      - 1.3.1 Button with 1 LED: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.3_Push_Button/1.3.1_Button_With_1_LED.md
+      - 1.3.2 Button with 2 LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.3_Push_Button/1.3.2_Button_With_2_LEDs.md
+      - 1.3.3 Button with 3 LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.3_Push_Button/1.3.3_Button_With_3_LEDs.md
+      - 1.3.4 Button with 4 LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.3_Push_Button/1.3.4_Button_With_4_LEDs.md
+    - 1.4 Traffic Light Module:
+      - 1.4.1 Green Light ON: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.4_Traffic_Light_Module/1.4.1_Green_Light_ON.md
+      - 1.4.2 Blink Green Light: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.4_Traffic_Light_Module/1.4.2_Blink_Green_Light.md
+      - 1.4.3 Red Light ON: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.4_Traffic_Light_Module/1.4.3_Red_Light_ON.md
+      - 1.4.4 Blink Red Light: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.4_Traffic_Light_Module/1.4.4_Blink_Red_Light.md
+      - 1.4.5 Yellow Light ON: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.4_Traffic_Light_Module/1.4.5_Yellow_Light_ON.md
+      - 1.4.6 Blink Yellow Light: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.4_Traffic_Light_Module/1.4.6_Blink_Yellow_Light.md
+    - 1.5 RGB Module:
+      - 1.5.1 RGB Introduction: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.0_RGB_Introduction.md
+      - 1.5.2 Red ON: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.1_Red_ON.md
+      - 1.5.3 Red Blink: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.2_Red_Blink.md
+      - 1.5.4 Green ON: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.3_Green_ON.md
+      - 1.5.5 Green Blink: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.4_Green_Blink.md
+      - 1.5.6 Blue ON: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.5_Blue_ON.md
+      - 1.5.7 Blue Blink: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.6_Blue_Blink.md
+      - 1.5.8 Rainbow Colors: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.5_RGB_Module/1.5.7_Rainbow_Colors.md
+    - 1.6 LDR Module: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.6_LDR_Module/1.6.1_LDR_Module.md
+    - 1.7 Servo Motor:
+      - 1.7.1 One Angle: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.7_Servo_Motor/1.7.1_One_Angle.md
+      - 1.7.2 Sweep: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.7_Servo_Motor/1.7.2_Sweep.md
+    - 1.8 Ultrasonic Sensor: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.8_Ultrasonic_Sensor/1.8.1_Ultrasonic_With_RGB.md
+    - 1.9 Sound Sensor: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.9_Sound_Sensor/1.9.1_Sound_Sensor.md
+    - 1.10 Noise Level Alarm:
+      - 1.10 Noise Level Alarm: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.10_Noise_Level_Alarm/1.10.1_Noise_level_alarm.md
+    - 1.11 Smart Simulation Night/Day Light:
+      - 1.11 Solar Simulation Night/Day Light: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.11_Solar_Simulation/1.11.1_solar_simulated.md
+    - 1.12 Smart Potentiometer Dimmer:
+      - 1.12 Smart Potentiometer Dimmer: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.12_Smart_potentiometer_dimmer/1.12.1_smart_potentiometer.md
+    - 1.13 Smart RGB Selector:
+      - 1.13 Smart RGB Selector: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.13_Push_Button_RGB_Selector/1.13.1_push_button_rgb_selector.md
+    - 1.14 Smart Servo Controlled Drawbridge:
+      - 1.14 Smart Servo Controlled Drawbridge: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.14_Servo_Controlled_Drawbridge/1.14.1_servo_controlled_drawbridge.md
+    - 1.15 Smart Distance Based Led Brighness:
+      - 1.15 Smart Distance Based Led Brighness: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.15_Distance_Based_Led_Brightness/1.15.1_distance_based_led.md
   - Intermediate Projects:
-      - Overview: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/index.md
-      - 2.1 Button and Buzzer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.1_Button_And_Buzzer/2.1.1_Button_And_Buzzer.md
-      - 2.2 Button and RGB: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.2_Button_And_RGB/2.2.1_Button_And_RGB.md
-      - 2.3 Button and Traffic Light: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.3_Button_And_Traffic_Light/2.3.1_Button_And_Traffic_Light.md
-      - 2.4 LDR and RGB: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.4_LDR_And_RGB/2.4.1_LDR_And_RGB.md
-      - 2.5 LDR and Traffic Light: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.5_LDR_And_Traffic_Light/2.5.1_LDR_And_Traffic_Light.md
-      - 2.6 Ultrasonic and Buzzer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.6_Ultrasonic_And_Buzzer/2.6.1_Ultrasonic_And_Buzzer.md
-      - 2.7 Ultrasonic and RGB: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.7_Ultrasonic_And_RGB/2.7.1_Ultrasonic_And_RGB.md
-      - 2.8 Sound Sensor and Traffic Light: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.8_Sound_Sensor_And_Traffic_Light/2.8.1_Sound_Sensor_And_Traffic_Light.md
-      - 2.9 Servo and Ultrasonic: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.9_Servo_And_Ultrasonic/2.9.1_Servo_And_Ultrasonic.md
-      - 2.10 Smart Alarm Projects:
-          - Ultrasonic + LED:
-              - Ultrasonic with 1 LED: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Ultrasonic_LED/2.10.1_Ultrasonic_with_1_LED.md
-              - Ultrasonic with 2 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Ultrasonic_LED/2.10.2_Ultrasonic_with_2_LEDs.md
-              - Ultrasonic with 3 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Ultrasonic_LED/2.10.3_Ultrasonic_with_3_LEDs.md
-              - Ultrasonic with 4 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Ultrasonic_LED/2.10.4_Ultrasonic_with_4_LEDs.md
-          - Push Button + LED:
-              - Button to Control LED: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.5_Button_to_control_LED.md
-              - Button to Blink LED: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.6_Button_to_blink_LED.md
-              - Button to Control 2 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.7_Button_to_control_2_LEDs.md
-              - Button to Blink 2 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.8_Button_to_blink_2_LEDs.md
-              - Button to Control 3 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.9_Button_to_control_3_LEDs.md
-              - Button to Blink 4 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.10_Button_to_blink_4_LEDs.md
-          - LDR + LED:
-              - LDR with 1 LED: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_LED/2.10.11_LDR_with_1_LED.md
-              - LDR with 2 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_LED/2.10.12_LDR_with_2_LEDs.md
-              - LDR with 4 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_LED/2.10.13_LDR_with_4_LEDs.md
-              - LDR with 5 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_LED/2.10.14_LDR_with_5_LEDs.md
-          - LDR + Buzzer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_Buzzer/2.10.15_LDR_with_Buzzer.md
-          - Sound + LED:
-              - Sound with 1 LED: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.16_Sound_with_1_LED.md
-              - Sound with 2 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.17_Sound_with_2_LEDs.md
-              - Sound with 3 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.18_Sound_with_3_LEDs.md
-      - 2.11 Potentiometer Buzzer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.11_Potentiometer_Buzzer/2.111_Potentiometer_Buzzer.md
-      - 2.12 Automatic traffic detention: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.12_Automatic_traffic_detention/2.12.1_Automatic_traffic_detention.md
-      - 2.13 Intruder Alarm System: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.13_Intruder_Alarm_System/2.13.1_Automatic_traffic_detention.md
+    - Overview: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/index.md
+    - 2.1 Button and Buzzer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.1_Button_And_Buzzer/2.1.1_Button_And_Buzzer.md
+    - 2.2 Button and RGB: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.2_Button_And_RGB/2.2.1_Button_And_RGB.md
+    - 2.3 Button and Traffic Light: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.3_Button_And_Traffic_Light/2.3.1_Button_And_Traffic_Light.md
+    - 2.4 LDR and RGB: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.4_LDR_And_RGB/2.4.1_LDR_And_RGB.md
+    - 2.5 LDR and Traffic Light: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.5_LDR_And_Traffic_Light/2.5.1_LDR_And_Traffic_Light.md
+    - 2.6 Ultrasonic and Buzzer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.6_Ultrasonic_And_Buzzer/2.6.1_Ultrasonic_And_Buzzer.md
+    - 2.7 Ultrasonic and RGB: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.7_Ultrasonic_And_RGB/2.7.1_Ultrasonic_And_RGB.md
+    - 2.8 Sound Sensor and Traffic Light: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.8_Sound_Sensor_And_Traffic_Light/2.8.1_Sound_Sensor_And_Traffic_Light.md
+    - 2.9 Servo and Ultrasonic: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.9_Servo_And_Ultrasonic/2.9.1_Servo_And_Ultrasonic.md
+    - 2.10 Smart Alarm Projects:
+      - Ultrasonic + LED:
+        - Ultrasonic with 1 LED: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Ultrasonic_LED/2.10.1_Ultrasonic_with_1_LED.md
+        - Ultrasonic with 2 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Ultrasonic_LED/2.10.2_Ultrasonic_with_2_LEDs.md
+        - Ultrasonic with 3 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Ultrasonic_LED/2.10.3_Ultrasonic_with_3_LEDs.md
+        - Ultrasonic with 4 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Ultrasonic_LED/2.10.4_Ultrasonic_with_4_LEDs.md
+      - Push Button + LED:
+        - Button to Control LED: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.5_Button_to_control_LED.md
+        - Button to Blink LED: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.6_Button_to_blink_LED.md
+        - Button to Control 2 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.7_Button_to_control_2_LEDs.md
+        - Button to Blink 2 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.8_Button_to_blink_2_LEDs.md
+        - Button to Control 3 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.9_Button_to_control_3_LEDs.md
+        - Button to Blink 4 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Push_Button_LED/2.10.10_Button_to_blink_4_LEDs.md
+      - LDR + LED:
+        - LDR with 1 LED: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_LED/2.10.11_LDR_with_1_LED.md
+        - LDR with 2 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_LED/2.10.12_LDR_with_2_LEDs.md
+        - LDR with 4 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_LED/2.10.13_LDR_with_4_LEDs.md
+        - LDR with 5 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_LED/2.10.14_LDR_with_5_LEDs.md
+      - LDR + Buzzer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/LDR_Buzzer/2.10.15_LDR_with_Buzzer.md
+      - Sound + LED:
+        - Sound with 1 LED: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.16_Sound_with_1_LED.md
+        - Sound with 2 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.17_Sound_with_2_LEDs.md
+        - Sound with 3 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.18_Sound_with_3_LEDs.md
+    - 2.11 Potentiometer Buzzer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.11_Potentiometer_Buzzer/2.111_Potentiometer_Buzzer.md
+    - 2.12 Automatic traffic detention: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.12_Automatic_traffic_detention/2.12.1_Automatic_traffic_detention.md
+    - 2.13 Intruder Alarm System: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.13_Intruder_Alarm_System/2.13.1_Automatic_traffic_detention.md
   - Advanced Projects:
-      - Overview: STEMAIDE_CODER_Kit_Manual/Advance Projects/index.md
-      - 3.1 Automatic Curtain Controller: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.1_Automatic_Curtain_Controller/3.1.1_Automatic_Curtain_Controller.md
-      - 3.2 Smart Parking System: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.2_Smart_Parking_System/3.2.1_Smart_Car_Parking_System.md
-      - 3.3 Home Security System: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.3_Home_Security_System/3.3.1_Smart_Security_System.md
-      - 3.4 Security Gate Audio Alert: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.4_Security_Gate_Audio_Alert/3.4.1_Security_Gate_Audio_Alert.md
-      - 3.5 Smart Traffic Light System: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.5_Smart_Traffic_Light_System/3.5.1_Smart_Traffic_Light_System.md
-      - 3.6 STEM Capstone Projects:
-          - 3.6.1 Smart Gauge System: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.6_STEM_Capstone_Projects/3.6.1_Smart_Gauge_System.md
-          - 3.6.2 Smart Traffic Light System: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.6_STEM_Capstone_Projects/3.6.2_Smart_Traffic_Light_System.md
-      - 3.7 Sound Controlled Desk Lamp: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.7_Sound_Controlled_Desk_Lamp/3.7.1_Sound_Controlled_Desk_Lamp.md
+    - Overview: STEMAIDE_CODER_Kit_Manual/Advance Projects/index.md
+    - 3.1 Automatic Curtain Controller: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.1_Automatic_Curtain_Controller/3.1.1_Automatic_Curtain_Controller.md
+    - 3.2 Smart Parking System: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.2_Smart_Parking_System/3.2.1_Smart_Car_Parking_System.md
+    - 3.3 Home Security System: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.3_Home_Security_System/3.3.1_Smart_Security_System.md
+    - 3.4 Security Gate Audio Alert: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.4_Security_Gate_Audio_Alert/3.4.1_Security_Gate_Audio_Alert.md
+    - 3.5 Smart Traffic Light System: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.5_Smart_Traffic_Light_System/3.5.1_Smart_Traffic_Light_System.md
+    - 3.6 STEM Capstone Projects:
+      - 3.6.1 Smart Gauge System: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.6_STEM_Capstone_Projects/3.6.1_Smart_Gauge_System.md
+      - 3.6.2 Smart Traffic Light System: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.6_STEM_Capstone_Projects/3.6.2_Smart_Traffic_Light_System.md
+    - 3.7 Sound Controlled Desk Lamp: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.7_Sound_Controlled_Desk_Lamp/3.7.1_Sound_Controlled_Desk_Lamp.md
   - Appendices:
-    #   - Overview: STEMAIDE_CODER_Kit_Manual/Appendices/index.md
-      - Wiring Reference: STEMAIDE_CODER_Kit_Manual/Appendices/Wiring_Reference.md
-      - Common Errors: STEMAIDE_CODER_Kit_Manual/Appendices/Common_Errors.md
-      - Component Guide: STEMAIDE_CODER_Kit_Manual/Appendices/Component_Guide.md
-      - Troubleshooting: STEMAIDE_CODER_Kit_Manual/Appendices/Troubleshooting.md
-    #   - User Guide: STEMAIDE_CODER_Kit_Manual/Appendices/User_Guide.md
-    #   - Developer Guide: STEMAIDE_CODER_Kit_Manual/Appendices/Developer_Guide.md
-    #   - Core Features: STEMAIDE_CODER_Kit_Manual/Appendices/Core_Features.md
-    #   - Advanced Features: STEMAIDE_CODER_Kit_Manual/Appendices/Advanced_Features.md
-    #   - About Prol: STEMAIDE_CODER_Kit_Manual/Appendices/About_Prol.md
-      - Code of Conduct: STEMAIDE_CODER_Kit_Manual/Appendices/Code_of_Conduct.md
-      - Contributing: STEMAIDE_CODER_Kit_Manual/Appendices/Contributing.md
-      - Changelog: STEMAIDE_CODER_Kit_Manual/Appendices/Changelog.md
+    - Wiring Reference: STEMAIDE_CODER_Kit_Manual/Appendices/Wiring_Reference.md
+    - Common Errors: STEMAIDE_CODER_Kit_Manual/Appendices/Common_Errors.md
+    - Component Guide: STEMAIDE_CODER_Kit_Manual/Appendices/Component_Guide.md
+    - Troubleshooting: STEMAIDE_CODER_Kit_Manual/Appendices/Troubleshooting.md
+    - Code of Conduct: STEMAIDE_CODER_Kit_Manual/Appendices/Code_of_Conduct.md
+    - Contributing: STEMAIDE_CODER_Kit_Manual/Appendices/Contributing.md
+    - Changelog: STEMAIDE_CODER_Kit_Manual/Appendices/Changelog.md
   - Glossary: STEMAIDE_CODER_Kit_Manual/Glossary/STEMAIDE_Glossary.md
   - References: STEMAIDE_CODER_Kit_Manual/References/References.md
-
+- Aider:
+  - Overview: aider_index.md
+  - 1. Beginner:
+    - 1.1 Bluetooth:
+      - 1.1.1 Bluetooth Smart Buzzer: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.1 Bluetooth Smart Buzzer.md
+      - 1.1.2 Bluetooth LED Dimmer: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.2 Bluetooth LED Dimmer.md
+      - 1.1.3 Bluetooth Smart Lamp: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.3 Bluetooth Smart Lamp.md
+      - 1.1.4 Bluetooth Phone-Controlled LED: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.4 Bluetooth Phone-Controlled LED.md
+      - 1.1.5 Bluetooth Buzzer Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.5 Bluetooth Buzzer Controller.md
+      - 1.1.6 Bluetooth Relay Switch: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.6 Bluetooth Relay Switch.md
+      - 1.1.7 Bluetooth LED Brightness Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.7 Bluetooth LED Brightness Controller.md
+      - 1.1.8 Bluetooth RGB LED Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.8 Bluetooth RGB LED Controller.md
+      - 1.1.9 Bluetooth Touch Switch: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.9 Bluetooth Touch Switch.md
+      - 1.1.10 Bluetooth Plant Moisture Monitor: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.10 Bluetooth Plant Moisture Monitor.md
+      - 1.1.11 Bluetooth Environmental Monitor: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.11 Bluetooth Environmental Monitor.md
+      - 1.1.12 Bluetooth Water Pump Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.12 Bluetooth Water Pump Controller.md
+      - 1.1.13 Bluetooth Motion Alert: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.13 Bluetooth Motion Alert.md
+      - 1.1.14 Bluetooth Rain Detector: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.14 Bluetooth Rain Detector.md
+      - 1.1.15 Bluetooth Soil Dryness Monitor: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.15 Bluetooth Soil Dryness Monitor.md
+      - 1.1.16 Bluetooth Timer Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.16 Bluetooth Timer Controller.md
+      - 1.1.17 Bluetooth Sensor Data Logger: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.17 Bluetooth Sensor Data Logger.md
+      - 1.1.18 Bluetooth Plant Health Checker: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.18 Bluetooth Plant Health Checker.md
+      - 1.1.19 Bluetooth Doorbell: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.19 Bluetooth Doorbell.md
+      - 1.1.20 Bluetooth Relay Board: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.20 Bluetooth Relay Board.md
+      - 1.1.21 Bluetooth Direction Signal Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.21 Bluetooth Direction Signal Controller.md
+      - 1.1.22 Bluetooth Greenhouse Monitor: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.22 Bluetooth Greenhouse Monitor.md
+      - 1.1.23 Bluetooth Water Level Display: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.23 Bluetooth Water Level Display.md
+      - 1.1.24 Bluetooth Classroom Demo Kit: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.24 Bluetooth Classroom Demo Kit.md
+      - 1.1.25 Bluetooth Security Alarm: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.25 Bluetooth Security Alarm.md
+      - 1.1.26 Bluetooth Irrigation Toggle: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.26 Bluetooth Irrigation Toggle.md
+      - 1.1.27 Bluetooth Emergency Alert: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.27 Bluetooth Emergency Alert.md
+      - 1.1.28 Bluetooth Weather Display: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.28 Bluetooth Weather Display.md
+      - 1.1.29 Bluetooth Color Detection System: STEMAIDE_AIDER_Kit_Manual/beginner/1.1 Bluetooth/1.1.29 Bluetooth Color Detection System.md
+    - 1.2 Beginner Projects:
+      - 1.2.1 Potentiometer LED Brightness Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.1 Potentiometer LED Brightness Controller.md
+      - 1.2.2 Touch Sensor LED Switch: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.2 Touch Sensor LED Switch.md
+      - 1.2.3 Mini Traffic Light Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.3 Mini Traffic Light Controller.md
+      - 1.2.4 PWM DC Motor Speed Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.4 PWM DC Motor Speed Controller.md
+      - 1.2.5 Soil Moisture LED Indicator: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.5 Soil Moisture LED Indicator.md
+      - 1.2.6 Rain Detection Buzzer Alert: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.6 Rain Detection Buzzer Alert.md
+      - 1.2.7 Touch Sensor Doorbell: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.7 Touch Sensor Doorbell.md
+      - 1.2.8 BME280 Temperature Display with OLED: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.8 BME280 Temperature Display with OLED.md
+      - 1.2.9 DHT11 Humidity Monitor: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.9 DHT11 Humidity Monitor.md
+      - 1.2.10 Light Intensity Meter: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.10 Light Intensity Meter.md
+      - 1.2.11 Color Detection System: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.11 Color Detection System.md
+      - 1.2.12 Heart Rate Monitor: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.12 Heart Rate Monitor.md
+      - 1.2.13 Multi-LED Pattern Display: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.13 Multi-LED Pattern Display.md
+      - 1.2.14 Rain Status Webpage: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.14 Rain Status Webpage.md
+      - 1.2.15 Remote Irrigation Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.15 Remote Irrigation Controller.md
+      - 1.2.16 Environmental Data Logger: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.16 Environmental Data Logger.md
+      - 1.2.17 Soil Dryness Indicator: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.17 Soil Dryness Indicator.md
+      - 1.2.18 Rain Alert System: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.18 Rain Alert System.md
+      - 1.2.19 Safety Alert Buzzer: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.19 Safety Alert Buzzer.md
+      - 1.2.20 PWM LED Brightness Control: STEMAIDE_AIDER_Kit_Manual/beginner/1.2.20 PWM LED Brightness Control.md
+    - 1.3 OLED:
+      - 1.3.1 OLED Countdown Timer: STEMAIDE_AIDER_Kit_Manual/beginner/1.3 OLED/1.3.1 OLED Countdown Timer.md
+      - 1.3.2 OLED Button Press Counter: STEMAIDE_AIDER_Kit_Manual/beginner/1.3 OLED/1.3.2 OLED Button Press Counter.md
+      - 1.3.3 OLED IoT Dashboard: STEMAIDE_AIDER_Kit_Manual/beginner/1.3 OLED/1.3.3 OLED IoT Dashboard.md
+    - 1.4 Cloud:
+      - 1.4.1 Cloud Light Intensity Logger: STEMAIDE_AIDER_Kit_Manual/beginner/1.4 Cloud/1.4.1 Cloud Light Intensity Logger.md
+      - 1.4.2 Cloud Soil Moisture Display: STEMAIDE_AIDER_Kit_Manual/beginner/1.4 Cloud/1.4.2 Cloud Soil Moisture Display.md
+      - 1.4.3 Cloud Timer Switch: STEMAIDE_AIDER_Kit_Manual/beginner/1.4 Cloud/1.4.3 Cloud Timer Switch.md
+      - 1.4.4 Cloud LED Pattern Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.4 Cloud/1.4.4 Cloud LED Pattern Controller.md
+    - 1.5 Web:
+      - 1.5.1 Web LED Brightness Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.5 Web/1.5.1 Web LED Brightness Controller.md
+      - 1.5.2 Web Motion Counter: STEMAIDE_AIDER_Kit_Manual/beginner/1.5 Web/1.5.2 Web Motion Counter.md
+      - 1.5.3 Web Water Pump Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.5 Web/1.5.3 Web Water Pump Controller.md
+    - 1.6 IoT:
+      - 1.6.1 IoT Alarm Clock: STEMAIDE_AIDER_Kit_Manual/beginner/1.6 IoT/1.6.1 IoT Alarm Clock.md
+      - 1.6.2 IoT Plant Status Monitor: STEMAIDE_AIDER_Kit_Manual/beginner/1.6 IoT/1.6.2 IoT Plant Status Monitor.md
+      - 1.6.3 IoT Home Status Board: STEMAIDE_AIDER_Kit_Manual/beginner/1.6 IoT/1.6.3 IoT Home Status Board.md
+      - 1.6.4 IoT Classroom Demo Board: STEMAIDE_AIDER_Kit_Manual/beginner/1.6 IoT/1.6.4 IoT Classroom Demo Board.md
+    - 1.7 IR:
+      - 1.7.1 IR Remote LED Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.7 IR/1.7.1 IR Remote LED Controller.md
+      - 1.7.2 IR Remote Buzzer Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.7 IR/1.7.2 IR Remote Buzzer Controller.md
+      - 1.7.3 IR Obstacle Detection System: STEMAIDE_AIDER_Kit_Manual/beginner/1.7 IR/1.7.3 IR Obstacle Detection System.md
+      - 1.7.4 IR Remote Relay Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.7 IR/1.7.4 IR Remote Relay Controller.md
+    - 1.8 Water Level:
+      - 1.8.1 Water Level LED Indicator: STEMAIDE_AIDER_Kit_Manual/beginner/1.8 Water Level/1.8.1 Water Level LED Indicator.md
+      - 1.8.2 Water Level Buzzer Alert: STEMAIDE_AIDER_Kit_Manual/beginner/1.8 Water Level/1.8.2 Water Level Buzzer Alert.md
+      - 1.8.3 Water Level Status Webpage: STEMAIDE_AIDER_Kit_Manual/beginner/1.8 Water Level/1.8.3 Water Level Status Webpage.md
+    - 1.9 Push Button:
+      - 1.9.1 Push Button LED Toggle Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.9 Push Button/1.9.1 Push Button LED Toggle Controller.md
+      - 1.9.2 Push Button Buzzer Alarm: STEMAIDE_AIDER_Kit_Manual/beginner/1.9 Push Button/1.9.2 Push Button Buzzer Alarm.md
+      - 1.9.3 Push Button Water Pump Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.9 Push Button/1.9.3 Push Button Water Pump Controller.md
+    - 1.10 Relay:
+      - 1.10.1 Relay Controlled LED Switch: STEMAIDE_AIDER_Kit_Manual/beginner/1.10 Relay/1.10.1 Relay Controlled LED Switch.md
+      - 1.10.2 Relay Controlled DC Motor Driver: STEMAIDE_AIDER_Kit_Manual/beginner/1.10 Relay/1.10.2 Relay Controlled DC Motor Driver.md
+      - 1.10.3 Relay Timer Switch: STEMAIDE_AIDER_Kit_Manual/beginner/1.10 Relay/1.10.3 Relay Timer Switch.md
+    - 1.11 Wi-Fi:
+      - 1.11.1 Online Temperature Monitor: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.1 Online Temperature Monitor.md
+      - 1.11.2 Online Humidity Monitor: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.2 Online Humidity Monitor.md
+      - 1.11.3 Online Motor Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.3 Online Motor Controller.md
+      - 1.11.4 Online Tank Level Chart: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.4 Online Tank Level Chart.md
+      - 1.11.5 Wi-Fi Buzzer Web Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.5 Wi-Fi Buzzer Web Controller.md
+      - 1.11.6 Wi-Fi Button Press Logger: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.6 Wi-Fi Button Press Logger.md
+      - 1.11.7 Wi-Fi Color Sensor Display: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.7 Wi-Fi Color Sensor Display.md
+      - 1.11.8 Wi-Fi Doorbell: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.8 Wi-Fi Doorbell.md
+      - 1.11.9 Wi-Fi Heart Rate Monitor: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.9 Wi-Fi Heart Rate Monitor.md
+      - 1.11.10 Wi-Fi Heartbeat Logger: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.10 Wi-Fi Heartbeat Logger.md
+      - 1.11.11 Wi-Fi LED Web Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.11 Wi-Fi LED Web Controller.md
+      - 1.11.12 Wi-Fi Panic Button: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.12 Wi-Fi Panic Button.md
+      - 1.11.13 Wi-Fi PIR Motion Alert: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.13 Wi-Fi PIR Motion Alert.md
+      - 1.11.14 Wi-Fi Power Usage Simulator: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.14 Wi-Fi Power Usage Simulator.md
+      - 1.11.15 Wi-Fi Relay Scheduler: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.15 Wi-Fi Relay Scheduler.md
+      - 1.11.16 Wi-Fi Relay Switch: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.16 Wi-Fi Relay Switch.md
+      - 1.11.17 Wi-Fi Temperature Alert: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.17 Wi-Fi Temperature Alert.md
+      - 1.11.18 Wi-Fi Touch Switch: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.18 Wi-Fi Touch Switch.md
+      - 1.11.19 Wi-Fi Weather Station: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.19 Wi-Fi Weather Station.md
+      - 1.11.20 Wi-Fi IR Remote LED Controller: STEMAIDE_AIDER_Kit_Manual/beginner/1.11 Wi-Fi/1.11.20 Wi-Fi IR Remote LED Controller.md
+    - 1.12 PIR:
+      - 1.12.1 PIR Motion Counter: STEMAIDE_AIDER_Kit_Manual/beginner/1.12 PIR/1.12.1 PIR Motion Counter.md
+      - 1.12.2 PIR Motion Activated LED Light: STEMAIDE_AIDER_Kit_Manual/beginner/1.12 PIR/1.12.2 PIR Motion Activated LED Light.md
+      - 1.12.3 PIR Motion Buzzer Alarm: STEMAIDE_AIDER_Kit_Manual/beginner/1.12 PIR/1.12.3 PIR Motion Buzzer Alarm.md
+  - 4. Expert:
+    - 4.1 Smart:
+      - 4.1.1 National Smart Agriculture Pilot: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.1 National Smart Agriculture Pilot.md
+      - 4.1.2 Agriculture Environment Convergence System: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.2 Agriculture Environment Convergence System.md
+      - 4.1.3 Climate-Resilient Farming System: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.3 Climate-Resilient Farming System.md
+      - 4.1.4 Smart Agriculture Research Lab Demo: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.4 Smart Agriculture Research Lab Demo.md
+      - 4.1.5 Smart Environment Policy Tool: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.5 Smart Environment Policy Tool.md
+      - 4.1.6 Smart Environmental Governance Platform: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.6 Smart Environmental Governance Platform.md
+      - 4.1.7 Smart Sanitation AI Framework: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.7 Smart Sanitation AI Framework.md
+      - 4.1.8 Smart Sanitation for Smart Cities: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.8 Smart Sanitation for Smart Cities.md
+      - 4.1.9 Smart Water Sustainability Framework: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.9 Smart Water Sustainability Framework.md
+      - 4.1.10 Smart Water Scarcity Predictor: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.10 Smart Water Scarcity Predictor.md
+      - 4.1.11 Smart Agriculture Innovation Hub: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.11 Smart Agriculture Innovation Hub.md
+      - 4.1.12 Smart Sanitation Smart Nation Demo: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.12 Smart Sanitation Smart Nation Demo.md
+      - 4.1.13 Smart Environment Climate Dashboard: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.13 Smart Environment Climate Dashboard.md
+      - 4.1.14 Smart Water Crisis Management System: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.14 Smart Water Crisis Management System.md
+      - 4.1.15 Smart Agriculture Future Simulator: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.15 Smart Agriculture Future Simulator.md
+      - 4.1.16 Smart Sanitation Digital Twin: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.16 Smart Sanitation Digital Twin.md
+      - 4.1.17 Smart Environment AI Observatory: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.17 Smart Environment AI Observatory.md
+      - 4.1.18 Smart Water Infrastructure Monitor: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.18 Smart Water Infrastructure Monitor.md
+      - 4.1.19 Smart Agriculture Sustainability Engine: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.19 Smart Agriculture Sustainability Engine.md
+      - 4.1.20 Smart Sanitation Resilience Platform: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.20 Smart Sanitation Resilience Platform.md
+      - 4.1.21 Smart Environment Adaptive System: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.21 Smart Environment Adaptive System.md
+      - 4.1.22 Smart Water National Dashboard: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.22 Smart Water National Dashboard.md
+      - 4.1.23 Smart Agriculture Automation City: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.23 Smart Agriculture Automation City.md
+      - 4.1.24 Smart Sanitation Data Ecosystem: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.24 Smart Sanitation Data Ecosystem.md
+      - 4.1.25 Smart Environment Global Monitor: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.25 Smart Environment Global Monitor.md
+      - 4.1.26 Smart Water Climate Resilience Tool: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.26 Smart Water Climate Resilience Tool.md
+      - 4.1.27 Smart Agriculture Decision AI: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.27 Smart Agriculture Decision AI.md
+      - 4.1.28 Smart Sanitation Environment Link: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.28 Smart Sanitation Environment Link.md
+      - 4.1.29 Smart Environment Global Analytics: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.29 Smart Environment Global Analytics.md
+      - 4.1.30 Smart Water Smart Nation: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.30 Smart Water Smart Nation.md
+      - 4.1.31 Smart Agriculture Ecosystem Builder: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.31 Smart Agriculture Ecosystem Builder.md
+      - 4.1.32 Smart Sanitation Global IoT Network: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.32 Smart Sanitation Global IoT Network.md
+      - 4.1.33 Smart Environment Future Modeling: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.33 Smart Environment Future Modeling.md
+      - 4.1.34 Smart Water Digital Governance: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.34 Smart Water Digital Governance.md
+      - 4.1.35 Smart Agriculture Planetary Model: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.35 Smart Agriculture Planetary Model.md
+      - 4.1.36 Smart Sanitation Sustainability Lab: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.36 Smart Sanitation Sustainability Lab.md
+      - 4.1.37 Smart Environment Impact Prediction AI: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.37 Smart Environment Impact Prediction AI.md
+      - 4.1.38 Smart Water Nextgen System: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.38 Smart Water Nextgen System.md
+      - 4.1.39 Smart Agriculture AI Governance: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.39 Smart Agriculture AI Governance.md
+      - 4.1.40 Smart Sanitation Climate Solution: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.40 Smart Sanitation Climate Solution.md
+      - 4.1.41 Smart Environment Planetary Dashboard: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.41 Smart Environment Planetary Dashboard.md
+      - 4.1.42 Smart Water Future Resilience: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.42 Smart Water Future Resilience.md
+      - 4.1.43 Smart Agriculture Innovation Ecosystem: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.43 Smart Agriculture Innovation Ecosystem.md
+      - 4.1.44 Smart Sanitation Planetary System: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.44 Smart Sanitation Planetary System.md
+      - 4.1.45 Smart Environment Nextgen AI: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.45 Smart Environment Nextgen AI.md
+      - 4.1.46 Smart Sanitation World Scale System: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.46 Smart Sanitation World Scale System.md
+      - 4.1.47 Smart Environment AI Governance: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.47 Smart Environment AI Governance.md
+      - 4.1.48 Smart Water Planetary Intelligence: STEMAIDE_AIDER_Kit_Manual/expert/4.1 Smart/4.1.48 Smart Water Planetary Intelligence.md
+  - Intermediate Projects:
+    - ALERT BRACELET PROTOTYPE: intermediate/ALERT BRACELET PROTOTYPE.md
+    - CROP ENVIRONMENT LOGGER: intermediate/CROP ENVIRONMENT LOGGER.md
+    - DATA STREAMING: intermediate/DATA STREAMING.md
+    - EMERGENCY NOTIFIER: intermediate/EMERGENCY NOTIFIER.md
+    - FARM NIGHT SECURITY MOTION ALERT: intermediate/FARM NIGHT SECURITY MOTION ALERT.md
+    - LIVESTOCK AREA MOTION MONITOR: intermediate/LIVESTOCK AREA MOTION MONITOR.md
+    - MULTI SENSOR DASHBOARD: intermediate/MULTI SENSOR DASHBOARD.md
+    - MULTI-PLANT IRRIGATION SYSTEM: intermediate/MULTI-PLANT IRRIGATION SYSTEM.md
+    - PLANT STRESS DETECTION: intermediate/PLANT STRESS DETECTION.md
+    - RAIN AWARE IRRIGATION: intermediate/RAIN AWARE IRREGATION.md
+    - SOIL MOISTURE CLOUD ANALYTICS: intermediate/SOIL MOISTURE CLOUD ANALYTICS.md
+    - SOIL MOISTURE TREND ANALYZER: intermediate/SOIL MOISTURE TREND ANALYZER.md
+    - TOUCH CONTROL HUB: intermediate/TOUCH CONTROL HUB.md
+    - WATER LEVEL ALARM: intermediate/WATER LEVEL ALARM.md
+    - WATER USAGE MONITORING: intermediate/WATER USAGE MONITORING.md
+    - WI-FI CONTROLLED IRRIGATION: intermediate/WI-FI CONTROLLED IRRIGATION.md
+    - LIVESTOCK AREA MOTION MONITOR: intermediate/LIVESTOCK AREA MOTION MONITOR.md
+    - SMART FARM LIGHTING SYSTEM: intermediate/SMART/SMART FARM LIGHTING SYSTEM.md
+    - Automated:
+      - AUTOMATED IRRIGATION TIMER: intermediate/AUTOMATED/AUTOMATED IRREGATION TIMER.md
+      - AUTOMATED IRRIGATION ALERTS: intermediate/AUTOMATED/AUTOMATED IRRIGATION ALERTS.md
+    - Bluetooth:
+      - BLUETOOTH ENVIRONMENTAL ALARM: intermediate/BLUETOOTH/BLUETOOTH ENVIRONMENTAL ALARM.md
+      - BLUETOOTH FARM MONITORING NODE: intermediate/BLUETOOTH/BLUETOOTH FARM MONITORING NODE.md
+      - BLUETOOTH LED ANIMATION CONTROL: intermediate/BLUETOOTH/BLUETOOTH LED ANIMATION CONTROL.md
+      - BLUETOOTH MOTION LIGHT: intermediate/BLUETOOTH/BLUETOOTH_MOTION_LIGHT.md
+      - BLUETOOTH PUMP AUTOMATION: intermediate/BLUETOOTH/BLUETOOTH PUMP AUTOMATION.md
+      - BLUETOOTH REMOTE CONTROLLED FAN: intermediate/BLUETOOTH/BLUETOOTH REMOTE CONTROLLED FAN.md
+      - BLUETOOTH ROOM MONITOR: intermediate/BLUETOOTH/BLUETOOTH ROOM MONITOR.md
+      - BLUETOOTH SAFETY ALERT SYSTEM: intermediate/BLUETOOTH/BLUETOOTH SAFETY ALERT SYSTEM.md
+      - BLUETOOTH SMART SWITCH PANEL: intermediate/BLUETOOTH/BLUETOOTH SMART SWITCH PANEL.md
+      - BLUETOOTH SOIL SENSOR LOGGER: intermediate/BLUETOOTH/BLUETOOTH SOIL SENSOR LOGGER.md
+    - Greenhouse:
+      - GREENHOUSE ALERT: intermediate/GREENHOUSE/GREENHOUSE ALERT.md
+      - GREENHOUSE HUMIDITY CONTROL: intermediate/GREENHOUSE/GREENHOUSE HUMIDITY CONTROL.md
+      - GREENHOUSE TEMPERATURE CONTROL: intermediate/GREENHOUSE/GREENHOUSE TEMPERATURE CONTROL.md
+    - IoT:
+      - IOT FARM DASHBOARD: intermediate/IOT/IOT FARM DASHBOARD.md
+      - IOT LEARNING KIT: intermediate/IOT/IOT LEARNING KIT.md
+    - Smart:
+      - SMART TIMER: intermediate/SMART/SMART TIMER.md
+      - SMART PLUG: intermediate/SMART/SMART PLUG.md
+      - SMART IRRIGATION SYSTEM: intermediate/SMART/SMART IRRIGATION SYSTEM.md
+      - SMART FERTILIZER REMINDER: intermediate/SMART/SMART FERTILIZER REMINDER.md
+      - SMART GREENHOUSE ALARM: intermediate/SMART/SMART GREENHOUSE ALARM.md
+      - SMART IRRIGATION SCHEDULING AI: intermediate/SMART/SMART IRRIGATION SCHEDULING AI.md
+      - SMART PLANT HEALTH MONITOR: intermediate/SMART/SMART PLANT HEALTH MONITOR.md
+      - SMART SEEDLING MONITORING KIT: intermediate/SMART/SMART SEEDLING MONITORING KIT.md
+      - SMART WATER TANK REFILL SYSTEM: intermediate/SMART/SMART WATER TANK REFILL SYSTEM.md
+      - SMART FARM LIGHTING SYSTEM: intermediate/SMART/SMART FARM LIGHTING SYSTEM.md
