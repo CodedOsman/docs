@@ -26,3 +26,6 @@ rebuild.py
 pycache/
 
 __pycache__/
+
+docs/STEMAIDE_AIDER_Kit_Manual/Restructured/
+docs/STEMAIDE_AIDER_Kit_Manual/aider_yaml_block.txt

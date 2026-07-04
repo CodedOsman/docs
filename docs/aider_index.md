@@ -38,25 +38,25 @@ hide:
 ## Quick Start
 Get your hardware kit set up and write your first program in under 10 minutes.
 <div class="quickstart-grid">
-  <a href="STEMAIDE_AIDER_Kit_Manual/beginner/1.1%20Bluetooth/1.1.1%20Bluetooth%20Smart%20Buzzer/" class="quick-card">
+  <a href="../STEMAIDE_AIDER_Kit_Manual/Getting%20Started/2_Installation_Guide/" class="quick-card">
     <!-- <div class="quick-card-icon">💻</div> -->
     <div class="quick-card-content">
-      <h3>1. IDE Setup & Drivers</h3>
-      <p>Install the Arduino IDE on Windows, macOS, or Linux and select board/port.</p>
+      <h3>1. Installation & Setup</h3>
+      <p>Install Thonny IDE, install MicroPython on the Raspberry Pi Pico 2 W, and connect.</p>
     </div>
   </a>
-  <a href="STEMAIDE_AIDER_Kit_Manual/Getting%20Started/Basic_Programming_Concept/" class="quick-card">
+  <a href="../STEMAIDE_AIDER_Kit_Manual/Getting%20Started/3_First_MicroPython_Code/" class="quick-card">
     <!-- <div class="quick-card-icon">⚡</div> -->
     <div class="quick-card-content">
-      <h3>2. First Arduino Code</h3>
-      <p>Understand void setup(), void loop(), comments, and code uploads.</p>
+      <h3>2. First MicroPython Code</h3>
+      <p>Understand basic syntax, loops, and run your very first MicroPython script.</p>
     </div>
   </a>
-  <a href="STEMAIDE_AIDER_Kit_Manual/beginner/1.1%20Bluetooth/1.1.2%20Bluetooth%20LED%20Dimmer/" class="quick-card">
+  <a href="../STEMAIDE_AIDER_Kit_Manual/Appendices/Troubleshooting/" class="quick-card">
     <!-- <div class="quick-card-icon">💡</div> -->
     <div class="quick-card-content">
-      <h3>3. Project 1: LED Control</h3>
-      <p>Wire a basic LED circuit on a breadboard and turn it ON with code.</p>
+      <h3>3. Troubleshooting</h3>
+      <p>Common error messages and practical solutions to help you get unstuck quickly.</p>
     </div>
   </a>
 </div>
@@ -79,7 +79,7 @@ Browse documentation by complexity and learning progression.
         <li>Reading Circuit Diagrams</li>
         <li>Variables & Data Types</li>
       </ul>
-      <a href="STEMAIDE_AIDER_Kit_Manual/beginner/1.1%20Bluetooth/1.1.1%20Bluetooth%20Smart%20Buzzer/" class="path-action">View Foundation Topics →</a>
+      <a href="../STEMAIDE_AIDER_Kit_Manual/Getting%20Started/2_Installation_Guide/" class="path-action">View Foundation Topics →</a>
     </div>
   </div>
 
@@ -90,12 +90,12 @@ Browse documentation by complexity and learning progression.
     <div class="path-body">
       <p>Start interacting with modules: buzzers, digital buttons, sound sensors, LDRs, traffic light models, and servo motors.</p>
       <ul>
-        <li><a href="STEMAIDE_AIDER_Kit_Manual/beginner/1.1%20Bluetooth/1.1.2%20Bluetooth%20LED%20Dimmer/">LED Projects (1-5 LEDs)</a></li>
-        <li><a href="STEMAIDE_AIDER_Kit_Manual/beginner/1.3_Push_Button/1.3.1_Button_With_1_LED/">Push Button Interfacing</a></li>
-        <li><a href="STEMAIDE_AIDER_Kit_Manual/beginner/1.5_RGB_Module/1.5.0_RGB_Introduction/">RGB Multicolor Mixing</a></li>
-        <li><a href="STEMAIDE_AIDER_Kit_Manual/beginner/1.7_Servo_Motor/1.7.2_Sweep/">Servo Angular sweeps</a></li>
+        <li><a href="../STEMAIDE_AIDER_Kit_Manual/Appendices/Troubleshooting/">LED Projects (1-5 LEDs)</a></li>
+        <li><a href="../STEMAIDE_AIDER_Kit_Manual/beginner/1.1%20Push%20Button/1.1.1%20Push%20Button%20LED%20Toggle%20Controller/">Push Button Interfacing</a></li>
+        <li><a href="../STEMAIDE_AIDER_Kit_Manual/beginner/1.2%20Basic%20Projects/1.2.1%20Potentiometer%20LED%20Brightness%20Controller/">RGB Multicolor Mixing</a></li>
+        <li><a href="../STEMAIDE_AIDER_Kit_Manual/beginner/1.5%20IR/1.5.1%20IR%20Remote%20LED%20Controller/">Servo Angular sweeps</a></li>
       </ul>
-      <a href="STEMAIDE_AIDER_Kit_Manual/beginner/" class="path-action">Browse Beginner Projects →</a>
+      <a href="../STEMAIDE_AIDER_Kit_Manual/beginner/1.1%20Push%20Button/1.1.1%20Push%20Button%20LED%20Toggle%20Controller/" class="path-action">Browse Beginner Projects →</a>
     </div>
   </div>
 
@@ -111,7 +111,7 @@ Browse documentation by complexity and learning progression.
         <li>Ultrasonic Proximity alarms</li>
         <li>All Threshold Smart Alarms</li>
       </ul>
-      <a href="STEMAIDE_AIDER_Kit_Manual/intermediate/" class="path-action">Browse Intermediate Projects →</a>
+      <a href="../STEMAIDE_AIDER_Kit_Manual/intermediate/2.1%20BLUETOOTH/2.1.1%20BLUETOOTH%20SOIL%20SENSOR%20LOGGER/" class="path-action">Browse Intermediate Projects →</a>
     </div>
   </div>
 
@@ -122,12 +122,12 @@ Browse documentation by complexity and learning progression.
     <div class="path-body">
       <p>Assemble real-world prototype systems including automatic hand washers, security barriers, parking lot count grids, and smart street lighting.</p>
       <ul>
-        <li><a href="STEMAIDE_AIDER_Kit_Manual/expert/4.1%20Smart/3.1_Automatic_Curtain_Controller/3.1.1_Automatic_Curtain_Controller/">Automatic Curtain Controller</a></li>
-        <li><a href="STEMAIDE_AIDER_Kit_Manual/expert/4.1%20Smart/3.2_Smart_Parking_System/3.2.1_Smart_Car_Parking_System/">Smart Parking System</a></li>
-        <li><a href="STEMAIDE_AIDER_Kit_Manual/expert/4.1%20Smart/3.3_Home_Security_System/3.3.1_Smart_Security_System/">Home Security Guard</a></li>
-        <li><a href="STEMAIDE_AIDER_Kit_Manual/expert/4.1%20Smart/3.6_STEM_Capstone_Projects/3.6.1_Smart_Gauge_System/">Proximity Capstone Systems</a></li>
+        <li><a href="../STEMAIDE_AIDER_Kit_Manual/expert/4.1%20Smart/4.1.1%20National%20Smart%20Agriculture%20Pilot/">Automatic Curtain Controller</a></li>
+        <li><a href="../STEMAIDE_AIDER_Kit_Manual/expert/4.1%20Smart/4.1.2%20City-Wide%20Smart%20Traffic%20Control/">Smart Parking System</a></li>
+        <li><a href="../STEMAIDE_AIDER_Kit_Manual/expert/4.1%20Smart/4.1.3%20Industrial%20IoT%20Security%20Network/">Home Security Guard</a></li>
+        <li><a href="../STEMAIDE_AIDER_Kit_Manual/expert/4.1%20Smart/4.1.4%20Smart%20Hospital%20Patient%20Monitor/">Proximity Capstone Systems</a></li>
       </ul>
-      <a href="STEMAIDE_AIDER_Kit_Manual/expert/4.1%20Smart/" class="path-action">Explore Advanced STEM →</a>
+      <a href="../STEMAIDE_AIDER_Kit_Manual/expert/4.1%20Smart/4.1.1%20National%20Smart%20Agriculture%20Pilot/" class="path-action">Explore Advanced STEM →</a>
     </div>
   </div>
 </div>
@@ -141,22 +141,22 @@ Instantly navigate based on the components you are wiring.
   <div class="comp-card">
     <h4>Digital Actuators</h4>
     <p>LEDs, Buzzers, and standard output pins.</p>
-    <a href="STEMAIDE_AIDER_Kit_Manual/beginner/1.1%20Bluetooth/1.1.2%20Bluetooth%20LED%20Dimmer/">LED Guides</a> • <a href="STEMAIDE_AIDER_Kit_Manual/beginner/1.2_Buzzer/1.2.1_Buzzer_ON_OFF/">Buzzers</a>
+    <a href="../STEMAIDE_AIDER_Kit_Manual/Appendices/Troubleshooting/">LED Guides</a> • <a href="../STEMAIDE_AIDER_Kit_Manual/beginner/1.2%20Basic%20Projects/1.2.2%20Buzzer%20SOS%20Signal/">Buzzers</a>
   </div>
   <div class="comp-card">
     <h4>Input Controls</h4>
     <p>Momentary push buttons and toggle inputs.</p>
-    <a href="STEMAIDE_AIDER_Kit_Manual/beginner/1.3_Push_Button/1.3.1_Button_With_1_LED/">Push Buttons</a>
+    <a href="../STEMAIDE_AIDER_Kit_Manual/beginner/1.1%20Push%20Button/1.1.1%20Push%20Button%20LED%20Toggle%20Controller/">Push Buttons</a>
   </div>
   <div class="comp-card">
     <h4>Acoustic & Optics</h4>
     <p>RGB modules, LDR sensors, and Sound modules.</p>
-    <a href="STEMAIDE_AIDER_Kit_Manual/beginner/1.5_RGB_Module/1.5.0_RGB_Introduction/">RGB LED</a> • <a href="STEMAIDE_AIDER_Kit_Manual/beginner/1.6_LDR_Module/1.6.1_LDR_Module/">LDR Sensors</a> • <a href="STEMAIDE_AIDER_Kit_Manual/beginner/1.9_Sound_Sensor/1.9.1_Sound_Sensor/">Sound Sensors</a>
+    <a href="../STEMAIDE_AIDER_Kit_Manual/beginner/1.2%20Basic%20Projects/1.2.1%20Potentiometer%20LED%20Brightness%20Controller/">RGB LED</a> • <a href="../STEMAIDE_AIDER_Kit_Manual/beginner/1.3%20PIR/1.3.1%20PIR%20Motion%20Activated%20LED%20Light/">LDR Sensors</a> • <a href="../STEMAIDE_AIDER_Kit_Manual/beginner/1.4%20Relay/1.4.1%20Relay%20Controlled%20LED%20Switch/">Sound Sensors</a>
   </div>
   <div class="comp-card">
     <h4>Motion & Distance</h4>
     <p>Servo motors and Ultrasonic rangefinders.</p>
-    <a href="STEMAIDE_AIDER_Kit_Manual/beginner/1.7_Servo_Motor/1.7.1_One_Angle/">Servo Motors</a> • <a href="STEMAIDE_AIDER_Kit_Manual/beginner/1.8_Ultrasonic_Sensor/1.8.1_Ultrasonic_With_RGB/">Ultrasonic Sensor</a>
+    <a href="../STEMAIDE_AIDER_Kit_Manual/beginner/1.5%20IR/1.5.1%20IR%20Remote%20LED%20Controller/">Servo Motors</a> • <a href="../STEMAIDE_AIDER_Kit_Manual/beginner/1.6%20Water%20Level/1.6.1%20Water%20Level%20Indicator%20Alarm/">Ultrasonic Sensor</a>
   </div>
 </div>
 
@@ -166,21 +166,21 @@ Instantly navigate based on the components you are wiring.
 Here are some popular projects that showcase the power of combining the STEMAIDE kit with simple coding:
 
 <div class="featured-list">
-  <a href="STEMAIDE_AIDER_Kit_Manual/expert/4.1%20Smart/3.1_Automatic_Curtain_Controller/3.1.1_Automatic_Curtain_Controller/" class="featured-item">
+  <a href="../STEMAIDE_AIDER_Kit_Manual/expert/4.1%20Smart/4.1.1%20National%20Smart%20Agriculture%20Pilot/" class="featured-item">
     <span class="badge badge-adv">Advanced</span>
     <div class="featured-item-text">
       <h4>Automatic Curtain Controller</h4>
       <p>Automatically opens and closes curtains based on ambient light levels using an LDR sensor, potentiometer calibration, and servo motor control.</p>
     </div>
   </a>
-  <a href="STEMAIDE_AIDER_Kit_Manual/intermediate/2.10_Smart_Alarm_Projects/Ultrasonic_LED/2.10.4_Ultrasonic_with_4_LEDs/" class="featured-item">
+  <a href="../STEMAIDE_AIDER_Kit_Manual/intermediate/2.1%20BLUETOOTH/2.1.1%20BLUETOOTH%20SOIL%20SENSOR%20LOGGER/" class="featured-item">
     <span class="badge badge-int">Intermediate</span>
     <div class="featured-item-text">
       <h4>Smart Alert Lighting System (4 LEDs)</h4>
       <p>A multi-stage proximity notifier that turns on progressive warning LEDs as an object gets closer to the sensor, simulating safety barricades.</p>
     </div>
   </a>
-  <a href="STEMAIDE_AIDER_Kit_Manual/beginner/1.5_RGB_Module/1.5.7_Rainbow_Colors/" class="featured-item">
+  <a href="../STEMAIDE_AIDER_Kit_Manual/beginner/1.7%20OLED/1.7.1%20OLED%20Hello%20World%20Display/" class="featured-item">
     <span class="badge badge-beg">Beginner</span>
     <div class="featured-item-text">
       <h4>RGB Rainbow Color Sweep</h4>
@@ -195,9 +195,9 @@ Here are some popular projects that showcase the power of combining the STEMAIDE
 Find quick lookup references for coding syntax, component pins, and error fixes.
 
 <div class="references-nav">
-  <a href="STEMAIDE_AIDER_Kit_Manual/Appendices/Common_Errors/"> Common Code Errors</a>
-  <a href="STEMAIDE_AIDER_Kit_Manual/Appendices/Troubleshooting/"> Troubleshooting Checklist</a>
-  <a href="STEMAIDE_AIDER_Kit_Manual/Glossary/STEMAIDE_Glossary/"> Term Glossary</a>
+  <a href="../STEMAIDE_AIDER_Kit_Manual/Appendices/Troubleshooting/"> Common Code Errors</a>
+  <a href="../STEMAIDE_AIDER_Kit_Manual/Appendices/Troubleshooting/"> Troubleshooting Checklist</a>
+  <a href="../STEMAIDE_AIDER_Kit_Manual/Appendices/Glossary/"> Term Glossary</a>
 </div>
 
 
