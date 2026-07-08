@@ -27,7 +27,8 @@ pycache/
 
 __pycache__/
 
-gen_new_projects.py
-docs/STEMAIDE_AIDER_Kit_Manual/
-docs/STEMAIDE_CODER_Kit_Manual/stemaide_project_catalog.md
+docs/STEMAIDE_AIDER_Kit_Manual/Restructured/
+docs/STEMAIDE_AIDER_Kit_Manual/aider_yaml_block.txt
 new_discovery/
+gen_new_projects.py
+docs/STEMAIDE_CODER_kit_Manual/stemaide_project_catalog.md

@@ -1,0 +1,270 @@
+# Project 214
+## HYGIENE COMPLIANCE MONITOR
+
+**Advanced Embedded Systems Project Using Raspberry Pi Pico 2 W and MicroPython**
+
+
+
+## Contents
+
+- [Overview](#overview)
+- [Learning Objectives](#learning-objectives)
+- [Required Components](#required-components)
+- [Before You Begin](#before-you-begin)
+- [Circuit Connections](#circuit-connections)
+- [Wiring Diagram](#wiring-diagram)
+- [Step-by-Step Assembly](#step-by-step-assembly)
+- [Testing Individual Components](#testing-individual-components)
+- [Full Project Code](#full-project-code)
+- [How the Code Works](#how-the-code-works)
+- [Expected Result](#expected-result)
+- [Troubleshooting](#troubleshooting)
+- [Challenge Extensions](#challenge-extensions)
+- [Reflection Questions](#reflection-questions)
+- [Save Your Work](#save-your-work)
+- [Next Project](#next-project)
+
+---
+
+## Overview
+
+The Pico detects a person entering the wash zone and checks whether a wash input occurs within the expected time window.
+
+Hygiene reminders are more meaningful when the system distinguishes between presence and an actual wash action.
+
+A Pico 2 W prototype with a PIR sensor, wash sensor or button, and red and green LEDs.
+
+State-based hygiene logic, timed validation, and honest prototype framing.
+
+### Project Story
+
+**Advanced Project**: This advanced project is designed to help learners move beyond basic wiring and coding into complete system thinking. The learner should build the prototype, test each subsystem, validate the data, explain the design decisions, and propose improvements for real-world deployment.
+
+Hygiene-compliance prototypes can help learners think about monitored behavior, but they cannot prove correct handwashing technique or cleanliness by themselves.
+
+---
+
+## Learning Objectives
+
+- Cycle between multiple system states
+- Represent status clearly with LEDs or indicators
+- Use debouncing or event logic to keep the interface reliable
+- Explain why local status indicators matter in real operations
+- Discuss how a simple status tool could scale into a larger system
+
+---
+
+## Required Components
+
+| Component Name | Quantity | Short Description | Important Note |
+|----------------|----------|-------------------|----------------|
+| Raspberry Pi Pico 2 W | 1 | Main controller board | Use MicroPython firmware |
+| PIR motion sensor | 1 | Detects a person entering the wash zone | Allow warm-up time before testing |
+| Wash sensor or push button | 1 | Simulates or detects a wash action | Use a simple digital signal during prototyping |
+| Green LED | 1 | Shows wash action detected | Add a 220 ohm resistor |
+| Red LED | 1 | Shows reminder or missed action | Add a 220 ohm resistor |
+
+---
+
+## Before You Begin
+
+Before starting this project, make sure you have completed the foundational sections at the beginning of the manual:
+
+- **Software Installation and Setup**
+- **Safety Guidelines**
+- **Breadboard Basics**
+- **Reading Circuit Diagrams**
+
+### Project-Specific Setup Notes
+
+- No external library is required. This project uses only built-in MicroPython modules.
+
+### Project-Specific Safety Note
+
+Public hygiene or compliance outputs in this project are prototype indicators only and should not replace trained human inspection.
+
+This project demonstrates prototype compliance logic only and should not be used to judge real hygiene quality.
+
+---
+
+## Circuit Connections
+
+| Component Pin | Connects To | Pico GPIO / Physical Pin Number | Notes |
+|---------------|-------------|---------------------------------|-------|
+| PIR OUT | GPIO 14 | GPIO 14 / physical pin 19 | Entry detection input |
+| Wash sensor or button | GPIO 15 | GPIO 15 / physical pin 20 | Wash action input |
+| Green LED anode | 220 ohm resistor to GPIO 16 | GPIO 16 / physical pin 21 | Compliant state |
+| Red LED anode | 220 ohm resistor to GPIO 17 | GPIO 17 / physical pin 22 | Missed or pending state |
+
+---
+
+## Wiring Diagram
+
+```
+  PIR OUT                     -> GPIO 14
+  Wash sensor/button          -> GPIO 15
+  GPIO 16 -> 220 ohm resistor -> green LED anode
+  GPIO 17 -> 220 ohm resistor -> red LED anode
+  Common GND                  -> PIR, wash input, and LEDs
+```
+
+---
+
+## Step-by-Step Assembly
+
+1. Connect the PIR output to GPIO 14 and allow it to warm up before testing.
+2. Connect the wash sensor or push button to GPIO 15 with stable digital logic.
+3. Wire the green and red LEDs to GPIO 16 and GPIO 17 through 220 ohm resistors.
+4. Position the PIR so it detects a user entering the wash zone rather than background movement.
+
+---
+
+## Testing Individual Components
+
+Before running the full project, test each subsystem separately. This makes it easier to find wiring, library, or logic problems before full integration.
+
+1. **Hardware setup**: Assemble the Pico, sensor, indicator, and load wiring exactly as shown in the connection table before applying power.
+2. **Test the input sensor**: Test the PIR entry input and wash-action input separately before combining them into one state machine.
+3. **Test the output device**: Test both LEDs with a simple script before using them in the compliance logic.
+4. **Test the decision logic**: Trigger entry with and without a wash action to confirm both outcomes are handled correctly.
+5. **Run the full system**: Run the full system and compare the printed state with the LED result.
+6. **Validate the prototype**: Discuss how this prototype could still misclassify real human behavior.
+7. **Save the project**: Save the validated program on the Pico as main.py and keep a copy on the computer for future edits.
+
+---
+
+## Full Project Code
+
+After completing and checking the circuit connections, open Thonny IDE, copy and paste this code into a new file or upload the project file to the Raspberry Pi Pico 2 W, then run it from Thonny.
+
+```python
+from machine import Pin
+import time
+
+PIR_PIN = 14
+WASH_PIN = 15
+GREEN_LED_PIN = 16
+RED_LED_PIN = 17
+WINDOW_SECONDS = 10
+
+pir = Pin(PIR_PIN, Pin.IN, Pin.PULL_DOWN)
+wash = Pin(WASH_PIN, Pin.IN, Pin.PULL_DOWN)
+green_led = Pin(GREEN_LED_PIN, Pin.OUT)
+red_led = Pin(RED_LED_PIN, Pin.OUT)
+occupied = False
+window_active = False
+window_start = 0
+
+print('Hygiene compliance monitor ready')
+
+while True:
+    motion = pir.value() == 1
+    wash_action = wash.value() == 1
+    now = time.time()
+
+    if motion and not occupied:
+        occupied = True
+        window_active = True
+        window_start = now
+        print('Visit started')
+    elif not motion:
+        occupied = False
+
+    if window_active and wash_action:
+        green_led.value(1)
+        red_led.value(0)
+        window_active = False
+        print('Compliant wash detected')
+    elif window_active and now - window_start >= WINDOW_SECONDS:
+        green_led.value(0)
+        red_led.value(1)
+        window_active = False
+        print('Wash missed in time window')
+
+    time.sleep(0.1)
+```
+
+---
+
+## How the Code Works
+
+| Code Section | What It Does | Why It Matters | What to Modify During Testing |
+|--------------|--------------|----------------|------------------------------|
+| Observation window | Starts a time window after entry is detected | A compliance system needs a defined period in which the action should happen | Adjust the window if it feels too short or too long during testing |
+| Wash detection | Marks the visit compliant when the wash input becomes active | This connects behavior to a visible decision | Use a reliable digital input during prototyping so the logic is easy to validate |
+| LED result | Uses green for compliant and red for missed behavior | The result is visible without reading the serial output | Reset or re-enter the zone between tests so each visit is distinct |
+
+---
+
+## Expected Result
+
+The serial monitor reports the current reading or state clearly.
+
+The hardware output responds when the decision logic changes state.
+
+Subsystem behavior matches the thresholds, timing, or rules described in the document.
+
+### Validation Checks
+
+- **Normal condition test**: confirm the system stays in its safe or idle state under baseline conditions
+- **Warning condition test**: move the input close to the chosen threshold and confirm the transition is sensible
+- **Critical condition test**: trigger the strongest alert or control state and confirm the output response is correct
+- **Calibration test**: compare the sensor or timing against a known reference or repeated trial
+- **Limitation test**: deliberately create an awkward or noisy condition and note how the prototype behaves
+
+### Deployment and Limitations
+
+- This prototype is useful for local indicator boards and classroom control panels
+- Before deployment, labeling, enclosure design, and user training need improvement
+- Status tools only work well when users trust the meaning of each state and keep the system updated
+
+---
+
+## Troubleshooting
+
+| Problem | Possible Cause | Solution |
+|---------|----------------|----------|
+| Every visit is marked missed | The wash input is not being detected | Test GPIO 15 separately and confirm the digital input changes state |
+| The red LED stays on forever | The logic never resets between visits | Leave the detection zone fully so a new visit can start cleanly |
+| Entry is never detected | The PIR is not warmed up or is misaligned | Wait for warm-up and aim the PIR at the user entry path |
+| Green and red results feel unreliable | Human movement timing is inconsistent | Use slower, more deliberate test sequences during validation |
+
+---
+
+## Challenge Extensions
+
+- Add a local display showing the active state name
+- Add event logging for maintenance review
+- Add wireless reporting to a dashboard
+- Design a wall-mount enclosure with labels for users
+
+---
+
+## Reflection Questions
+
+1. How could users misunderstand the current status state?
+2. What would make the interface more reliable in a busy environment?
+3. How would you validate that the status tool reflects reality?
+4. What would you add before deploying the system publicly?
+
+---
+
+## Save Your Work
+
+Save the file to your computer as:
+
+```
+project_214_hygiene_compliance_monitor.py
+```
+
+If you want the program to run automatically when the Pico powers on, save the final version to the Pico as:
+
+```
+main.py
+```
+
+---
+
+## Next Project
+
+**Project 215: Flood Evacuation Alert**
