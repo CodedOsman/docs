@@ -26,3 +26,8 @@ rebuild.py
 pycache/
 
 __pycache__/
+
+gen_new_projects.py
+docs/STEMAIDE_AIDER_Kit_Manual/
+docs/STEMAIDE_CODER_Kit_Manual/stemaide_project_catalog.md
+new_discovery/
