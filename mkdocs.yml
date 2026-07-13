@@ -90,6 +90,7 @@ nav:
       - 1.2 Buzzer:
           - 1.2.1 Buzzer ON/OFF: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.2_Buzzer/1.2.1_Buzzer_ON_OFF.md
           - 1.2.2 Buzzer Beep: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.2_Buzzer/1.2.2_Buzzer_Beep.md
+          - 1.2.3 Piezo Beep Code Generator: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.2_Buzzer/1.2.3_Piezo_Beep_Code_Generator.md
       - 1.3 Push Button:
           - 1.3.1 Button with 1 LED: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.3_Push_Button/1.3.1_Button_With_1_LED.md
           - 1.3.2 Button with 2 LEDs: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.3_Push_Button/1.3.2_Button_With_2_LEDs.md
@@ -115,16 +116,22 @@ nav:
       - 1.7 Servo Motor:
           - 1.7.1 One Angle: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.7_Servo_Motor/1.7.1_One_Angle.md
           - 1.7.2 Sweep: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.7_Servo_Motor/1.7.2_Sweep.md
-      - 1.8 Ultrasonic Sensor: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.8_Ultrasonic_Sensor/1.8.1_Ultrasonic_With_RGB.md
-      - 1.9 Sound Sensor: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.9_Sound_Sensor/1.9.1_Sound_Sensor.md
+      - 1.8 Ultrasonic Sensor:
+          - 1.8.1 Ultrasonic Sensor with RGB: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.8_Ultrasonic_Sensor/1.8.1_Ultrasonic_With_RGB.md
+          - 1.8.2 Ultrasonic Distance Monitor: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.8_Ultrasonic_Sensor/1.8.2_Ultrasonic_Distance_Monitor.md
+      - 1.9 Sound Sensor: 
+          - 1.9.1 Noise Checker: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.9_Sound_Sensor/1.9.1_Sound_Sensor.md
+          - 1.9.2 Sound Level Trigger: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.9_Sound_Sensor/1.9.2_Sound_Level_Trigger.md
       - 1.10 Noise Level Alarm:
          - 1.10 Noise Level Alarm: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.10_Noise_Level_Alarm/1.10.1_Noise_level_alarm.md
       - 1.11 Smart Simulation Night/Day Light:
          - 1.11 Solar Simulation Night/Day Light: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.11_Solar_Simulation/1.11.1_solar_simulated.md
       - 1.12 Smart Potentiometer Dimmer:
          - 1.12 Smart Potentiometer Dimmer: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.12_Smart_potentiometer_dimmer/1.12.1_smart_potentiometer.md
+         - 1.12.2 Analog Dial Positioner: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.12_Smart_potentiometer_dimmer/1.12.2_Analog_Dial_Positioner.md
       - 1.13 Smart RGB Selector:
-         - 1.13 Smart RGB Selector: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.13_Push_Button_RGB_Selector/1.13.1_push_button_rgb_selector.md
+         - 1.13.1 Smart RGB Selector: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.13_Push_Button_RGB_Selector/1.13.1_push_button_rgb_selector.md
+         - 1.13.2 Serial Button Terminal: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.13_Push_Button_RGB_Selector/1.13.2_Serial_Button_Terminal.md
       - 1.14 Smart Servo Controlled Drawbridge:
          - 1.14 Smart Servo Controlled Drawbridge: STEMAIDE_CODER_Kit_Manual/Beginner Projects/1.14_Servo_Controlled_Drawbridge/1.14.1_servo_controlled_drawbridge.md
       - 1.15 Smart Distance Based Led Brighness:
@@ -135,7 +142,10 @@ nav:
       - 2.2 Button and RGB: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.2_Button_And_RGB/2.2.1_Button_And_RGB.md
       - 2.3 Button and Traffic Light: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.3_Button_And_Traffic_Light/2.3.1_Button_And_Traffic_Light.md
       - 2.4 LDR and RGB: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.4_LDR_And_RGB/2.4.1_LDR_And_RGB.md
-      - 2.5 LDR and Traffic Light: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.5_LDR_And_Traffic_Light/2.5.1_LDR_And_Traffic_Light.md
+      - 2.5 Light Dependent Resistor:
+        - 2.5.1 LDR and Traffic Light: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.5_LDR_And_Traffic_Light/2.5.1_LDR_And_Traffic_Light.md
+        - 2.5.2 Solar Sensing Streetlight: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.5_LDR_And_Traffic_Light/2.5.2_Solar_Sensing_Streetlight.md
+        - 2.5.3 Light_Sensitive_Canopy_Controller: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.5_LDR_And_Traffic_Light/2.5.3_Light_Sensitive_Canopy_Controller.md
       - 2.6 Ultrasonic and Buzzer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.6_Ultrasonic_And_Buzzer/2.6.1_Ultrasonic_And_Buzzer.md
       - 2.7 Ultrasonic and RGB: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.7_Ultrasonic_And_RGB/2.7.1_Ultrasonic_And_RGB.md
       - 2.8 Sound Sensor and Traffic Light: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.8_Sound_Sensor_And_Traffic_Light/2.8.1_Sound_Sensor_And_Traffic_Light.md
