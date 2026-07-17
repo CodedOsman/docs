@@ -147,9 +147,19 @@ nav:
         - 2.5.2 Solar Sensing Streetlight: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.5_LDR_And_Traffic_Light/2.5.2_Solar_Sensing_Streetlight.md
         - 2.5.3 Light_Sensitive_Canopy_Controller: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.5_LDR_And_Traffic_Light/2.5.3_Light_Sensitive_Canopy_Controller.md
       - 2.6 Ultrasonic and Buzzer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.6_Ultrasonic_And_Buzzer/2.6.1_Ultrasonic_And_Buzzer.md
-      - 2.7 Ultrasonic and RGB: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.7_Ultrasonic_And_RGB/2.7.1_Ultrasonic_And_RGB.md
-      - 2.8 Sound Sensor and Traffic Light: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.8_Sound_Sensor_And_Traffic_Light/2.8.1_Sound_Sensor_And_Traffic_Light.md
-      - 2.9 Servo and Ultrasonic: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.9_Servo_And_Ultrasonic/2.9.1_Servo_And_Ultrasonic.md
+      - 2.7 Ultrasonic and RGB:
+        - 2.7.1 Ultrasonic and RGB: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.7_Ultrasonic_And_RGB/2.7.1_Ultrasonic_And_RGB.md
+        - 2.7.2 Backing_Distance_Meter: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.7_Ultrasonic_And_RGB/2.7.2_Backing_Distance_Meter.md
+        - 2.7.3 Proximity_Alarm_Radar: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.7_Ultrasonic_And_RGB/2.7.3_Proximity_Alarm_Radar.md
+        - 2.7.4 Automatic_Barrier_Gate: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.7_Ultrasonic_And_RGB/2.7.4_Automatic_Barrier_Gate.md
+      - 2.8 Sound Sensor and Traffic Light:
+              - Sound Sensor and Traffic Light: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.8_Sound_Sensor_And_Traffic_Light/2.8.1_Sound_Sensor_And_Traffic_Light.md
+              - Sound Controlled Security Siren: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.8_Sound_Sensor_And_Traffic_Light/2.8.2_Sound_Controlled_Security_Siren.md
+              - Acoustic Doggy Door Latch: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.8_Sound_Sensor_And_Traffic_Light/2.8.3_Acoustic_Doggy_Door_Latch.md
+              - Visual Siren Alert: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.8_Sound_Sensor_And_Traffic_Light/2.8.4_Visual_Siren_Alert.md
+      - 2.9 Servo Motor:         
+              - Servo and Ultrasonic: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.9_Servo_And_Ultrasonic/2.9.1_Servo_And_Ultrasonic.md
+              - Moving Gate Warning Light: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.9_Servo_And_Ultrasonic/2.9.2_Moving_Gate_Warning_Light.md
       - 2.10 Smart Alarm Projects:
           - Ultrasonic + LED:
               - Ultrasonic with 1 LED: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Ultrasonic_LED/2.10.1_Ultrasonic_with_1_LED.md
@@ -173,9 +183,23 @@ nav:
               - Sound with 1 LED: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.16_Sound_with_1_LED.md
               - Sound with 2 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.17_Sound_with_2_LEDs.md
               - Sound with 3 LEDs: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.18_Sound_with_3_LEDs.md
-      - 2.11 Potentiometer Buzzer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.11_Potentiometer_Buzzer/2.111_Potentiometer_Buzzer.md
+              - Clap to Toggle Lamp: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.19_Clap_to_Toggle_Lamp.md
+              - Sound Reactive Party Light: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.20_Sound_Reactive_Party_Light.md
+              - Decibel Visualizer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.21_Decibel_Visualizer.md
+              - Heartbeat Sync Display: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/Sound_LED/2.10.22_Heartbeat_Sync_Display.md
+          - LED + RGB:
+              - Diagnostic Mode Display: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/LED_RGB/2.10.22_Diagnostic_Mode_Display.md
+              - Crosswalk Hazard Warning: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.10_Smart_Alarm_Projects/LED_RGB/2.10.23_Crosswalk_Hazard_Warning.md
+      - 2.11 Potentiometer:       
+              - Potentiometer Buzzer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.11_Potentiometer_Buzzer/2.11.1_Potentiometer_Buzzer.md
+              - Potentiometer LED Dimmer: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.11_Potentiometer_Buzzer/2.11.2_Potentiometer_LED_Dimmer.md
+              - Manual Traffic Speed Dial: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.11_Potentiometer_Buzzer/2.11.3_Manual_Traffic_Speed_Dial.md
+              - Potentiometer Frequency Theremin: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.11_Potentiometer_Buzzer/2.11.4_Potentiometer_Frequency_Theremin.md
+              - Potentiometer Servo Link: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.11_Potentiometer_Buzzer/2.11.5_Potentiometer_Servo_Link.md
       - 2.12 Automatic traffic detention: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.12_Automatic_traffic_detention/2.12.1_Automatic_traffic_detention.md
-      - 2.13 Intruder Alarm System: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.13_Intruder_Alarm_System/2.13.1_Automatic_traffic_detention.md
+      - 2.13 Intruder Alarm System: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.13_Intruder_Alarm_System/2.13.1_Automatic_traffic_detection.md
+      - 2.14 RGB and Traffic Light Module:
+              - Double Intersection Simulator: STEMAIDE_CODER_Kit_Manual/Intermediate Projects/2.14_RGB_And_Traffic_Light/2.14.1_Double_Intersection_Simulator.md
   - Advanced Projects:
       - Overview: STEMAIDE_CODER_Kit_Manual/Advance Projects/index.md
       - 3.1 Automatic Curtain Controller: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.1_Automatic_Curtain_Controller/3.1.1_Automatic_Curtain_Controller.md
