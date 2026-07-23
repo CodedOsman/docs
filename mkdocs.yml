@@ -1041,3 +1041,59 @@ nav:
     - 3. Bluetooth:
       - 3.1 Assembly: STEMAIDE_ROVER_Kit_Manual/Projects/3_Bluetooth/3.1_Assembly.md
       - 3.2 Code: STEMAIDE_ROVER_Kit_Manual/Projects/3_Bluetooth/3.2_Code.md
+- Pilot:
+  - Home: pilot_index.md
+  - Beginner:
+    - 1.1 Paper Dart Glider: STEMAIDE_PILOT_Kit_Manual/1.0/1.1.paper_dart_glider.md
+    - 1.2 Foam Hand Launch: STEMAIDE_PILOT_Kit_Manual/1.0/1.2.foam_hand_launch.md
+    - 1.3 Rubber Band Powered: STEMAIDE_PILOT_Kit_Manual/1.0/1.3.rubber_band_powered.md
+    - 1.4 Rc Flight Simulator: STEMAIDE_PILOT_Kit_Manual/1.0/1.4.rc_flight_simulator.md
+    - 1.5 Pre Flight Safety Checklist: STEMAIDE_PILOT_Kit_Manual/1.0/1.5.pre_flight_safety_checklist.md
+    - 1.6 Aircraft Classification: STEMAIDE_PILOT_Kit_Manual/1.0/1.6.aircraft_classification.md
+    - 1.7 Four Forces Demonstration: STEMAIDE_PILOT_Kit_Manual/1.0/1.7.four_forces_demonstration.md
+    - 1.8 Centre Of Gravity: STEMAIDE_PILOT_Kit_Manual/1.0/1.8.centre_of_gravity.md
+    - 1.9 Paper Helicopter: STEMAIDE_PILOT_Kit_Manual/1.0/1.9.paper_helicopter.md
+    - 1.10 Balsa Wood Tower: STEMAIDE_PILOT_Kit_Manual/1.0/1.10.balsa_wood_tower.md
+    - 1.11 Straw Paper: STEMAIDE_PILOT_Kit_Manual/1.0/1.11.straw_paper.md
+    - 1.12 Kite Building: STEMAIDE_PILOT_Kit_Manual/1.0/1.12.kite_building.md
+    - 1.13 Airfoil Shape Comparison: STEMAIDE_PILOT_Kit_Manual/1.0/1.13.airfoil_shape_comparison.md
+    - 1.14 Propeller Thrust: STEMAIDE_PILOT_Kit_Manual/1.0/1.14.propeller_thrust.md
+  - Intermediate:
+    - '2.1 Mini Avionics Bay ': STEMAIDE_PILOT_Kit_Manual/2.0/2.1.mini_avionics_bay_.md
+    - 2.2 Build A Tethered: STEMAIDE_PILOT_Kit_Manual/2.0/2.2.build_a_tethered.md
+    - 2.3 Scratch Built Foam Board: STEMAIDE_PILOT_Kit_Manual/2.0/2.3.scratch_built_foam_board.md
+    - '2.4 Rc Plane ': STEMAIDE_PILOT_Kit_Manual/2.0/2.4.rc_plane_.md
+    - 2.5 Cockpit Instrument Panel: STEMAIDE_PILOT_Kit_Manual/2.0/2.5.cockpit_instrument_panel.md
+    - 2.6 Quadcopter Manual: STEMAIDE_PILOT_Kit_Manual/2.0/2.6.quadcopter_manual.md
+    - 2.7 Led Navigation: STEMAIDE_PILOT_Kit_Manual/2.0/2.7.led_navigation.md
+    - 2.8 Altitude Climb Rate: STEMAIDE_PILOT_Kit_Manual/2.0/2.8.altitude_climb_rate.md
+    - 2.9 Aviation Weather: STEMAIDE_PILOT_Kit_Manual/2.0/2.9.aviation_weather.md
+    - 2.10 Jet Engine Principles: STEMAIDE_PILOT_Kit_Manual/2.0/2.10.jet_engine_principles.md
+    - 2.11 Gcaa Icao: STEMAIDE_PILOT_Kit_Manual/2.0/2.11.gcaa_icao.md
+    - 2.12 Water Bottle: STEMAIDE_PILOT_Kit_Manual/2.0/2.12.water_bottle.md
+    - 2.13 Gyroscope Accelerometer: STEMAIDE_PILOT_Kit_Manual/2.0/2.13.gyroscope_accelerometer.md
+  - Advance:
+    - 3.1 Fpv Quadcopter: STEMAIDE_PILOT_Kit_Manual/3.0/3.1.fpv_quadcopter.md
+    - 3.2 Autonomous Gps: STEMAIDE_PILOT_Kit_Manual/3.0/3.2.autonomous_gps.md
+    - 3.3 Rc Plane Cargo: STEMAIDE_PILOT_Kit_Manual/3.0/3.3.rc_plane_cargo.md
+    - 3.4 Quadcopter Obstacle: STEMAIDE_PILOT_Kit_Manual/3.0/3.4.quadcopter_obstacle.md
+    - '3.5 Flaps Spoilers ': STEMAIDE_PILOT_Kit_Manual/3.0/3.5.flaps_spoilers_.md
+    - 3.6 Ghana Aerospace: STEMAIDE_PILOT_Kit_Manual/3.0/3.6.ghana_aerospace.md
+    - 3.7 Aircraft Materials: STEMAIDE_PILOT_Kit_Manual/3.0/3.7.aircraft_materials.md
+    - '3.8 Moments Stability ': STEMAIDE_PILOT_Kit_Manual/3.0/3.8.moments_stability_.md
+    - 3.9 Vhf Radio Communication: STEMAIDE_PILOT_Kit_Manual/3.0/3.9.vhf_radio_communication.md
+    - 3.10 Dead Reckoning: STEMAIDE_PILOT_Kit_Manual/3.0/3.10.dead_reckoning.md
+    - 3.11 Ads B Live Aircraft: STEMAIDE_PILOT_Kit_Manual/3.0/3.11.ads_b_live_aircraft.md
+    - 3.12 Aircraft Maintenance: STEMAIDE_PILOT_Kit_Manual/3.0/3.12.aircraft_maintenance.md
+    - 3.13 Flight Data Recorder: STEMAIDE_PILOT_Kit_Manual/3.0/3.13.flight_data_recorder.md
+  - Expert:
+    - 4.1 Design Build A Custom: STEMAIDE_PILOT_Kit_Manual/4.0/4.1.design_build_a_custom.md
+    - '4.2 Full Capstone ': STEMAIDE_PILOT_Kit_Manual/4.0/4.2.full_capstone_.md
+    - 4.3 Servo Controlled: STEMAIDE_PILOT_Kit_Manual/4.0/4.3.servo_controlled.md
+    - 4.4 Rc Plane Wing: STEMAIDE_PILOT_Kit_Manual/4.0/4.4.rc_plane_wing.md
+    - 4.5 Vtol Hybrid: STEMAIDE_PILOT_Kit_Manual/4.0/4.5.vtol_hybrid.md
+    - 4.6 Autonomous Formation: STEMAIDE_PILOT_Kit_Manual/4.0/4.6.autonomous_formation.md
+    - 4.7 Long Endurance: STEMAIDE_PILOT_Kit_Manual/4.0/4.7.long_endurance.md
+    - 4.8 Uav Mission Requirements: STEMAIDE_PILOT_Kit_Manual/4.0/4.8.uav_mission_requirements.md
+    - '4.9 Uav Sizing ': STEMAIDE_PILOT_Kit_Manual/4.0/4.9.uav_sizing_.md
+    - 4.10 Ghana Aerospace Vision: STEMAIDE_PILOT_Kit_Manual/4.0/4.10.ghana_aerospace_vision.md

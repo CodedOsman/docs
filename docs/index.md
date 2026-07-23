@@ -30,4 +30,10 @@ hide:
       <p style="margin-bottom: 0;">Learn to build and program your own autonomous rover using PictoBlox.</p>
     </div>
   </a>
+  <a href="pilot_index/" class="quick-card" style="text-align: center; padding: 2rem; border-radius: 8px; border: 1px solid var(--md-default-fg-color--lightest); text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;">
+    <div class="quick-card-content">
+      <h2 style="margin-top: 0; color: var(--md-primary-fg-color);">STEMAIDE PILOT Kit</h2>
+      <p style="margin-bottom: 0;">Aviation and Aerospace Education Kit for building, testing and understanding flight mechanics.</p>
+    </div>
+  </a>
 </div>
