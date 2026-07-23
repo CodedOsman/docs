@@ -176,7 +176,31 @@ nav:
       - 3.6 STEM Capstone Projects:
           - 3.6.1 Smart Gauge System: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.6_STEM_Capstone_Projects/3.6.1_Smart_Gauge_System.md
           - 3.6.2 Smart Traffic Light System: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.6_STEM_Capstone_Projects/3.6.2_Smart_Traffic_Light_System.md
-      - 3.7 Sound Controlled Desk Lamp: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.7_Sound_Controlled_Desk_Lamp/3.7.1_Sound_Controlled_Desk_Lamp.md
+      - 3.7 Sound Controlled Desk Lamp: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.7_Sound_Controlled_Desk_Lamp/3.7.1_Sound_controlled_Desk_Lamp.md
+      - 3.8 Proximity Parking Radar: STEMAIDE_CODER_Kit_Manual/Advance Projects/3.8_Proximity_Parking_Radar/3.8.1_Proximity_Parking_Radar.md
+      - 3.9 Calibrated Water: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.9_Caliberated_Water\3.9.1_Calibrated_Water_Level_Simulator.md
+      - 3.10 Interactive Toll Gate: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.10_Interactive_Toll_Gate\3.10.1_Interactive_Toll_Gate_Barrier.md
+      - 3.11 Smart Thermostat: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.11_Smart_Thermostat\3.11.1_Smart_Thermostat_Simulator.md
+      - 3.12 Armed Intruder Alarm: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.12_Armed_Intruder_Alarm\3.12.1_Armed_Intruder_Alarm.md
+      - 3.13 Speed Trapping Radar: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.13_Speed_Trapping_Radar\3.13.1_Speed_Trapping_Radar_Warning.md
+      - 3.14 Sound and Distance Alarm: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.14_Sound_And_Distance_Alarm\3.14.1_Sound_&_Distance_Alarm.md
+      - 3.15 Emergency Panic Station: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.15_Emergency_Panic\3.15.1_Emergency_Panic_Station.md
+      - 3.16 Greenhouse Climate Monitor: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.16_Greenhouse_Climate_Monitor\3.16.1_Greenhouse_Climate_Monitor.md
+      - 3.17 Sound Reactive Servo Display: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.17_Sound_Reactive_Servo_Display\3.17.1_Sound_Reactive_Servo_Display.md
+      - 3.18 Noise Pollution Monitor: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.18_Noise_Pollution_Monitor\3.18.1_Noise_Pollution_Monitor.md
+      - 3.19 Adjustable Blink Rate Alarm: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.19_Adjustable_Blink_Rate_Alarm\3.19.1_Adjustable_Blink_Rate_Alarm.md
+      - 3.20 Color Coded Servo Positioner: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.20_Color_Coded_Servo_Positioner\3.20.1_Color_Coded_Servo_Positioner.md
+      - 3.21 Multi Modal Security Gate: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.21_Multi_Modal_Security_Gate\3.21.1_Multi_Modal_Security_Gate.md
+      - 3.22 Smart Mood Room Controller: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.22_Smart_Mood_Room_Controller\3.22.1_Smart_Mood_Room_Controller.md
+      - 3.23 Dual Sensor Perimeter Alarm: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.23_Dual_Sensor_Perimeter_Alarm\3.23.1_Dual_Sensor_Perimeter_Alarm.md
+      - 3.24 Calibrated Light Alarm Gauge: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.24_Calibrated_Light_Alarm_Gauge\3.24.1_Calibrated_Light_Alarm_Gauge.md
+      -  3.25 Integrated Smart Home Security Console: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.25_Integrated_Smart_Home_Security_Console\3.25.1_Integrated_Smart_Home_Security_Console.md
+      - 3.26 Autonomous Parking Garage System: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.26_Autonomous_Parking_Garage_System\3.26.1_Autonomous_Parking_Garage_System.md
+      - 3.27 Auditortory Reaction Timer Game: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.27_Auditory_Reaction_Timer_Game\3.27.1_Auditory_Reaction_Timer_Game.md
+      - 3.28 Smart Weather Station Console: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.28_Smart_Weather_Station_Console\3.28.1_Smart_Weather_Station_Console.md
+      - 3.29 Automated Greenhouse Controller: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.29_Automated_Greenhouse_Controller\3.29.1_Automated_Greenhouse_Controller.md
+      - 3.30 Industrial Safety Monitor: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.30_Industrial_Safety_Monitor\3.30.1_Industrial_Safety_Monitor.md
+      - 3.31 Smart City Intersection Simulator: STEMAIDE_CODER_Kit_Manual\Advance Projects\3.31_Smart_City_Intersection_Simulator\3.31.1_Smart_City_Intersection_Simulator.md
   - Appendices:
     #   - Overview: STEMAIDE_CODER_Kit_Manual/Appendices/index.md
       - Wiring Reference: STEMAIDE_CODER_Kit_Manual/Appendices/Wiring_Reference.md
@@ -193,4 +217,3 @@ nav:
       - Changelog: STEMAIDE_CODER_Kit_Manual/Appendices/Changelog.md
   - Glossary: STEMAIDE_CODER_Kit_Manual/Glossary/STEMAIDE_Glossary.md
   - References: STEMAIDE_CODER_Kit_Manual/References/References.md
-
