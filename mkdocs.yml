@@ -1059,36 +1059,36 @@ nav:
     - 1.13 Airfoil Shape Comparison: STEMAIDE_PILOT_Kit_Manual/1.0/1.13.airfoil_shape_comparison.md
     - 1.14 Propeller Thrust: STEMAIDE_PILOT_Kit_Manual/1.0/1.14.propeller_thrust.md
   - Intermediate:
-    - '2.1 Mini Avionics Bay ': STEMAIDE_PILOT_Kit_Manual/2.0/2.1.mini_avionics_bay_.md
+    - 2.1 Mini Avionics Bay: STEMAIDE_PILOT_Kit_Manual/2.0/2.1.mini_avionics_bay_.md
     - 2.2 Build A Tethered: STEMAIDE_PILOT_Kit_Manual/2.0/2.2.build_a_tethered.md
     - 2.3 Scratch Built Foam Board: STEMAIDE_PILOT_Kit_Manual/2.0/2.3.scratch_built_foam_board.md
-    - '2.4 Rc Plane ': STEMAIDE_PILOT_Kit_Manual/2.0/2.4.rc_plane_.md
+    - 2.4 RC Plane: STEMAIDE_PILOT_Kit_Manual/2.0/2.4.rc_plane_.md
     - 2.5 Cockpit Instrument Panel: STEMAIDE_PILOT_Kit_Manual/2.0/2.5.cockpit_instrument_panel.md
     - 2.6 Quadcopter Manual: STEMAIDE_PILOT_Kit_Manual/2.0/2.6.quadcopter_manual.md
     - 2.7 Led Navigation: STEMAIDE_PILOT_Kit_Manual/2.0/2.7.led_navigation.md
     - 2.8 Altitude Climb Rate: STEMAIDE_PILOT_Kit_Manual/2.0/2.8.altitude_climb_rate.md
     - 2.9 Aviation Weather: STEMAIDE_PILOT_Kit_Manual/2.0/2.9.aviation_weather.md
     - 2.10 Jet Engine Principles: STEMAIDE_PILOT_Kit_Manual/2.0/2.10.jet_engine_principles.md
-    - 2.11 Gcaa Icao: STEMAIDE_PILOT_Kit_Manual/2.0/2.11.gcaa_icao.md
+    - 2.11 GCAA ICAO: STEMAIDE_PILOT_Kit_Manual/2.0/2.11.GCAA_ICAO.md
     - 2.12 Water Bottle: STEMAIDE_PILOT_Kit_Manual/2.0/2.12.water_bottle.md
     - 2.13 Gyroscope Accelerometer: STEMAIDE_PILOT_Kit_Manual/2.0/2.13.gyroscope_accelerometer.md
   - Advance:
-    - 3.1 Fpv Quadcopter: STEMAIDE_PILOT_Kit_Manual/3.0/3.1.fpv_quadcopter.md
-    - 3.2 Autonomous Gps: STEMAIDE_PILOT_Kit_Manual/3.0/3.2.autonomous_gps.md
-    - 3.3 Rc Plane Cargo: STEMAIDE_PILOT_Kit_Manual/3.0/3.3.rc_plane_cargo.md
+    - 3.1 FPV Quadcopter: STEMAIDE_PILOT_Kit_Manual/3.0/3.1.fpv_quadcopter.md
+    - 3.2 Autonomous GPS: STEMAIDE_PILOT_Kit_Manual/3.0/3.2.autonomous_gps.md
+    - 3.3 RC Plane Cargo: STEMAIDE_PILOT_Kit_Manual/3.0/3.3.rc_plane_cargo.md
     - 3.4 Quadcopter Obstacle: STEMAIDE_PILOT_Kit_Manual/3.0/3.4.quadcopter_obstacle.md
     - '3.5 Flaps Spoilers ': STEMAIDE_PILOT_Kit_Manual/3.0/3.5.flaps_spoilers_.md
     - 3.6 Ghana Aerospace: STEMAIDE_PILOT_Kit_Manual/3.0/3.6.ghana_aerospace.md
     - 3.7 Aircraft Materials: STEMAIDE_PILOT_Kit_Manual/3.0/3.7.aircraft_materials.md
     - '3.8 Moments Stability ': STEMAIDE_PILOT_Kit_Manual/3.0/3.8.moments_stability_.md
-    - 3.9 Vhf Radio Communication: STEMAIDE_PILOT_Kit_Manual/3.0/3.9.vhf_radio_communication.md
+    - 3.9 VHF Radio Communication: STEMAIDE_PILOT_Kit_Manual/3.0/3.9.vhf_radio_communication.md
     - 3.10 Dead Reckoning: STEMAIDE_PILOT_Kit_Manual/3.0/3.10.dead_reckoning.md
     - 3.11 Ads B Live Aircraft: STEMAIDE_PILOT_Kit_Manual/3.0/3.11.ads_b_live_aircraft.md
     - 3.12 Aircraft Maintenance: STEMAIDE_PILOT_Kit_Manual/3.0/3.12.aircraft_maintenance.md
     - 3.13 Flight Data Recorder: STEMAIDE_PILOT_Kit_Manual/3.0/3.13.flight_data_recorder.md
   - Expert:
     - 4.1 Design Build A Custom: STEMAIDE_PILOT_Kit_Manual/4.0/4.1.design_build_a_custom.md
-    - '4.2 Full Capstone ': STEMAIDE_PILOT_Kit_Manual/4.0/4.2.full_capstone_.md
+    - 4.2 Full Capstone: STEMAIDE_PILOT_Kit_Manual/4.0/4.2.full_capstone_.md
     - 4.3 Servo Controlled: STEMAIDE_PILOT_Kit_Manual/4.0/4.3.servo_controlled.md
     - 4.4 Rc Plane Wing: STEMAIDE_PILOT_Kit_Manual/4.0/4.4.rc_plane_wing.md
     - 4.5 Vtol Hybrid: STEMAIDE_PILOT_Kit_Manual/4.0/4.5.vtol_hybrid.md
