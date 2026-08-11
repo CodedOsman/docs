@@ -463,6 +463,22 @@ nav:
           - 2.1 Basic Projects:
               - 2.1.1 Alert Bracelet Prototype: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
                   Basic Projects/2.1.1 Alert Bracelet Prototype.md
+              - 2.1.2 Cloud-based Crop Healthchart: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
+                  Basic Projects/2.1.2 Cloud-based Crop Healthchart.md
+              - 2.1.3 Community Farm Monitoring System: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
+                  Basic Projects/2.1.3 Community Farm Monitoring System.md
+              - 2.1.4 Crop Environment Logger: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
+                  Basic Projects/2.1.4 Crop Environment Logger.md
+              - 2.1.5 Data Streaming: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1 Basic
+                  Projects/2.1.5 Data Streaming.md
+              - 2.1.6 Emergency Notifier: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
+                  Basic Projects/2.1.6 Emergency Notifier.md
+              - 2.1.7 Environmental Pollution Alert: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
+                  Basic Projects/2.1.7 Environmental Pollution Alert.md
+              - 2.1.8 Farm Environmental Compliance Monitor: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
+                  Basic Projects/2.1.8 Farm Environmental Compliance Monitor.md
+              - 2.1.9 Farm Night Security Motion Alert: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
+                  Basic Projects/2.1.9 Farm Night Security Motion Alert.md
               - 2.1.10 Farm Pump Safety System: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
                   Basic Projects/2.1.10 Farm Pump Safety System.md
               - 2.1.11 Flood Alert System: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
@@ -483,8 +499,6 @@ nav:
                   Basic Projects/2.1.18 Precision Irrigation Demo System.md
               - 2.1.19 Public Restroom Usage Monitor: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
                   Basic Projects/2.1.19 Public Restroom Usage Monitor.md
-              - 2.1.2 Cloud-based Crop Healthchart: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
-                  Basic Projects/2.1.2 Cloud-based Crop Healthchart.md
               - 2.1.20 Rain Aware Irregation: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
                   Basic Projects/2.1.20 Rain Aware Irregation.md
               - 2.1.21 Rain Prediction Alert System: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
@@ -505,26 +519,12 @@ nav:
                   Basic Projects/2.1.28 Touch Control Hub.md
               - 2.1.29 Water Level Alarm: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
                   Basic Projects/2.1.29 Water Level Alarm.md
-              - 2.1.3 Community Farm Monitoring System: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
-                  Basic Projects/2.1.3 Community Farm Monitoring System.md
               - 2.1.30 Water Usage Monitoring: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
                   Basic Projects/2.1.30 Water Usage Monitoring.md
               - 2.1.31 Water-efficient Irrigation Controller: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
                   Basic Projects/2.1.31 Water-efficient Irrigation Controller.md
               - 2.1.32 Wi-fi Controlled Irrigation: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
                   Basic Projects/2.1.32 Wi-fi Controlled Irrigation.md
-              - 2.1.4 Crop Environment Logger: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
-                  Basic Projects/2.1.4 Crop Environment Logger.md
-              - 2.1.5 Data Streaming: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1 Basic
-                  Projects/2.1.5 Data Streaming.md
-              - 2.1.6 Emergency Notifier: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
-                  Basic Projects/2.1.6 Emergency Notifier.md
-              - 2.1.7 Environmental Pollution Alert: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
-                  Basic Projects/2.1.7 Environmental Pollution Alert.md
-              - 2.1.8 Farm Environmental Compliance Monitor: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
-                  Basic Projects/2.1.8 Farm Environmental Compliance Monitor.md
-              - 2.1.9 Farm Night Security Motion Alert: STEMAIDE_AIDER_Kit_Manual/intermediate/2.1
-                  Basic Projects/2.1.9 Farm Night Security Motion Alert.md
           - 2.2 Automated:
               - 2.2.1 Automated Irregation Timer: STEMAIDE_AIDER_Kit_Manual/intermediate/2.2
                   Automated/2.2.1 Automated Irregation Timer.md
@@ -532,19 +532,13 @@ nav:
                   Automated/2.2.2 Automated Irrigation Alerts.md
               - 2.2.3 Automated Irrigation Scheduler: STEMAIDE_AIDER_Kit_Manual/intermediate/2.2
                   Automated/2.2.3 Automated Irrigation Scheduler.md
-              - 2.2.4 Automated Irrigation Timer: STEMAIDE_AIDER_Kit_Manual/intermediate/2.2
-                  Automated/2.2.4 Automated Irrigation Timer.md
-              - 2.2.5 Automated Irrigation With Weather Input: STEMAIDE_AIDER_Kit_Manual/intermediate/2.2
-                  Automated/2.2.5 Automated Irrigation With Weather Input.md
-              - 2.2.6 Automated Water Pump Protection: STEMAIDE_AIDER_Kit_Manual/intermediate/2.2
-                  Automated/2.2.6 Automated Water Pump Protection.md
+              - 2.2.4 Automated Irrigation With Weather Input: STEMAIDE_AIDER_Kit_Manual/intermediate/2.2
+                  Automated/2.2.4 Automated Irrigation With Weather Input.md
+              - 2.2.5 Automated Water Pump Protection: STEMAIDE_AIDER_Kit_Manual/intermediate/2.2
+                  Automated/2.2.5 Automated Water Pump Protection.md
           - 2.3 Bluetooth:
               - 2.3.1 Bluetooth Environmental Alarm: STEMAIDE_AIDER_Kit_Manual/intermediate/2.3
                   Bluetooth/2.3.1 Bluetooth Environmental Alarm.md
-              - 2.3.10 Bluetooth-based Farm Monitor: STEMAIDE_AIDER_Kit_Manual/intermediate/2.3
-                  Bluetooth/2.3.10 Bluetooth-based Farm Monitor.md
-              - 2.3.11 Bluetooth_motion_light: STEMAIDE_AIDER_Kit_Manual/intermediate/2.3
-                  Bluetooth/2.3.11 Bluetooth_motion_light.md
               - 2.3.2 Bluetooth Farm Monitoring Node: STEMAIDE_AIDER_Kit_Manual/intermediate/2.3
                   Bluetooth/2.3.2 Bluetooth Farm Monitoring Node.md
               - 2.3.3 Bluetooth Led Animation Control: STEMAIDE_AIDER_Kit_Manual/intermediate/2.3
@@ -561,11 +555,15 @@ nav:
                   Bluetooth/2.3.8 Bluetooth Smart Switch Panel.md
               - 2.3.9 Bluetooth Soil Sensor Logger: STEMAIDE_AIDER_Kit_Manual/intermediate/2.3
                   Bluetooth/2.3.9 Bluetooth Soil Sensor Logger.md
+              - 2.3.10 Bluetooth-based Farm Monitor: STEMAIDE_AIDER_Kit_Manual/intermediate/2.3
+                  Bluetooth/2.3.10 Bluetooth-based Farm Monitor.md
+              - 2.3.11 Bluetooth_motion_light: STEMAIDE_AIDER_Kit_Manual/intermediate/2.3
+                  Bluetooth/2.3.11 Bluetooth_motion_light.md
           - 2.4 Greenhouse:
               - 2.4.1 Greenhouse Alert: STEMAIDE_AIDER_Kit_Manual/intermediate/2.4
                   Greenhouse/2.4.1 Greenhouse Alert.md
-              - 2.4.2 Greenhouse Humidity Control: STEMAIDE_AIDER_Kit_Manual/intermediate/2.4
-                  Greenhouse/2.4.2 Greenhouse Humidity Control.md
+              - 2.4.2 Greenhouse Humidity Monitor: STEMAIDE_AIDER_Kit_Manual/intermediate/2.4
+                  Greenhouse/2.4.2 Greenhouse Humidity Monitor.md
               - 2.4.3 Greenhouse Temperature Control: STEMAIDE_AIDER_Kit_Manual/intermediate/2.4
                   Greenhouse/2.4.3 Greenhouse Temperature Control.md
           - 2.5 Iot:
@@ -580,6 +578,22 @@ nav:
           - 2.6 Smart:
               - 2.6.1 Smart Agricultural Iot Hub: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
                   Smart/2.6.1 Smart Agricultural Iot Hub.md
+              - 2.6.2 Smart Compost Moisture Monitor: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
+                  Smart/2.6.2 Smart Compost Moisture Monitor.md
+              - 2.6.3 Smart Drainage Blockage Detector: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
+                  Smart/2.6.3 Smart Drainage Blockage Detector.md
+              - 2.6.4 Smart Farm Analytics Display: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
+                  Smart/2.6.4 Smart Farm Analytics Display.md
+              - 2.6.5 Smart Farm Data Logger: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
+                  Smart/2.6.5 Smart Farm Data Logger.md
+              - 2.6.6 Smart Farm Lighting System: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
+                  Smart/2.6.6 Smart Farm Lighting System.md
+              - 2.6.7 Smart Farm Weather Station: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
+                  Smart/2.6.7 Smart Farm Weather Station.md
+              - 2.6.8 Smart Fertilizer Reminder: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
+                  Smart/2.6.8 Smart Fertilizer Reminder.md
+              - 2.6.9 Smart Greenhouse Alarm: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
+                  Smart/2.6.9 Smart Greenhouse Alarm.md
               - 2.6.10 Smart Greenhouse Control Panel: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
                   Smart/2.6.10 Smart Greenhouse Control Panel.md
               - 2.6.11 Smart Greenhouse Lighting: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
@@ -600,8 +614,6 @@ nav:
                   Smart/2.6.18 Smart Irrigation Override System.md
               - 2.6.19 Smart Irrigation Rain Integration: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
                   Smart/2.6.19 Smart Irrigation Rain Integration.md
-              - 2.6.2 Smart Compost Moisture Monitor: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
-                  Smart/2.6.2 Smart Compost Moisture Monitor.md
               - 2.6.20 Smart Irrigation Scheduling Ai: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
                   Smart/2.6.20 Smart Irrigation Scheduling Ai.md
               - 2.6.21 Smart Irrigation Sms Alert: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
@@ -622,8 +634,6 @@ nav:
                   Smart/2.6.28 Smart Sanitation Facility Monitor.md
               - 2.6.29 Smart Seedling Monitoring Kit: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
                   Smart/2.6.29 Smart Seedling Monitoring Kit.md
-              - 2.6.3 Smart Drainage Blockage Detector: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
-                  Smart/2.6.3 Smart Drainage Blockage Detector.md
               - 2.6.30 Smart Timer: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6 Smart/2.6.30
                   Smart Timer.md
               - 2.6.31 Smart Toilet Water Monitor: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
@@ -634,22 +644,26 @@ nav:
                   Smart/2.6.33 Smart Water Quality Proxy System.md
               - 2.6.34 Smart Water Tank Refill System: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
                   Smart/2.6.34 Smart Water Tank Refill System.md
-              - 2.6.4 Smart Farm Analytics Display: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
-                  Smart/2.6.4 Smart Farm Analytics Display.md
-              - 2.6.5 Smart Farm Data Logger: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
-                  Smart/2.6.5 Smart Farm Data Logger.md
-              - 2.6.6 Smart Farm Lighting System: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
-                  Smart/2.6.6 Smart Farm Lighting System.md
-              - 2.6.7 Smart Farm Weather Station: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
-                  Smart/2.6.7 Smart Farm Weather Station.md
-              - 2.6.8 Smart Fertilizer Reminder: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
-                  Smart/2.6.8 Smart Fertilizer Reminder.md
-              - 2.6.9 Smart Greenhouse Alarm: STEMAIDE_AIDER_Kit_Manual/intermediate/2.6
-                  Smart/2.6.9 Smart Greenhouse Alarm.md
       - 3. Advance:
           - 3.1 Basic Projects:
               - 3.1.1 Ai-style Irrigation Decision System: STEMAIDE_AIDER_Kit_Manual/advance/3.1
                   Basic Projects/3.1.1 Ai-style Irrigation Decision System.md
+              - 3.1.2 Auto Rain Cover System: STEMAIDE_AIDER_Kit_Manual/advance/3.1
+                  Basic Projects/3.1.2 Auto Rain Cover System.md
+              - 3.1.3 Compost Control: STEMAIDE_AIDER_Kit_Manual/advance/3.1 Basic
+                  Projects/3.1.3 Compost Control.md
+              - 3.1.4 Contaminated Water Alert: STEMAIDE_AIDER_Kit_Manual/advance/3.1
+                  Basic Projects/3.1.4 Contaminated Water Alert.md
+              - 3.1.5 Door Open Alert: STEMAIDE_AIDER_Kit_Manual/advance/3.1 Basic
+                  Projects/3.1.5 Door Open Alert.md
+              - 3.1.6 Fire Alert: STEMAIDE_AIDER_Kit_Manual/advance/3.1 Basic Projects/3.1.6
+                  Fire Alert.md
+              - 3.1.7 Garden Moisture Display: STEMAIDE_AIDER_Kit_Manual/advance/3.1
+                  Basic Projects/3.1.7 Garden Moisture Display.md
+              - 3.1.8 Handwash Counter: STEMAIDE_AIDER_Kit_Manual/advance/3.1 Basic
+                  Projects/3.1.8 Handwash Counter.md
+              - 3.1.9 Handwash Timer: STEMAIDE_AIDER_Kit_Manual/advance/3.1 Basic
+                  Projects/3.1.9 Handwash Timer.md
               - 3.1.10 Heart Rate Monitor: STEMAIDE_AIDER_Kit_Manual/advance/3.1 Basic
                   Projects/3.1.10 Heart Rate Monitor.md
               - 3.1.11 Hygiene Compliance Monitor: STEMAIDE_AIDER_Kit_Manual/advance/3.1
@@ -670,8 +684,6 @@ nav:
                   Basic Projects/3.1.18 Multi-sensor Smart Farm Management System.md
               - 3.1.19 Nighttime Alert: STEMAIDE_AIDER_Kit_Manual/advance/3.1 Basic
                   Projects/3.1.19 Nighttime Alert.md
-              - 3.1.2 Auto Rain Cover System: STEMAIDE_AIDER_Kit_Manual/advance/3.1
-                  Basic Projects/3.1.2 Auto Rain Cover System.md
               - 3.1.20 Occupancy Light: STEMAIDE_AIDER_Kit_Manual/advance/3.1 Basic
                   Projects/3.1.20 Occupancy Light.md
               - 3.1.21 Pollution Indicator Board: STEMAIDE_AIDER_Kit_Manual/advance/3.1
@@ -692,8 +704,6 @@ nav:
                   Basic Projects/3.1.28 Status Remote Display.md
               - 3.1.29 Toxic Gas Sanitation Alert: STEMAIDE_AIDER_Kit_Manual/advance/3.1
                   Basic Projects/3.1.29 Toxic Gas Sanitation Alert.md
-              - 3.1.3 Compost Control: STEMAIDE_AIDER_Kit_Manual/advance/3.1 Basic
-                  Projects/3.1.3 Compost Control.md
               - 3.1.30 Ventilation Fan: STEMAIDE_AIDER_Kit_Manual/advance/3.1 Basic
                   Projects/3.1.30 Ventilation Fan.md
               - 3.1.31 Wearable Alert: STEMAIDE_AIDER_Kit_Manual/advance/3.1 Basic
@@ -704,18 +714,6 @@ nav:
                   Basic Projects/3.1.33 Wi-fi Multi-node Iot Sensor Network.md
               - 3.1.34 Zone Occupancy Dashboard: STEMAIDE_AIDER_Kit_Manual/advance/3.1
                   Basic Projects/3.1.34 Zone Occupancy Dashboard.md
-              - 3.1.4 Contaminated Water Alert: STEMAIDE_AIDER_Kit_Manual/advance/3.1
-                  Basic Projects/3.1.4 Contaminated Water Alert.md
-              - 3.1.5 Door Open Alert: STEMAIDE_AIDER_Kit_Manual/advance/3.1 Basic
-                  Projects/3.1.5 Door Open Alert.md
-              - 3.1.6 Fire Alert: STEMAIDE_AIDER_Kit_Manual/advance/3.1 Basic Projects/3.1.6
-                  Fire Alert.md
-              - 3.1.7 Garden Moisture Display: STEMAIDE_AIDER_Kit_Manual/advance/3.1
-                  Basic Projects/3.1.7 Garden Moisture Display.md
-              - 3.1.8 Handwash Counter: STEMAIDE_AIDER_Kit_Manual/advance/3.1 Basic
-                  Projects/3.1.8 Handwash Counter.md
-              - 3.1.9 Handwash Timer: STEMAIDE_AIDER_Kit_Manual/advance/3.1 Basic
-                  Projects/3.1.9 Handwash Timer.md
           - 3.2 Automated:
               - 3.2.1 Automated Urinal Flusher: STEMAIDE_AIDER_Kit_Manual/advance/3.2
                   Automated/3.2.1 Automated Urinal Flusher.md
@@ -739,12 +737,6 @@ nav:
           - 3.4 Environmental:
               - 3.4.1 Climate Logger: STEMAIDE_AIDER_Kit_Manual/advance/3.4 Environmental/3.4.1
                   Climate Logger.md
-              - 3.4.10 Environmental Risk Scoring: STEMAIDE_AIDER_Kit_Manual/advance/3.4
-                  Environmental/3.4.10 Environmental Risk Scoring.md
-              - 3.4.11 Environmental Sensor Network: STEMAIDE_AIDER_Kit_Manual/advance/3.4
-                  Environmental/3.4.11 Environmental Sensor Network.md
-              - 3.4.12 Environmental Trend Analyzer: STEMAIDE_AIDER_Kit_Manual/advance/3.4
-                  Environmental/3.4.12 Environmental Trend Analyzer.md
               - 3.4.2 Environmental Awareness Display: STEMAIDE_AIDER_Kit_Manual/advance/3.4
                   Environmental/3.4.2 Environmental Awareness Display.md
               - 3.4.3 Environmental Compliance: STEMAIDE_AIDER_Kit_Manual/advance/3.4
@@ -761,6 +753,12 @@ nav:
                   Environmental/3.4.8 Environmental Iot Node.md
               - 3.4.9 Environmental Monitoring Kit: STEMAIDE_AIDER_Kit_Manual/advance/3.4
                   Environmental/3.4.9 Environmental Monitoring Kit.md
+              - 3.4.10 Environmental Risk Scoring: STEMAIDE_AIDER_Kit_Manual/advance/3.4
+                  Environmental/3.4.10 Environmental Risk Scoring.md
+              - 3.4.11 Environmental Sensor Network: STEMAIDE_AIDER_Kit_Manual/advance/3.4
+                  Environmental/3.4.11 Environmental Sensor Network.md
+              - 3.4.12 Environmental Trend Analyzer: STEMAIDE_AIDER_Kit_Manual/advance/3.4
+                  Environmental/3.4.12 Environmental Trend Analyzer.md
           - 3.5 Flood:
               - 3.5.1 Flood Early Warning: STEMAIDE_AIDER_Kit_Manual/advance/3.5 Flood/3.5.1
                   Flood Early Warning.md
@@ -791,6 +789,80 @@ nav:
                   Water Safety Alarm.md
               - 3.8.4 Water Sustainability Monitor: STEMAIDE_AIDER_Kit_Manual/advance/3.8
                   Water/3.8.4 Water Sustainability Monitor.md
+          - 3.9 Smart:
+              - 3.9.1 Smart Agriculture Automation Suite: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.1 Smart Agriculture Automation Suite.md
+              - 3.9.2 Smart Agriculture Command Dashboard: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.2 Smart Agriculture Command Dashboard.md
+              - 3.9.3 Smart Agriculture Data Lake: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.3 Smart Agriculture Data Lake.md
+              - 3.9.4 Smart Agriculture Digital Platform: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.4 Smart Agriculture Digital Platform.md
+              - 3.9.5 Smart Agriculture Digital Twin: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.5 Smart Agriculture Digital Twin.md
+              - 3.9.6 Smart Agriculture Future Lab: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.6 Smart Agriculture Future Lab.md
+              - 3.9.7 Smart Agriculture Iot Command Center: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.7 Smart Agriculture Iot Command Center.md
+              - 3.9.8 Smart Agriculture Iot Network: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.8 Smart Agriculture Iot Network.md
+              - 3.9.9 Smart Agriculture Iot Os: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.9 Smart Agriculture Iot Os.md
+              - 3.9.10 Smart Agriculture Monitoring Grid: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.10 Smart Agriculture Monitoring Grid.md
+              - 3.9.11 Smart Agriculture National Demo: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.11 Smart Agriculture National Demo.md
+              - 3.9.12 Smart Agriculture Optimization System: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.12 Smart Agriculture Optimization System.md
+              - 3.9.13 Smart Agriculture Policy Simulator: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.13 Smart Agriculture Policy Simulator.md
+              - 3.9.14 Smart Agriculture Predictive Analytics: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.14 Smart Agriculture Predictive Analytics.md
+              - 3.9.15 Smart Air Quality Proxy Monitor: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.15 Smart Air Quality Proxy Monitor.md
+              - 3.9.16 Smart Environment Control System: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.16 Smart Environment Control System.md
+              - 3.9.17 Smart Environment Decision Engine: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.17 Smart Environment Decision Engine.md
+              - 3.9.18 Smart Environment Digital Observatory: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.18 Smart Environment Digital Observatory.md
+              - 3.9.19 Smart Environment Early Warning Ai: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.19 Smart Environment Early Warning Ai.md
+              - 3.9.20 Smart Environment Impact Analyzer: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.20 Smart Environment Impact Analyzer.md
+              - 3.9.21 Smart Environment Management Suite: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.21 Smart Environment Management Suite.md
+              - 3.9.22 Smart Environment Sustainability Engine: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.22 Smart Environment Sustainability Engine.md
+              - 3.9.23 Smart Environment Trend Predictor: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.23 Smart Environment Trend Predictor.md
+              - 3.9.24 Smart Environmental Analytics Engine: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.24 Smart Environmental Analytics Engine.md
+              - 3.9.25 Smart Environmental Automation System: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.25 Smart Environmental Automation System.md
+              - 3.9.26 Smart Environmental Compliance Engine: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.26 Smart Environmental Compliance Engine.md
+              - 3.9.27 Smart Environmental Data Fusion: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.27 Smart Environmental Data Fusion.md
+              - 3.9.28 Smart Environmental Forecasting System: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.28 Smart Environmental Forecasting System.md
+              - 3.9.29 Smart Environmental Iot Infrastructure: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.29 Smart Environmental Iot Infrastructure.md
+              - 3.9.30 Smart Environmental Monitoring Mesh: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.30 Smart Environmental Monitoring Mesh.md
+              - 3.9.31 Smart Environmental Response System: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.31 Smart Environmental Response System.md
+              - 3.9.32 Smart Environmental Risk Platform: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.32 Smart Environmental Risk Platform.md
+              - 3.9.33 Smart Farm Ai Assistant: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.33 Smart Farm Ai Assistant.md
+              - 3.9.34 Smart Farm Iot Ecosystem: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.34 Smart Farm Iot Ecosystem.md
+              - 3.9.35 Smart Flood Management System: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.35 Smart Flood Management System.md
+              - 3.9.36 Smart Flood Prediction Dashboard: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.36 Smart Flood Prediction Dashboard.md
+              - 3.9.37 Smart Flood Warning: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.37 Smart Flood Warning.md
+              - 3.9.38 Smart Flood Warning Display: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.38 Smart Flood Warning Display.md
+              - 3.9.39 Smart Greenhouse Autonomous Controller: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.39 Smart Greenhouse Autonomous Controller.md
+              - 3.9.40 Smart Rainwater Harvesting System: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.40 Smart Rainwater Harvesting System.md
+              - 3.9.41 Smart Sanitation Alert Network: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.41 Smart Sanitation Alert Network.md
+              - 3.9.42 Smart Sanitation Alert System: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.42 Smart Sanitation Alert System.md
+              - 3.9.43 Smart Sanitation Analytics Cloud: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.43 Smart Sanitation Analytics Cloud.md
+              - 3.9.44 Smart Sanitation Analytics Platform: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.44 Smart Sanitation Analytics Platform.md
+              - 3.9.45 Smart Sanitation Compliance Monitor: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.45 Smart Sanitation Compliance Monitor.md
+              - 3.9.46 Smart Sanitation Data Intelligence: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.46 Smart Sanitation Data Intelligence.md
+              - 3.9.47 Smart Sanitation Digital Monitoring: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.47 Smart Sanitation Digital Monitoring.md
+              - 3.9.48 Smart Sanitation Global Prototype: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.48 Smart Sanitation Global Prototype.md
+              - 3.9.49 Smart Sanitation Impact Tracker: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.49 Smart Sanitation Impact Tracker.md
+              - 3.9.50 Smart Sanitation Innovation System: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.50 Smart Sanitation Innovation System.md
+              - 3.9.51 Smart Sanitation Iot Platform: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.51 Smart Sanitation Iot Platform.md
+              - 3.9.52 Smart Sanitation Monitoring Ai: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.52 Smart Sanitation Monitoring Ai.md
+              - 3.9.53 Smart Sanitation Monitoring Cloud: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.53 Smart Sanitation Monitoring Cloud.md
+              - 3.9.54 Smart Sanitation Operations System: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.54 Smart Sanitation Operations System.md
+              - 3.9.55 Smart Sanitation Performance Analytics: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.55 Smart Sanitation Performance Analytics.md
+              - 3.9.56 Smart Sanitation Predictive System: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.56 Smart Sanitation Predictive System.md
+              - 3.9.57 Smart Sanitation Smart City Module: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.57 Smart Sanitation Smart City Module.md
+              - 3.9.58 Smart Sanitation Sustainability Tracker: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.58 Smart Sanitation Sustainability Tracker.md
+              - 3.9.59 Smart Tank Dashboard: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.59 Smart Tank Dashboard.md
+              - 3.9.60 Smart Water Ai Controller: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.60 Smart Water Ai Controller.md
+              - 3.9.61 Smart Water Conservation Ai: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.61 Smart Water Conservation Ai.md
+              - 3.9.62 Smart Water Conservation System: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.62 Smart Water Conservation System.md
+              - 3.9.63 Smart Water Distribution Monitor: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.63 Smart Water Distribution Monitor.md
+              - 3.9.64 Smart Water Efficiency Ai: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.64 Smart Water Efficiency Ai.md
+              - 3.9.65 Smart Water Governance Demo: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.65 Smart Water Governance Demo.md
+              - 3.9.66 Smart Water Intelligence Dashboard: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.66 Smart Water Intelligence Dashboard.md
+              - 3.9.67 Smart Water Intelligence System: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.67 Smart Water Intelligence System.md
+              - 3.9.68 Smart Water Leakage Detector: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.68 Smart Water Leakage Detector.md
+              - 3.9.69 Smart Water Optimization Platform: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.69 Smart Water Optimization Platform.md
+              - 3.9.70 Smart Water Policy Simulation System: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.70 Smart Water Policy Simulation System.md
+              - 3.9.71 Smart Water Resilience System: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.71 Smart Water Resilience System.md
+              - 3.9.72 Smart Water Security System: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.72 Smart Water Security System.md
+              - 3.9.73 Smart Water Sustainability Ai: STEMAIDE_AIDER_Kit_Manual/advance/3.9 smart/3.9.73 Smart Water Sustainability Ai.md
       - 4. Expert:
           - 4.1 Smart:
               - 4.1.1 National Smart Agriculture Pilot: STEMAIDE_AIDER_Kit_Manual/expert/4.1
