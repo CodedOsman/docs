@@ -63,9 +63,9 @@ nav:
   - Coder:
       - Overview: coder_index.md
       - Getting Started:
-          - Arduino IDE Setup: STEMAIDE_CODER_Kit_Manual/Getting Started/Arduino_IDE_Setup.md
-          - Basic Programming Concepts: STEMAIDE_CODER_Kit_Manual/Getting Started/Basic_Programming_Concept.md
-          - Safety Guidelines: STEMAIDE_CODER_Kit_Manual/Getting Started/Safety_Guidelines.md
+          - Arduino IDE Setup: STEMAIDE_CODER_Kit_Manual/Getting_Started/Arduino_IDE_Setup.md
+          - Basic Programming Concepts: STEMAIDE_CODER_Kit_Manual/Getting_Started/Basic_Programming_Concept.md
+          - Safety Guidelines: STEMAIDE_CODER_Kit_Manual/Getting_Started/Safety_Guidelines.md
       - Beginner Projects:
           - Overview: STEMAIDE_CODER_Kit_Manual/Beginner Projects/index.md
           - 1.1 LED Control:
@@ -988,7 +988,7 @@ nav:
       - 1.4 MotionBell Presence Trainer: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.4_MotionBell_Presence_Trainer.md
       - 1.5 AquaDropColourSignal: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.5_AquaDropColourSignal.md
       - 1.6 Push Button Direction Signal: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.6_Push_Button_Direction_Signal.md
-      - 1.7 SmartBadge RFID Reader: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.7_SmartBadge_RFID_Reader.md
+      - 1.7 SmartBadge RFID Reader: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.7_Smart_Badge_RFID_Reader.md
       - 1.8 JoyMap Position Meter: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.8_JoyMap_Position_Meter.md
       - 1.9 ServoAngle Classroom Pointer: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.9_ServoAngle_Classroom_Pointer.md
       - 1.10 SonicRange Number Reporter: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.10_SonicRange_Number_Reporter.md
@@ -1016,6 +1016,15 @@ nav:
       - 2.15 Classroom Response System: STEMAIDE_CODER_PRO_Kit_Manual/2.0/2.15_Classroom_Response_System.md
       
     - Advance Projects:
+      - 3.1 Smart Greenhouse Controller: STEMAIDE_CODER_PRO_Kit_Manual/3.0/3.1_Smart_Greenhouse_Controller.md
+      - 3.2 Smart Home Security Dashboard: STEMAIDE_CODER_PRO_Kit_Manual/3.0/3.2_Smart_Home_Security_Dashboard.md
+      - 3.3 Automated Classroom Environment Monitor: STEMAIDE_CODER_PRO_Kit_Manual/3.0/3.3_Automated_Classroom_Environment_Monitor.md
+      - 3.4 Smart Energy Consumption Monitor: STEMAIDE_CODER_PRO_Kit_Manual/3.0/3.4_Smart_Energy_Consumption_Monitor.md
+      - 3.5 Automated Warehouse Monitoring System: STEMAIDE_CODER_PRO_Kit_Manual/3.0/3.5_Automated_Warehouse_Monitoring_System.md
+      - 3.6 Intelligent Visitor Management System: STEMAIDE_CODER_PRO_Kit_Manual/3.0/3.6_Intelligent_Visitor_Management_System.md
+      - 3.7 Smart Vehicle Parking Management System: STEMAIDE_CODER_PRO_Kit_Manual/3.0/3.7_Smart_Vehicle_Parking_Management_System.md
+      - 3.8 Smart Hospital Patient Monitoring System: STEMAIDE_CODER_PRO_Kit_Manual/3.0/3.8_Smart_Hospital_Patient_Monitoring_System.md
+      - 3.9 Smart Building Access System: STEMAIDE_CODER_PRO_Kit_Manual/3.0/3.9_Smart_Building_Access_System.md
       - 3.1 Smart Greenhouse Controller: STEMAIDE_CODER_PRO_Kit_Manual/3.0/3.1_Smart_Greenhouse_Controller.md
       - 3.2 Smart Home Security Dashboard: STEMAIDE_CODER_PRO_Kit_Manual/3.0/3.2_Smart_Home_Security_Dashboard.md
       - 3.3 Automated Classroom Environment Monitor: STEMAIDE_CODER_PRO_Kit_Manual/3.0/3.3_Automated_Classroom_Environment_Monitor.md
