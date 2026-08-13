@@ -63,9 +63,9 @@ nav:
   - Coder:
       - Overview: coder_index.md
       - Getting Started:
-          - Arduino IDE Setup: STEMAIDE_CODER_Kit_Manual/Getting Started/Arduino_IDE_Setup.md
-          - Basic Programming Concepts: STEMAIDE_CODER_Kit_Manual/Getting Started/Basic_Programming_Concept.md
-          - Safety Guidelines: STEMAIDE_CODER_Kit_Manual/Getting Started/Safety_Guidelines.md
+          - Arduino IDE Setup: STEMAIDE_CODER_Kit_Manual/Getting_Started/Arduino_IDE_Setup.md
+          - Basic Programming Concepts: STEMAIDE_CODER_Kit_Manual/Getting_Started/Basic_Programming_Concept.md
+          - Safety Guidelines: STEMAIDE_CODER_Kit_Manual/Getting_Started/Safety_Guidelines.md
       - Beginner Projects:
           - Overview: STEMAIDE_CODER_Kit_Manual/Beginner Projects/index.md
           - 1.1 LED Control:
@@ -982,7 +982,7 @@ nav:
   - Coder Pro:
     - Home: coder_pro_index.md
     - Beginner Projects:
-      - 1.10 SonicRange Number Reporter: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.10_SonicRange_Number_Reporter.md
+      - 1.10 SonicRange Number Reporter: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.10_Sonic_Range_Number_Reporter.md
       - 1.11 Electronic Voting Counter: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.11_Electronic_Voting_Counter.md
       - 1.12 Distance Warning System: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.12_Distance_Warning_System.md
       - 1.13 Smart Fan Indicator: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.13_Smart_Fan_Indicator.md
@@ -994,9 +994,9 @@ nav:
       - 1.4 MotionBell Presence Trainer: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.4_MotionBell_Presence_Trainer.md
       - 1.5 AquaDropColourSignal: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.5_AquaDropColourSignal.md
       - 1.6 Push Button Direction Signal: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.6_Push_Button_Direction_Signal.md
-      - 1.7 SmartBadge RFID Reader: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.7_SmartBadge_RFID_Reader.md
+      - 1.7 SmartBadge RFID Reader: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.7_Smart_Badge_RFID_Reader.md
       - 1.8 JoyMap Position Meter: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.8_JoyMap_Position_Meter.md
-      - 1.9 ServoAngle Classroom Pointer: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.9_ServoAngle_Classroom_Pointer.md
+      - 1.9 ServoAngle Classroom Pointer: STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.9_Servo_Angle_Classroom_Pointer.md
     - Intermediate Projects:
       - 2.10 Electronic Auction System: STEMAIDE_CODER_PRO_Kit_Manual/2.0/2.10_Electronic_Auction_System.md
       - 2.11 Intelligent Water Tank Monitor: STEMAIDE_CODER_PRO_Kit_Manual/2.0/2.11_Intelligent_Water_Tank_Monitor.md
