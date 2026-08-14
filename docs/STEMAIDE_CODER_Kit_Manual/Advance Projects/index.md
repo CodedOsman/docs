@@ -21,7 +21,7 @@ Advanced projects leverage sophisticated component combinations for real-world a
 - **Water Level Sensor** — Fluid level detection for smart bins and irrigation management.
 - **Motion Sensors** — Infrared sensors for occupancy detection and automated systems.
 
-## Available Projects
+## Some Available Projects
 
 Each project demonstrates professional IoT and automation principles:
 
