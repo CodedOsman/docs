@@ -18,41 +18,41 @@ hide:
 
 <div class="portal-stats">
   <div class="stat-card">
-    <span class="stat-num">13</span>
-    <span class="stat-label">Foundation Lessons</span>
+    <span class="stat-num">15</span>
+    <span class="stat-label">Beginner Lessons</span>
   </div>
   <div class="stat-card">
-    <span class="stat-num">42</span>
-    <span class="stat-label">Beginner Projects</span>
-  </div>
-  <div class="stat-card">
-    <span class="stat-num">30</span>
+    <span class="stat-num">15</span>
     <span class="stat-label">Intermediate Projects</span>
   </div>
   <div class="stat-card">
-    <span class="stat-num">8</span>
-    <span class="stat-label">Advanced STEM Systems</span>
+    <span class="stat-num">31</span>
+    <span class="stat-label">Advance Projects</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-num">95</span>
+    <span class="stat-label">Expert STEM Systems</span>
   </div>
 </div>
 
 ## Quick Start
 Get your hardware kit set up and write your first program in under 10 minutes.
 <div class="quickstart-grid">
-  <a href="STEMAIDE_CODER_PRO_Kit_Manual/Getting%20Started/Arduino_IDE_Setup/" class="quick-card">
+  <a href="../../docs/docs/STEMAIDE_CODER_Kit_Manual/Getting_Started/Arduino_IDE_Setup.md" class="quick-card">
     <!-- <div class="quick-card-icon">💻</div> -->
     <div class="quick-card-content">
       <h3>1. IDE Setup & Drivers</h3>
       <p>Install the Arduino IDE on Windows, macOS, or Linux and select board/port.</p>
     </div>
   </a>
-  <a href="STEMAIDE_CODER_PRO_Kit_Manual/Getting%20Started/Basic_Programming_Concept/" class="quick-card">
+  <a href="../../docs/docs/STEMAIDE_CODER_Kit_Manual/Getting_Started/Arduino_IDE_Setup.md" class="quick-card">
     <!-- <div class="quick-card-icon">⚡</div> -->
     <div class="quick-card-content">
       <h3>2. First Arduino Code</h3>
       <p>Understand void setup(), void loop(), comments, and code uploads.</p>
     </div>
   </a>
-  <a href="STEMAIDE_CODER_PRO_Kit_Manual/Beginner%20Projects/1.1_LED/1.1.1_Turn_ON_One_LED/" class="quick-card">
+  <a href="../../docs/docs/STEMAIDE_CODER_PRO_Kit_Manual/1.0/1.1_LED_Morse_Code_Messenger.md" class="quick-card">
     <!-- <div class="quick-card-icon">💡</div> -->
     <div class="quick-card-content">
       <h3>3. Project 1: LED Control</h3>
@@ -79,7 +79,7 @@ Browse documentation by complexity and learning progression.
         <li>Reading Circuit Diagrams</li>
         <li>Variables & Data Types</li>
       </ul>
-      <a href="STEMAIDE_CODER_PRO_Kit_Manual/Getting%20Started/Arduino_IDE_Setup/" class="path-action">View Foundation Topics →</a>
+      <a href="../../docs/docs/STEMAIDE_CODER_PRO_Kit_Manual/Glossary/STEMAIDE_Glossary.md" class="path-action">View Foundation Topics →</a>
     </div>
   </div>
 
@@ -111,7 +111,7 @@ Browse documentation by complexity and learning progression.
         <li>Ultrasonic Proximity alarms</li>
         <li>All Threshold Smart Alarms</li>
       </ul>
-      <a href="STEMAIDE_CODER_PRO_Kit_Manual/Intermediate%20Projects/" class="path-action">Browse Intermediate Projects →</a>
+      <a href="../../docs/docs/STEMAIDE_CODER_PRO_Kit_Manual/2.0/" class="path-action">Browse Intermediate Projects →</a>
     </div>
   </div>
 
@@ -134,7 +134,7 @@ Browse documentation by complexity and learning progression.
 
 ---
 
-## Component Categories & Hardware References
+<!-- ## Component Categories & Hardware References -->
 Instantly navigate based on the components you are wiring.
 
 <div class="components-grid">
@@ -195,9 +195,10 @@ Here are some popular projects that showcase the power of combining the STEMAIDE
 Find quick lookup references for coding syntax, component pins, and error fixes.
 
 <div class="references-nav">
-  <a href="STEMAIDE_CODER_PRO_Kit_Manual/Appendices/Common_Errors/"> Common Code Errors</a>
-  <a href="STEMAIDE_CODER_PRO_Kit_Manual/Appendices/Troubleshooting/"> Troubleshooting Checklist</a>
-  <a href="STEMAIDE_CODER_PRO_Kit_Manual/Glossary/STEMAIDE_Glossary/"> Term Glossary</a>
+  <a href="../../docs/docs/STEMAIDE_CODER_PRO_Kit_Manual/References/References.md"> External References</a>
+  <a href="../../docs/docs/STEMAIDE_CODER_PRO_Kit_Manual/Appendices/Common_Errors.md"> Common Code Errors</a>
+  <a href="../../docs/docs/STEMAIDE_CODER_PRO_Kit_Manual/Appendices/Troubleshooting.md"> Troubleshooting Checklist</a>
+  <a href="../../docs/docs/STEMAIDE_CODER_PRO_Kit_Manual/Glossary/STEMAIDE_Glossary.md"> Term Glossary</a>
 </div>
 
 
