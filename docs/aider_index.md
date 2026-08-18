@@ -18,19 +18,23 @@ hide:
 
 <div class="portal-stats">
   <div class="stat-card">
-    <span class="stat-num">238+</span>
+    <span class="stat-num">396</span>
     <span class="stat-label">Total Projects</span>
   </div>
   <div class="stat-card">
-    <span class="stat-num">99+</span>
+    <span class="stat-num">100</span>
     <span class="stat-label">Beginner Projects</span>
   </div>
   <div class="stat-card">
-    <span class="stat-num">91+</span>
+    <span class="stat-num">89</span>
     <span class="stat-label">Intermediate Projects</span>
   </div>
   <div class="stat-card">
-    <span class="stat-num">48+</span>
+    <span class="stat-num">159</span>
+    <span class="stat-label">Advanced Projects</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-num">48</span>
     <span class="stat-label">Expert Ecosystems</span>
   </div>
 </div>
