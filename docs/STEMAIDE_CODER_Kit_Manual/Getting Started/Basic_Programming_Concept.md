@@ -9,16 +9,22 @@ Arduino is programmed using a language based on C++. Here are a few essential co
 A **variable** is like a labeled container that stores information for your program to use or change. When you create a variable, you must tell the Arduino what kind of data it will hold (its **Data Type**).
 
 Common data types include:
+
 - `int` (Integer): Stores whole numbers. Example: `int ledPin = 13;`
+
 - `float`: Stores numbers with decimals. Example: `float temperature = 25.5;`
+
 - `String`: Stores text. Example: `String message = "Hello!";`
+
 - `bool` (Boolean): Stores `true` or `false`. Example: `bool isLightOn = true;`
 
 **Example:** By writing `int ledPin = 13;` at the very top of your code, you create a variable named `ledPin` and store the number `13` inside it. Now, instead of remembering the number 13, you can just use `ledPin`!
 
 ### The Two Main Functions: setup() and loop()
 Every Arduino program relies on two main blocks of code:
+
 - `void setup()`: This block runs **only once** when you power on or reset the Arduino. We use it for initial configurations, such as setting a pin as an `OUTPUT` or `INPUT`.
+
 - `void loop()`: After the setup finishes, the `loop()` block runs over and over again forever. This is where the main instructions for your project live (like turning an LED on and off).
 
 ## The Arduino IDE and Basic Set Up
@@ -38,7 +44,7 @@ At the point you should see the code below on your computer / laptop.
 
 ![Third interface of IDE](../../assets/third_interface.png)
 
-**Step 4:** Left Click before the ( void setup () ) and click on the Enter key on your keyboard to get space at the top of the void setup(). Then click above the void setup().
+**Step 4:** Left Click before the void setup ()  and click on the Enter key on your keyboard to get space at the top of the void setup(). Then click above the void setup().
 
 |![Creating space for varibales](../../assets/creating_space_1.png) | ![Creating space for varibales](../../assets/creating_space_2.png) |
 |----------------------------------|----------------------------------|
@@ -68,7 +74,7 @@ Click on tools on the menu bar and hover your mouse on Port, a new window will a
 
 _**NB:** Your COM number may be different. In this example we have COM36 (Arduino Uno)_
 
-**Step 3:**  Click Control S (CTRL S) on your keyboard or click Save on the Arduino task bar.
+**Step 3:**  Click Control S (CTRL + S) on your keyboard or click Save on the Arduino task bar.
 
 ![Pinmode decalration](../../assets/saving.png).
 
