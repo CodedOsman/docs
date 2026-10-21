@@ -63,7 +63,6 @@ extra:
   - icon: fontawesome/brands/tiktok
     link: https://www.tiktok.com/@stemaide
     name: TikTok
-    name: TikTok
 nav:
 - Home: index.md
 - Coder:
@@ -215,8 +214,8 @@ nav:
           Projects/2.7_Ultrasonic_And_RGB/2.7.2_Backing_Distance_Meter.md
       - 2.7.3 Proximity Alarm Radar: STEMAIDE_CODER_Kit_Manual/Intermediate 
           Projects/2.7_Ultrasonic_And_RGB/2.7.3_Proximity_Alarm_Radar.md
-      - 2.7.4 Automatic_Barrier Gate: STEMAIDE_CODER_Kit_Manual/Intermediate 
-          Projects/2.7_Ultrasonic_And_RGB/2.7.4_Automatic_Barrier_Gate.md
+      - 2.7.4 Automatic_Barrier_gate: STEMAIDE_CODER_Kit_Manual/Intermediate 
+          Projects/2.7_Ultrasonic_And_RGB/2.7.4_Automatic_Barrier_gate.md
       - 2.7.5 Manual Trigger Radar: STEMAIDE_CODER_Kit_Manual/Intermediate 
           Projects/2.7_Ultrasonic_And_RGB/2.7.5_Manual_Trigger_Radar.md
       - 2.7.6 Solar Proximity Switch: STEMAIDE_CODER_Kit_Manual/Intermediate 
@@ -1367,6 +1366,7 @@ nav:
     - Troubleshooting: STEMAIDE_PILOT_Kit_Manual/Appendices/Troubleshooting.md
 
 - Coder Pro:
+  - Overview: coder_pro_index.md
   - Beginner:
     - 1.1 LED Morse Code Messenger: STEMAIDE_CODER_PRO_Kit_Manual/beginner/1.1_LED_Morse_Code_Messenger.md
     - 1.2 Adjustable LED Dimmer: STEMAIDE_CODER_PRO_Kit_Manual/beginner/1.2_Adjustable_LED_Dimmer.md
