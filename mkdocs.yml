@@ -29,10 +29,6 @@ theme:
 
 plugins:
   - search
-  - llmstxt:
-      sections:
-        Content:
-          - '**/*.md'
 
 validation:
   nav:
