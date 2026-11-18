@@ -428,7 +428,7 @@ nav:
           - 4.3.7 Wireless Bluetooth Industrial Robot Arm Drive: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.7_Wireless_Bluetooth_Industrial_Robot_Arm_Drive.md
           - 4.3.8 Real Time Clock Night Light Controller: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.8_Real_Time_Clock_Night_Light_Controller.md
           - 4.3.9 Smart RFID Door Access Control Gate: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.9_Smart_RFID_Door_Access_Control_Gate.md
-          - 4.3.10 Bluetooth Variable DC Fan Controller: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.10_Bluetooth_Variable_DC_Fan_Controller.md
+          - 4.3.10 Analog Threshold Hysteresis Demonstrator: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.10_Analog_Threshold_Hysteresis_Demonstrator.md
           - 4.3.11 Real Time Clock Industrial Shift Siren: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.11_Real_Time_Clock_Industrial_Shift_Siren.md
           - 4.3.12 RFID Inventory Tag Counter: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.12_RFID_Inventory_Tag_Counter.md
           - 4.3.13 Wireless Bluetooth Stepper Motor Controller: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.13_Wireless_Bluetooth_Stepper_Motor_Controller.md
@@ -436,18 +436,18 @@ nav:
           - 4.3.15 RFID Access Logging System: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.15_RFID_Access_Logging_System.md
           - 4.3.16 Bluetooth Multi Color Mood Lighting Console: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.16_Bluetooth_Multi_Color_Mood_Lighting_Console.md
           - 4.3.17 Real Time Clock Greenhouse Light Automation: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.17_Real_Time_Clock_Greenhouse_Light_Automation.md
-          - 4.3.18 RFID Keycard Motor Security Starter: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.18_RFID_Keycard_Motor_Security_Starter.md
+          - 4.3.18 RFID Keycard Starter Lever Interlock: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.18_RFID_Keycard_Motor_Security_Starter.md
           - 4.3.19 Bluetooth Wireless Proximity Alarm System: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.19_Bluetooth_Wireless_Proximity_Alarm_System.md
           - 4.3.20 Real Time Clock Fire Safeguard Logger: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.20_Real_Time_Clock_Fire_Safeguard_Logger.md
           - 4.3.21 RFID Dual Barrier Access Gate: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.21_RFID_Dual_Barrier_Access_Gate.md
           - 4.3.22 Bluetooth Remote Matrix Display Scroller: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.22_Bluetooth_Remote_Matrix_Display_Scroller.md
           - 4.3.23 Smart RTC Solar Tracker Controller: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.23_Smart_RTC_Solar_Tracker_Controller.md
-          - 4.3.24 RFID Keycard Multi Relay Switching Console: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.24_RFID_Keycard_Multi_Relay_Switching_Console.md
+          - 4.3.24 RFID Keycard Relay Switching Console: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.24_RFID_Keycard_Relay_Switching_Console.md
           - 4.3.25 Bluetooth Telemetry Environmental Logger: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.25_Bluetooth_Telemetry_Environmental_Logger.md
-          - 4.3.26 Real Time Clock Liquid Tank Automated Pump: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.26_Real_Time_Clock_Liquid_Tank_Automated_Pump.md
+          - 4.3.26 Real-Time Clock Liquid Tank Level Event Monitor: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.26_Real_Time_Clock_Liquid_Tank_Automated_Pump.md
           - 4.3.27 RFID Smart Warehouse Conveyor Indexer: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.27_RFID_Smart_Warehouse_Conveyor_Indexer.md
-          - 4.3.28 Bluetooth Controlled Pan Tilt Turret Camera: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.28_Bluetooth_Controlled_Pan_Tilt_Turret_Camera.md
-          - 4.3.29 Real Time Clock Multi Stage School Bell: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.29_Real_Time_Clock_Multi_Stage_School_Bell.md
+          - 4.3.28 Bluetooth-Controlled Pan-Tilt Camera Mount: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.28_Bluetooth_Controlled_Pan_Tilt_Turret_Camera.md
+          - 4.3.29 Real-Time Clock Multi-Stage School Bell: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.29_Real_Time_Clock_Multi_Stage_School_Bell.md
           - 4.3.30 Grand Master Wireless IoT Smart City Controller: STEMAIDE_CODER_PRO_Kit_Manual/expert/expert_III/4.3.30_Grand_Master_Wireless_IoT_Smart_City_Controller.md
   - Appendices:
       - Changelog: STEMAIDE_CODER_PRO_Kit_Manual/Appendices/Changelog.md
